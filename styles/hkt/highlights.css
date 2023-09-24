@@ -1,0 +1,38 @@
+.highlight .comment,
+.highlight .title,
+.highlight .xml {
+  color: d-gray;
+}
+.highlight .variable,
+.highlight .attribute,
+.highlight .tag,
+.highlight .doctype,
+.highlight .pseudo {
+  color: #6a3651;
+}
+.highlight .id,
+.highlight .class,
+.highlight .selector-class,
+.highlight .selector-id {
+  color: #576a6c;
+}
+.highlight .number,
+.highlight .preprocessor,
+.highlight .built_in,
+.highlight .literal,
+.highlight .params,
+.highlight .constant {
+  color: #8c7282;
+}
+.highlight .string,
+.highlight .value,
+.highlight .inheritance,
+.highlight .header {
+  color: #7b3e9d;
+}
+.highlight .javascript .title,
+.highlight .coffeescript .title,
+.highlight .keyword,
+.highlight .function {
+  color: #59657b;
+}

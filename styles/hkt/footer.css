@@ -1,0 +1,18 @@
+.main-footer {
+  display: flex;
+  flex-wrap: wrap;
+  color: #000;
+  margin-top: 4em;
+  margin-bottom: 1em;
+}
+.main-footer a {
+  font-size: 12px;
+}
+.main-footer span {
+  font-size: 12px;
+  display: inline-flex;
+}
+.main-footer >span:not(:nth-child(1))::before {
+  content: '||';
+  margin-right: 0.5em;
+}

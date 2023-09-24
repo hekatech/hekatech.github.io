@@ -1,0 +1,106 @@
+em {
+  font-style: normal;
+  color: h-light;
+  text-shadow: text-light;
+}
+del {
+  color: rgba(255,255,255,0.3);
+  transition: all 0.5s;
+}
+del:hover {
+  color: d-gray;
+}
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 2em;
+  list-style-type: none;
+}
+hr {
+  margin: 2em 0.5em 2em 0.5em;
+  border: 0;
+  height: 2px;
+  border-top: 2px dashed d-gray;
+  position: relative;
+}
+code {
+  background-color: rgba(0,0,0,0.5);
+  color: l-gray;
+  padding: 0 0.5em;
+  border-radius: 5px;
+  border: 1px solid d-gray;
+  transition: all 0.5s;
+}
+code:hover {
+  background-color: #000;
+  border-collapse: #000;
+}
+blockquote,
+.highlight {
+  background-color: rgba(0,0,0,0.1);
+  padding: 5px 1.5em;
+  margin: 0 0 1em 1em;
+  position: relative;
+  border-radius: 0 1em 1em 0;
+  border-top: 1px solid l-gray;
+  box-shadow: init-shadow;
+}
+blockquote >p,
+.highlight >p,
+blockquote >table,
+.highlight >table {
+  margin-left: 1.5em;
+}
+blockquote::before,
+.highlight::before {
+  content: ' ';
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: 8px solid #000;
+  border-right: 2px solid #000;
+}
+.highlight table {
+  display: block;
+  overflow-x: auto;
+  position: relative;
+}
+.highlight .gutter {
+  color: d-gray;
+  position: absolute;
+  vertical-align: baseline;
+}
+.highlight .gutter::after {
+  content: ' ';
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  background-color: #808080;
+  top: 0;
+  left: 2em;
+}
+.highlight .code {
+  padding-left: 2.5em;
+}
+#score svg {
+  width: 100%;
+  height: auto;
+}
+.lirics {
+  columns: 2;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.lirics p {
+  break-inside: avoid;
+}
+.lirics p:first-child {
+  margin-top: 0;
+}
+.sb {
+  border: 1px solid;
+  padding: 0.1em 0.2em;
+  margin: 0 0.2em;
+}

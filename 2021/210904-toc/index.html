@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    「目录 &amp; 自定义滚动栏」 - 無色人間。
+  
+</title>
+
+
+  <link rel="alternative" href="/atom.xml" title="無色人間。" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+
+
+<link rel="stylesheet" href="/styles/main.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <img src="/favicon.png">
+  </button>
+  <a class="title" href="/">無色人間。</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">無色人間。</a></h1>
+    
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/" title="主页" external="false">主页</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/about" title="关于" external="false">关于</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/categories" title="分类" external="false">分类</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/ark" title="｢匣｣" external="false">｢匣｣</a>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">归档</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">27</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">43</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS" external="false">RSS</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="javascript:;" title="搜索" external="false">搜索</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+  <div class="footer">
+    <div class="info">
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="/icon.png"></a>
+          
+        </div>
+      <div class="content">
+        
+          <div class="description">For the glory of mankind.</div>
+        
+        
+          <div class="author">4o</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    <div class="main-content">
+          <div class="post-body">
+
+<article id="post-210904-toc" class="article article-type-post">
+  
+    <div class="article-header">
+      <div class="article-title">
+      <h2>
+      目录 & 自定义滚动栏
+    </h2>
+    <span class="article-date">
+  2021/09/04
+</span>
+
+    
+
+  <span class="word-count">字数统计：
+    <span class="word-count-symbol">3.1k</span>
+  </span>
+  <span class="word-count">阅读时间：
+    <span class="word-count-time">5 mins</span>
+  </span>
+  
+    <span class="word-count">访问次数：
+      <span id="/2021/210904-toc/" class="waline-visitor-count">...</span>
+    </span>
+    <span class="word-count">评论统计：
+      <span id="/2021/210904-toc/" class="waline-comment-count">...</span>
+    </span>
+  
+
+
+  </div>
+    <div class="article-info">
+    
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E7%BB%B4%E6%8A%A4%E6%97%A5%E5%BF%97/">维护日志</a></li></ul>
+
+
+    
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HKT-924/" rel="tag">HKT-924</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/" rel="tag">前端笔记</a></li></ul>
+
+
+  </div>
+</div>
+  
+  <div class="article-entry">
+    <p>　　本篇文章又名：css 从入门到崩溃 / 一个透明滚动条引发的血案 / 不要靠近 <code>position: absolute</code> / Flex，yyds。<br>　　FUCK U CSS！</p>
+<span id="more"></span>
+
+<p>　　今日成果：</p>
+<ul>
+<li>修改了日期样式和字体，现在看起来更像尼尔 UI 了</li>
+<li>添加了正文目录<ul>
+<li>但是目前看起来不太尼尔</li>
+<li>以及二级目录默认展开很容易超出屏幕边界<ul>
+<li>暂时加了个滚动条，看起来不太美观（尤其在 firefox 上）但是能用就行</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>设置了透明滚动条（chrome 限定）<ul>
+<li>理论上 firefox 是可以实现的，但用的是完全不同的 css 属性，我没有耐心了【尖叫</li>
+</ul>
+</li>
+<li>修正了代码框拖动滚动条时装饰线会消失的问题</li>
+<li>为了实现以上功能几乎全盘重写了 layout<ul>
+<li>包括未雨绸缪地为 <a href="/tags/hekation/">#hekation</a> 新建了图层</li>
+</ul>
+</li>
+<li>初步调整了移动端页面显示效果</li>
+</ul>
+<h3 id="hexo-toc-目录"><a href="#hexo-toc-目录" class="headerlink" title="hexo-toc 目录"></a>hexo-toc 目录</h3><p>　　如果你不知道 toc 是什么，请看右边这一串 →<br>　　谷歌的教程告诉我要装插件，但我试了一下这是 hexo 的自带功能。<br>　　虽然他自动生成的 toc 框架像个智障而且我找不到在哪改 layout，这么一看我选择手写了分类汇总页面真是个明智的决定，不然我可能会提早一周进入硅基生命更年期【咬牙</p>
+<h4 id="layout-与参数设定"><a href="#layout-与参数设定" class="headerlink" title="layout 与参数设定"></a>layout 与参数设定</h4><p>　　依旧以「Chan」主题举例，其它用 ejs 写的主题也可以直接复制，但是需要修改一下文件路径。<br>　　在 <em>layout_partials\post</em> 文件夹下新建 <code>toc.ejs</code>，写入以下内容：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (theme.toc)&#123; %&gt;</span><br><span class="line"><span class="comment">// 判断主题是否开启 toc</span></span><br><span class="line"></span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;article-toc&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">    &lt;%- toc(post.content, &#123;max_depth:4&#125;) %&gt;</span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+<p>　　这玩意确实有官方文档，在 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/helpers.html">辅助函数</a> 的最底下，但是它很显然并不是用现代汉语 <del>而是某种程序员专用汉语</del> 写的，我直接复制过来翻译一下吧就……</p>
+<ul>
+<li>调用方式：在 layout 中插入 <code>&lt;%- toc(str, [options]) %&gt;</code></li>
+<li>可用参数（即用来替代 options 的内容）<ul>
+<li><code>class</code> ：类名，可填入任意字符<br>用来修改生成的 toc 元素的 classname，如留空则输出 <code>class=&quot;toc&quot;</code></li>
+<li><code>list_number</code> ：是否显示编号，只能填入 <code>true</code> 或 <code>false</code><br>默认为 <code>true</code> ，建议 <em>留空</em> ，因为它关掉的应该是绝大多数人希望保留的那个编号……<br>如果不知道我在说什么自己开一下试试就知道了【流汗黄豆.jpg</li>
+<li><code>max_depth</code> ：最大目录深度，可填入数字 1~6<br>其实「深度」这个词看起来就不太现代汉语但是我找不到更加信达雅的翻译方式……<br>用来控制需要添加到目录中的最低级标题，以本站为例正文中用到的通常是 <code>&lt;h3&gt;</code> 和 <code>&lt;h4&gt;</code> ，所以填入了 <em>4</em><br>建议保持最终生成效果在两层，过多的折叠层数会导致排版非常困难</li>
+<li><code>min_depth</code> ：最小目录深度，可填入数字 1~6<br>控制需要添加到目录中的最高级标题，一般直接 <em>留空</em> 即可</li>
+</ul>
+</li>
+</ul>
+<p>　　注意输入参数的时候要用这个<strong>花括号</strong> <code>&#123;&#125;</code>，如果希望全部维持默认参数，可以直接输入 <code>&lt;%- toc(post.content) %&gt;</code> 。<br>　　然后在正文页面的 layout 文件中使用 <code>&lt;%- partial(&#39;post/toc&#39;) %&gt;</code> 就可以插入目录了，运行 <code>hexo s --debug</code> 可以查看效果，如果 debug logs 里提示文件不存在请检查：</p>
+<ol>
+<li>相对引用目录是否正确</li>
+<li>layout 文件中是否有错漏的标点</li>
+</ol>
+<h4 id="修正默认-toc-样式"><a href="#修正默认-toc-样式" class="headerlink" title="修正默认 toc 样式"></a>修正默认 toc 样式</h4><p>　　按以上步骤操作成功后你的文章列表里就会出现这么一串令人绝望的东西：</p>
+<p><img src="/img/210904-toc.png" alt="img-center"></p>
+<p>　　是的，虽然我也难以置信，但 hexo 默认的 toc 确实存在完全重复的两层数字标号。这个时候你也许会想起前文提到过的 <code>list_number</code> 参数并尝试把它设置成 <code>false</code> ，但是，没想到吧！这个参数用来关的是后面那个带层数的数字标！这个伪元素它一直在哦！<br>　　<del>总之我再放一个流汗黄豆在这里</del><br>　　那么只能通过 css 来去掉 css 伪元素，具体操作方式是为 <code>.toc li::marker</code> 添加样式 <code>content: none;</code> ，如果你在前面的参数中修改了类名，记得用你自己的类名替换掉 <code>.toc</code> 。<br>　　css 部分请自由发挥，如果需要抄作业可以参考 <a target="_blank" rel="noopener" href="https://github.com/hekatech/hekatech.github.io/blob/main/styles/hkt/toc.css">本站源码</a> 。</p>
+<h3 id="自定义滚动栏"><a href="#自定义滚动栏" class="headerlink" title="自定义滚动栏"></a>自定义滚动栏</h3><p>　　今日血压的主要来源。<br>　　滚动栏的设置方法参考 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/::-webkit-scrollbar">这里</a>（firefox 除外，它用的是 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scrollbars">独立属性</a>）</p>
+<p>　　css 就不写笔记了……接下来都是吐槽时间……<br>　　设置完滚动条样式之后发现滚动条把整个 body 朝左挪了一个滚动条的宽度，并且无法通过 <code>position:fixed</code> 消除影响，视觉效果就是背景图出现了一条缝。于是尝试另起一层放背景图，发现滚动条永远浮在浏览器窗口的正上方，不管我把背景图放哪都没用，而且我整个页面的坐标莫名其妙地短斤少两了好几个像素。<br>　　最后的解决方式是重写了主 layout 文件和布局 css ，移除了所有 position 定位改用 flex 。一开始就把不同的部分写在不同的文件里真是太好了……</p>
+<p>　　总之血泪教训：慎用一切将元素移除出正常数据流的 css 属性，ex <code>position:absolute</code> 和 <code>float</code> ，一旦发现什么问题重写的时候真的会想死【</p>
+<h3 id="ERROR"><a href="#ERROR" class="headerlink" title="ERROR"></a>ERROR</h3><blockquote>
+<p>警告：检测到前方有大量程序错误，请注意绕行</p>
+</blockquote>
+<p>　　在毛象吐槽自己这一周搓博客的心路历程仿佛打零式首周，从开开心心到骂骂咧咧再到心态爆炸。但是下午点了奶茶喝完就把整个 layout 改完了，心情甚至还不错。<br>　　总之代码还是比野队队友能指望那么一些的，只要你还看得懂自己写了什么，它就永远不会辜负你……大概……</p>
+<p>　　想起首周在野队玩了近 50 小时钻石星辰心力交瘁的时候找前导师抱怨，没有收到期待的安慰反而被一顿臭骂，大意是「那么多的废物嘴上说要打首周最后半途而废你要和他们一样吗」。<br>　　我告诉自己她只是刀子嘴豆腐心想用激将法鼓励我坚持下去，但关了手机还是扑进被子里号啕大哭，因为我真的太™累了。<br>　　后来打了绝才知道她那一瞬间是真的觉得我是废物。我那个时候就应该远离她的，我为什么不跑呢。<br>　　大体来说我还是希望即使我没成功也有人能承认我曾经努力过。<br>　　现实世界里哪有那么多往前多走一步就能拯救世界的英雄，绝大多数人都只是还差一根稻草就会被压死的骆驼罢了。</p>
+<p>　　↑ 以上是一字不差从毛象复制过来的原文。为什么要再发一遍呢，我也不知道。<br>　　从在神兵队的最后一周开始我几乎就成了个绝本祥林嫂，退队拉黑了所有人之后尤其如此。直到现在我还是很不理解为什么一个「收留心碎零式人」「你居然觉得我们 6.0 之前能过本吗」「今天谁鸽」的休闲观光队会突然变成压力堪比首周的爆肝进度队。如果想正常开荒过本一开始的时候为什么要摆出那么吊儿郎当的态度甚至连攻略都懒得看呢，打着休闲队打着玩的旗号组满了人最后又反过来指责队友不够认真是不是太任性了点？<br>　　更何况我也没有不认真。攻略和第一视角我都认真看了，每天开荒也都录屏看回放找自己犯的错，可惜我是压力到了临界值就会开始运动神经失调的那类人，甚至因为这个破本诱发了进食障碍直到最近才康复。但是，不是所有的努力都是能有成果的，做不到就是做不到，尤其是在全队都给我施压的环境下我更做不到。想来你明明是知道我首周打完 12s 门神在进本体的一瞬间大脑一片空白连自己的技能都不认识了最后直接下线跑路的，为什么还要这样不停地给我压力呢。<br>　　说白了我就是这么菜啊……你是我的导师从入坑看到现在还不清楚吗，嫌我菜干嘛还要拉我打绝呢。难道你是误以为我是什么天才豆芽占星，头一次下绝本就能轻轻松松谈笑风生地打进本体然后随便看两天攻略直接过本吗？那确实对不起，是我让你失望了。我确实没有能力在一周内同时处理完全陌生的机制再根据随机的击杀速度排好团辅和奶轴，我对占星的理解也确实不那么透彻，能在首周打过前三层全凭作业抄得认真。我印象里起码提前半个月我就在对着国际服的第一视角做表格扒奶轴了，你也可以理解我完全不会打，只不过把其他人的操作背下来再执行了一个及格的分数而已。<br>　　当然我也知道大概率是我自作多情了，我可能无非就是一个被你拉去凑人头的奶妈罢了。总之……还是感谢你从我入坑以来对我的照顾，但是以后不要再联系了，就当我死了吧。</p>
+
+  </div>
+  <div class="clear" style="clear:both;"></div>
+  <footer class="article-footer">
+  </footer>
+</article>
+
+
+  <div class="comment-block">
+    <hr>
+  <div id="waline"></div>
+  </div>
+
+
+<div class="main-footer">
+  <span>© 2023 無色人間。-<a rel="me noopener" target="_blank" href="https://bgme.me/@suzushi">「e686a7e3828c」</a></span>
+  <span>转载本站图文请附上<a href="">「原始链接」</a></span>
+  <span class="description">已收录数据
+    <em class="word-count-symbol">&nbsp;186k&nbsp;</em>
+    字，登记访客&nbsp;
+    <em id="/" class="waline-visitor-count">...</em>
+    &nbsp;人。
+  </span>
+</div>
+</div>
+
+
+
+  <div class="article-toc">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo-toc-%E7%9B%AE%E5%BD%95"><span class="toc-number">1.</span> <span class="toc-text">hexo-toc 目录</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#layout-%E4%B8%8E%E5%8F%82%E6%95%B0%E8%AE%BE%E5%AE%9A"><span class="toc-number">1.1.</span> <span class="toc-text">layout 与参数设定</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%AD%A3%E9%BB%98%E8%AE%A4-toc-%E6%A0%B7%E5%BC%8F"><span class="toc-number">1.2.</span> <span class="toc-text">修正默认 toc 样式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%BB%9A%E5%8A%A8%E6%A0%8F"><span class="toc-number">2.</span> <span class="toc-text">自定义滚动栏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ERROR"><span class="toc-number">3.</span> <span class="toc-text">ERROR</span></a></li></ol>
+  </div>
+
+
+
+          
+  
+  </div>
+  <div class="hekation">
+
+<svg class="HKT-block" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <circle class="HKT-item" id="HKT-1" cx="128" cy="128" r="120"/>
+  <circle class="HKT-item" id="HKT-2" cx="128" cy="128" r="127"/>
+  <circle class="HKT-item" id="HKT-3" cx="128" cy="128" r="96"/>
+  <circle class="HKT-item" id="HKT-4" cx="128" cy="128" r="72"/>
+  <circle class="HKT-item" id="HKT-5" cx="128" cy="128" r="94"/>
+  <circle class="HKT-item" id="HKT-6" cx="128" cy="128" r="80"/>
+  <circle class="HKT-item" id="HKT-7" cx="128" cy="128" r="47"/>
+  <circle class="HKT-item" id="HKT-8" cx="128" cy="128" r="32"/>
+  <circle class="HKT-item" id="HKT-9" cx="128" cy="128" r="28"/>
+  <circle class="HKT-item" id="HKT-10" cx="128" cy="128" r="24"/>
+</svg>
+
+</div>
+
+  
+
+    <div class="search-block">
+      <div id="site_search">
+        <div class="form-group">
+          <input type="text" id="local-search-input" name="q" results="0" placeholder="search" class="st-search-input st-default-search-input form-control"/>
+        </div>
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+
+
+
+</body>
+<footer>
+  
+<script src="https://co5.me/lib/jquery/index.js?v=2.1.3.js"></script>
+
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<script src="/PhotoSwipe/photoswipe.js"></script>
+
+  
+<script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+
+
+<script src="/scripts/main.js"></script>
+
+
+<script src="/scripts/score.js"></script>
+
+
+<script src="/scripts/waline.js"></script>
+
+
+<script src="/scripts/search.js"></script>
+
+
+  
+
+  
+    
+      <script type="text/javascript">
+      Waline({
+        el: '#waline',
+        serverURL: 'https://waline-4o-cx.vercel.app/',
+        emoji: [],
+        uploadImage: false,
+        visitor: true,
+        requiredMeta: ['nick', 'mail'],
+        placeholder:"欢迎留言 ~ 登录非必选项，填上昵称和邮箱即可提交评论并显示 Libravatar / Gravatar",
+      });
+      window.onload = function(){
+        $("#waline-nick" ).attr( "placeholder" , "昵称" );
+        $("#waline-mail" ).attr( "placeholder" , "邮箱" );
+        $("#waline-link" ).attr( "placeholder" , "链接" );
+      }
+      </script>
+    
+  
+
+
+  
+  <script type="text/javascript">      
+    var path = "/search.xml";
+    searchFunc(path, 'local-search-input', 'local-search-result');
+  </script>
+
+  
+<script src="/hekation/emoji.js"></script>
+
+
+<link rel="stylesheet" href="/hekation/emoji.css">
+
+
+<script src="/scripts/HKT-63.js"></script>
+
+</footer>
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    「hexo 自定义域名 &amp; mastodon 认证」 - 無色人間。
+  
+</title>
+
+
+  <link rel="alternative" href="/atom.xml" title="無色人間。" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+
+
+<link rel="stylesheet" href="/styles/main.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <img src="/favicon.png">
+  </button>
+  <a class="title" href="/">無色人間。</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">無色人間。</a></h1>
+    
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/" title="主页" external="false">主页</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/about" title="关于" external="false">关于</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/categories" title="分类" external="false">分类</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/ark" title="｢匣｣" external="false">｢匣｣</a>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">归档</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">27</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">43</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS" external="false">RSS</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="javascript:;" title="搜索" external="false">搜索</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+  <div class="footer">
+    <div class="info">
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="/icon.png"></a>
+          
+        </div>
+      <div class="content">
+        
+          <div class="description">For the glory of mankind.</div>
+        
+        
+          <div class="author">4o</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    <div class="main-content">
+          <div class="post-body">
+
+<article id="post-210831-log" class="article article-type-post">
+  
+    <div class="article-header">
+      <div class="article-title">
+      <h2>
+      hexo 自定义域名 & mastodon 认证
+    </h2>
+    <span class="article-date">
+  2021/08/31
+</span>
+
+    
+
+  <span class="word-count">字数统计：
+    <span class="word-count-symbol">2.2k</span>
+  </span>
+  <span class="word-count">阅读时间：
+    <span class="word-count-time">4 mins</span>
+  </span>
+  
+    <span class="word-count">访问次数：
+      <span id="/2021/210831-log/" class="waline-visitor-count">...</span>
+    </span>
+    <span class="word-count">评论统计：
+      <span id="/2021/210831-log/" class="waline-comment-count">...</span>
+    </span>
+  
+
+
+  </div>
+    <div class="article-info">
+    
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E7%BB%B4%E6%8A%A4%E6%97%A5%E5%BF%97/">维护日志</a></li></ul>
+
+
+    
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HKT-924/" rel="tag">HKT-924</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BB%BA%E7%AB%99%E6%8C%87%E7%8C%AB/" rel="tag">建站指猫</a></li></ul>
+
+
+  </div>
+</div>
+  
+  <div class="article-entry">
+    <p>　　Fxcking hexo 我还什么都没写这文件夹怎么就 60M+ 了？？<br>　　今日成果：自定义域名 + 毛象认证，不出意外在部署以后毛象个人页上就有绿勾勾了。</p>
+<span id="more"></span>
+
+<p>　　本来今天 9 点多就上床睡觉了，凌晨一点胃疼醒来发现塔塔吐槽她的 hugo 模板不知道如何改字体，加之前两天陪她挑域名的时候蠢蠢欲动，我毅然从床上爬起来打开了电脑……<br>　　然后买了现在的域名，本来备选的还有 <code>hekatech.cc</code>（首年追加时长只要 31 一年）、<code>hekatech.icu</code>（很犯病，suki）以及 mzk 前缀的一些域名，然后惊觉三位的 me 域名已经涨价到四五位数了，还好西柚子的域名注册得早……<br>　　于是抱着奇怪的抢购心理买下了现在的 <code>4o.cx</code>，不为别的，就为这一个 4 位域名首年和续费都只要 120，难道不是超值吗！<br>　　虽然 cx 后缀看起来有些不明所以，但我告诉自己这个后缀可以转 90° 当颜文字看<del>（&gt;u&lt;）</del>，于是欣然接受了。<del>虽然设定上 4o 是不会出现这个表情的，但是 HKT-924 应该会经常输出这种奇怪的颜文字</del></p>
+<p>　　又及：因为存放了建站教学内容，大概这个站也要从头开始做搜索优化 + 访问统计 + 留言功能，<strong>不然岂不是浪费了我的 4 位域名吗！</strong></p>
+<h3 id="自定义域名踩坑"><a href="#自定义域名踩坑" class="headerlink" title="自定义域名踩坑"></a>自定义域名踩坑</h3><p>　　Github Pages 的可靠性似乎没有我想象的那么好……那么如果有人想为你的 hexo 绑定自定义域名，请按如下步骤操作：</p>
+<ol>
+<li>在电脑上打开 <em>开始菜单</em> 在键盘上敲击 <code>cmd.exe</code> 并回车，在弹出的 <em>命令提示符</em> 窗口中输入<br><code>ping + 空格 + &lt;你的用户名.github.io&gt;</code>（就是当前的 blog 地址）<br>并记录下返回的 <em>ip</em></li>
+<li>将返回的 <em>ip</em> 填入你的域名管理界面的 <em>DNS 设置</em> 中，类型设置为 <code>A</code><br>如果有 <em>TTL</em>（DNS 刷新时间）选项，就设置成最短的时间</li>
+<li>在 <code>hexo/source</code> 文件夹中新建一个 <strong>没有后缀名的</strong> <code>CNAME</code>文件（需要全大写）<br>在里面输入 <em>你的域名</em>，不要添加 <code>/</code> 或者 <code>https://</code> 等任何多余的内容<br>然后执行 <code>hexo g --d</code></li>
+<li>点开 <em>github 仓库</em> 的 <em>Settings</em> 页面，在左侧菜单中找到 <em>Pages</em><br>在 <em>Custom domain</em> 输入框中输入 <em>你的域名</em> 并点击 <em>Save</em> 保存</li>
+<li><em>【非常重要】</em><strong>在输入框里的猫头还在转的时候</strong> 勾上底下的 <em>Enforce HTTPS</em></li>
+</ol>
+<p>　　全部操作完毕后， github 设置页面大概率会显示红框提示你 DNS 设置错误，但只要到了你域名的 TTL 时间浏览器就可以打开了。</p>
+<blockquote>
+<p>提问：为什么会出现这种情况呢？<br>推测：Github pages 获取 DNS 的速度与域名提供商更新的速度不一致。</p>
+</blockquote>
+<p>　　以我使用的 <a target="_blank" rel="noopener" href="http://www.dynadot.com/?scz8RX8Z8M7m8P">Dynadot（此处为邀请链接）</a> 为例，域名设置 DNS 后最短只需要 5 分钟就可以更新，此时域名其实已经完成了解析，但 Github 并没有获取到 DNS 更新，所以会导致无法勾选 https 设置。<br>　　而 Dynadot 的域名是默认开启 https 的，两边的设置差会导致浏览器或是你的本地防火墙拒绝接收数据。另外不勾选这个 https 设置 Github 似乎也不会主动给你申请证书，然后陷入死循环，所以需要在它检测 DNS 失败之前抢先把 https 设置勾上，大概就是这么个原理吧……<br>　　Ps. 如果你还没有注册域名的话可以尝试点击上面的 <em>Dynadot 邀请链接</em>，据说是 <a target="_blank" rel="noopener" href="https://www.dynadot.com/zh/community/refer-a-friend.html">当有人点击链接并在 48 小时内创建账户并消费 ¥65，您和新账户都将获得 ¥32 个 DynaDollar。</a>当然我也没试过，不保证具体有效。</p>
+<h3 id="Mastodon-认证"><a href="#Mastodon-认证" class="headerlink" title="Mastodon 认证"></a>Mastodon 认证</h3><p>　　长毛象为用户在 <em>个人资料附加信息</em> 中填写的网页添加了 <em>验证</em> 功能，只要复制指定的链接 html 代码加入到个站网页中即可。<br>　　一般选择把这个链接都添加在 <em>页脚</em> 替换作者署名，具体操作步骤如下：</p>
+<p>　1. 在你的主题文件夹中搜索 <code>layout</code> 文件夹寻找文件名为 <code>footer.ejs</code> 的文件，如果没有请前往 <code>layout/_partials</code> 文件夹<br>这个文件就是用来输出页脚 html 元素的，不同主题的 layout 文件格式和语法可能会有出入，在修改文件时请注意备份<br>　2. 寻找作者 / 版权相关的语句段，以本站魔改基础 <a target="_blank" rel="noopener" href="https://github.com/denjones/hexo-theme-chan">Chan</a> 主题为例，<code>footer.ejs</code> 内容如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;main-footer&quot;</span>&gt;</span><br><span class="line">  &lt;% <span class="keyword">if</span> (theme.copyright) &#123; %&gt;</span><br><span class="line">    &lt;%- theme.copyright %&gt;</span><br><span class="line">  &lt;% &#125; <span class="keyword">else</span> &#123; %&gt;</span><br><span class="line">    © &lt;%= <span class="keyword">new</span> <span class="built_in">Date</span>().getFullYear() %&gt; &lt;%= config.title %&gt; - Powered by &lt;a href=<span class="string">&quot;http://hexo.io&quot;</span> target=<span class="string">&quot;_blank&quot;</span>&gt;Hexo&lt;<span class="regexp">/a&gt; - Theme &lt;a href=&quot;https:/</span><span class="regexp">/github.com/</span>denjones/hexo-theme-chan<span class="string">&quot; target=&quot;</span>_blank<span class="string">&quot;&gt;Chan&lt;/a&gt;</span></span><br><span class="line"><span class="string">  &lt;% &#125; %&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br></pre></td></tr></table></figure>
+<p>　　将其中的 <code>&lt;%= config.title %&gt;</code>（此处为网站标题）替换为 Mastodon 提供的验证链接，再将其中的 <code>Mastodon</code> 替换成需要的内容即可。更新部署 hexo 之后需要手动到 mastodon 的个人资料页面重新提交一次，验证成功后表格内的链接就会出现绿色背景和 ✓ 图标。<br>　　当然这个做法仅供参考，在理解 html 构成形式和 ejs 语法之后也可以把链接放在别的位置，比如做成侧边栏的联系方式图标等等。</p>
+<h3 id="其它记录-amp-吐槽"><a href="#其它记录-amp-吐槽" class="headerlink" title="其它记录 &amp; 吐槽"></a>其它记录 &amp; 吐槽</h3><ul>
+<li>Noto Sans 在代码框里的表现简直是灾难级别的<ul>
+<li>换成了 Sublime Text 的默认字体 <code>Consolas</code>，圆润了许多。</li>
+</ul>
+</li>
+<li>更新了 H3 H4 的标题样式<ul>
+<li>但是分类和归档页面点开变得更糟糕了</li>
+<li>这两个打算做成类似尼尔存档的那种 UI，过两天再说<ul>
+<li>尝试一下三级列表？啊这果然前缀消失了……</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>目前代码框的滚动条风格还不是很对，找时间修正一下。</li>
+<li>背景的抽丝效果对比度似乎太明显了，有些影响字体渲染效果，需要调整</li>
+<li>设想做一个匿名提问箱<ul>
+<li>暂时的思路是借用 Valine 的框架，删掉多余个人信息的提交和展示功能</li>
+<li>最多只显示 3~5 条最近提交的数据作为用户反馈，回答还是使用文章总结的形式<ul>
+<li>提交内容：昵称 + 提问内容 + 时间 + 分类</li>
+<li>展示内容：时间 + 昵称 + 分类</li>
+</ul>
+</li>
+<li>或者考虑一下 google 表格？但是墙内的访问可能会出现问题</li>
+</ul>
+</li>
+</ul>
+<p>　　那么今天的工作就到这里，随行支援系统「HKT-924」即将开启节能模式……</p>
+
+  </div>
+  <div class="clear" style="clear:both;"></div>
+  <footer class="article-footer">
+  </footer>
+</article>
+
+
+  <div class="comment-block">
+    <hr>
+  <div id="waline"></div>
+  </div>
+
+
+<div class="main-footer">
+  <span>© 2023 無色人間。-<a rel="me noopener" target="_blank" href="https://bgme.me/@suzushi">「e686a7e3828c」</a></span>
+  <span>转载本站图文请附上<a href="">「原始链接」</a></span>
+  <span class="description">已收录数据
+    <em class="word-count-symbol">&nbsp;186k&nbsp;</em>
+    字，登记访客&nbsp;
+    <em id="/" class="waline-visitor-count">...</em>
+    &nbsp;人。
+  </span>
+</div>
+</div>
+
+
+
+  <div class="article-toc">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E8%B8%A9%E5%9D%91"><span class="toc-number">1.</span> <span class="toc-text">自定义域名踩坑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mastodon-%E8%AE%A4%E8%AF%81"><span class="toc-number">2.</span> <span class="toc-text">Mastodon 认证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E5%AE%83%E8%AE%B0%E5%BD%95-amp-%E5%90%90%E6%A7%BD"><span class="toc-number">3.</span> <span class="toc-text">其它记录 &amp; 吐槽</span></a></li></ol>
+  </div>
+
+
+
+          
+  
+  </div>
+  <div class="hekation">
+
+<svg class="HKT-block" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <circle class="HKT-item" id="HKT-1" cx="128" cy="128" r="120"/>
+  <circle class="HKT-item" id="HKT-2" cx="128" cy="128" r="127"/>
+  <circle class="HKT-item" id="HKT-3" cx="128" cy="128" r="96"/>
+  <circle class="HKT-item" id="HKT-4" cx="128" cy="128" r="72"/>
+  <circle class="HKT-item" id="HKT-5" cx="128" cy="128" r="94"/>
+  <circle class="HKT-item" id="HKT-6" cx="128" cy="128" r="80"/>
+  <circle class="HKT-item" id="HKT-7" cx="128" cy="128" r="47"/>
+  <circle class="HKT-item" id="HKT-8" cx="128" cy="128" r="32"/>
+  <circle class="HKT-item" id="HKT-9" cx="128" cy="128" r="28"/>
+  <circle class="HKT-item" id="HKT-10" cx="128" cy="128" r="24"/>
+</svg>
+
+</div>
+
+  
+
+    <div class="search-block">
+      <div id="site_search">
+        <div class="form-group">
+          <input type="text" id="local-search-input" name="q" results="0" placeholder="search" class="st-search-input st-default-search-input form-control"/>
+        </div>
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+
+
+
+</body>
+<footer>
+  
+<script src="https://co5.me/lib/jquery/index.js?v=2.1.3.js"></script>
+
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<script src="/PhotoSwipe/photoswipe.js"></script>
+
+  
+<script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+
+
+<script src="/scripts/main.js"></script>
+
+
+<script src="/scripts/score.js"></script>
+
+
+<script src="/scripts/waline.js"></script>
+
+
+<script src="/scripts/search.js"></script>
+
+
+  
+
+  
+    
+      <script type="text/javascript">
+      Waline({
+        el: '#waline',
+        serverURL: 'https://waline-4o-cx.vercel.app/',
+        emoji: [],
+        uploadImage: false,
+        visitor: true,
+        requiredMeta: ['nick', 'mail'],
+        placeholder:"欢迎留言 ~ 登录非必选项，填上昵称和邮箱即可提交评论并显示 Libravatar / Gravatar",
+      });
+      window.onload = function(){
+        $("#waline-nick" ).attr( "placeholder" , "昵称" );
+        $("#waline-mail" ).attr( "placeholder" , "邮箱" );
+        $("#waline-link" ).attr( "placeholder" , "链接" );
+      }
+      </script>
+    
+  
+
+
+  
+  <script type="text/javascript">      
+    var path = "/search.xml";
+    searchFunc(path, 'local-search-input', 'local-search-result');
+  </script>
+
+  
+<script src="/hekation/emoji.js"></script>
+
+
+<link rel="stylesheet" href="/hekation/emoji.css">
+
+
+<script src="/scripts/HKT-63.js"></script>
+
+</footer>
+</html>

@@ -1,0 +1,110 @@
+.post-card-body {
+  display: block;
+  columns: 2;
+  column-gap: 1em;
+  margin-top: 1em;
+}
+.post-card-item {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  break-inside: avoid;
+  overflow: hidden;
+  margin-bottom: 1.5em;
+  max-width: 100%;
+  border: 2px solid #000;
+  background-color: rgba(255,255,255,0.15);
+}
+.post-card-item .post-cover img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale(50%);
+  background-color: rgba(200,200,200,0.9);
+}
+.post-card-item .post-cover img:hover {
+  opacity: 0.1;
+}
+.card-header {
+  width: 100%;
+  background: #000;
+  color: l-gray;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+.card-header .article-category-list {
+  display: inline-block;
+  list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0.8em;
+}
+.card-header .article-category-list a::before {
+  content: " ";
+  vertical-align: middle;
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  background-color: l-gray;
+  margin-bottom: 0.2em;
+  margin-right: 0.5em;
+}
+.card-header .article-date {
+  padding-right: 1em;
+}
+.card-info {
+  margin: 0 0.5em;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-top: 1em;
+}
+.card-info h2 {
+  font-size: 27px;
+}
+.card-info h2 a {
+  font-size: 1em;
+}
+.card-info h2 a:hover {
+  color: #000;
+}
+.card-info .article-tag-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0.5em;
+}
+.card-info .article-tag-list .article-tag-list-item {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+.card-info .article-tag-list .article-tag-list-item a {
+  color: #808080;
+}
+.card-info .article-tag-list .article-tag-list-item a:hover {
+  color: h-light;
+}
+.card-entry {
+  padding: 0 0.7em 2em 0.7em;
+}
+.card-entry a {
+  border-bottom: 1px solid d-gray;
+}
+.card-entry .card-more {
+  position: absolute;
+  border-bottom: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  padding: 0 0.5em;
+  border-radius: 0.5em 0 0 0;
+}
+.card-entry blockquote {
+  margin-left: 0;
+}
+.card-entry img {
+  display: none;
+}

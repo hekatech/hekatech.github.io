@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    「开发：emoji 显示」 - 無色人間。
+  
+</title>
+
+
+  <link rel="alternative" href="/atom.xml" title="無色人間。" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+
+
+<link rel="stylesheet" href="/styles/main.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <img src="/favicon.png">
+  </button>
+  <a class="title" href="/">無色人間。</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">無色人間。</a></h1>
+    
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/" title="主页" external="false">主页</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/about" title="关于" external="false">关于</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/categories" title="分类" external="false">分类</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/ark" title="｢匣｣" external="false">｢匣｣</a>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">归档</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">27</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">43</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS" external="false">RSS</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="javascript:;" title="搜索" external="false">搜索</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+  <div class="footer">
+    <div class="info">
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="/icon.png"></a>
+          
+        </div>
+      <div class="content">
+        
+          <div class="description">For the glory of mankind.</div>
+        
+        
+          <div class="author">4o</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    <div class="main-content">
+          <div class="post-body">
+
+<article id="post-210922-emoji" class="article article-type-post">
+  
+    <div class="article-header">
+      <div class="article-title">
+      <h2>
+      开发：emoji 显示
+    </h2>
+    <span class="article-date">
+  2021/09/22
+</span>
+
+    
+
+  <span class="word-count">字数统计：
+    <span class="word-count-symbol">1.7k</span>
+  </span>
+  <span class="word-count">阅读时间：
+    <span class="word-count-time">3 mins</span>
+  </span>
+  
+    <span class="word-count">访问次数：
+      <span id="/2021/210922-emoji/" class="waline-visitor-count">...</span>
+    </span>
+    <span class="word-count">评论统计：
+      <span id="/2021/210922-emoji/" class="waline-comment-count">...</span>
+    </span>
+  
+
+
+  </div>
+    <div class="article-info">
+    
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E7%BB%B4%E6%8A%A4%E6%97%A5%E5%BF%97/">维护日志</a></li></ul>
+
+
+    
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HKT-924/" rel="tag">HKT-924</a></li></ul>
+
+
+  </div>
+</div>
+  
+  <div class="article-entry">
+    <p>　　成了（成了）。<br>　　那么接下来请 4o 给大家表演一个川剧变脸：:4o-o1: :4o-o2: :4o-o3: :4o-o4: :4o-o3: :4o-o1:<br>　　感觉画得还差那么点意思……五官太小头太大了，总之今天先解决了代码的问题，可喜可贺可喜可贺！</p>
+<span id="more"></span>
+
+<p>　　本来打算直接照搬西柚子的 <a target="_blank" rel="noopener" href="https://github.com/shioko/co5emoji">co5emoji</a> ，但是我画的图线条没她清楚，放大 span 之后又会影响行距。于是虽然在捣鼓 css 的时候被伪元素伤透了心，今天还是决定用伪元素来实现排版功能……<br>　　我也不知道这是什么心态，大概就是犯贱吧 :4o-2:</p>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>　　大体上还是照搬了 <a target="_blank" rel="noopener" href="https://github.com/shioko/co5emoji">co5emoji</a> ，思路也是手动写入 <code>emojiList</code> 后用 JS 查找替换成相应 classname 的 span。<br>　　依稀记得西柚子说过她的插件会影响 canvas 绘制，看了一下少女癌的页面，好像 next 主题的 post 会专门生成在一个 <code>id=&quot;post&quot;</code> 的 div 内，所以西柚子是把替换范围限定在了这个 div 内，然后把她的 canvas <del>换头</del>小游戏放在了 page 里。<br>　　但是我用的主题它没有这功能啊！！page 和 post 用的是同一个 layout 啊！！！<br>　　于是实现思路变成了：数组里写入 <code>emojiList</code> ，然后查找所有 p 元素挨个把里面的 <code>emojiTag</code> 替换。因为替换和查找元素都需要批处理于是选择了用 jQuery 来实现。<br>　　这次没有问哆啦馒头！这次是我自己在谷歌上抄的作业！虽然有些地方还是不太懂为什么这么写，但是日本程序员的笔记真的，比中文也就好看懂那么几十倍吧……<br>　　想起我年轻时还吐槽过日本程序员的代码逻辑自成一派，但是他们做笔记真的好认真，比这群机翻洗稿的中文代码剪辑师友好多了【</p>
+<h4 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h4><p>　　首先是标签输入方面，虽然并不打算和其它网站复制的文本做兼容但还是用了 <code>:emojiname:</code> 的形式，当然 JS 处理完之后就变成没有内容的空 span 了，这个问题应该不大，等后续有空再修正。<br>　　然后是 <code>emojiList</code> ，依然是手动输入。另外由于 emoji 排版用到了伪元素，所以背景图的链接也是手动在 css 里逐个关联的。严格上来说这个库做得还是不够完善，但是因为不打算引入外部表情包所以目前的功能就够用了……<del>毕竟我也画不了那么多</del></p>
+<h4 id="JS-处理-输出"><a href="#JS-处理-输出" class="headerlink" title="JS 处理 + 输出"></a>JS 处理 + 输出</h4><p>　　再次诚挚感谢 <a target="_blank" rel="noopener" href="https://www.tsukimi.net/jquery_replace_in_bulk.html">霓虹程序员的笔记</a>，从「单个元素内按单一规律替换单个对象」到「多个元素内按多个规律替换多个对象」一共罗列了 6 种解法并都提供了代码，孩子抄得很顺利，谢谢茄子。</p>
+<p>　　最终的代码如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> emojiList = [</span><br><span class="line">	<span class="string">&#x27;4o-1&#x27;</span>,<span class="string">&#x27;4o-2&#x27;</span>,<span class="string">&#x27;4o-3&#x27;</span>,</span><br><span class="line">	<span class="comment">// 手动输入所有 emoji tag 名</span></span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> elm = $(<span class="string">&#x27;p&#x27;</span>);</span><br><span class="line"><span class="comment">// 用 jQuery 选择器选择所有类型为 p 的元素</span></span><br><span class="line"></span><br><span class="line">elm.each(<span class="function"><span class="keyword">function</span>(<span class="params">i</span>)</span>&#123;</span><br><span class="line"><span class="comment">// 对选中的所有 p 元素逐一执行以下事件：</span></span><br><span class="line">	$.each(emojiList, <span class="function"><span class="keyword">function</span>(<span class="params">ii,emojiName</span>) </span>&#123;</span><br><span class="line">	<span class="comment">// 对 emojiList 中的每一项都执行以下事件：</span></span><br><span class="line">		<span class="keyword">var</span> emojiTag = <span class="string">&#x27;:&#x27;</span> + emojiName + <span class="string">&#x27;:&#x27;</span>,</span><br><span class="line">		<span class="comment">// 设置输入的 emoji tag 格式</span></span><br><span class="line">		emojiSpan =</span><br><span class="line">			<span class="string">&#x27;&lt;span class=&quot;emoji &#x27;</span></span><br><span class="line">			<span class="comment">// ! 后面这个空格不可以去掉</span></span><br><span class="line">			+ emojiName</span><br><span class="line">			+ <span class="string">&#x27;&quot;&gt;&lt;/span&gt;&#x27;</span>;</span><br><span class="line">			<span class="comment">// 设置输出的 emoji span 格式</span></span><br><span class="line">		<span class="keyword">var</span> txt = elm.eq(i).html();</span><br><span class="line">		elm.eq(i).html(</span><br><span class="line">        	txt.replaceAll(emojiTag,emojiSpan)</span><br><span class="line">    	);</span><br><span class="line">    	<span class="comment">// 将区域内所有 emojiTag 替换为 emojiSpan</span></span><br><span class="line">	&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>　　是说不太懂的地方就是这个 <code>eq(i)</code> ，实测删掉之后会把所有 p 元素都替换成第一个 p 的内容……我的理解大概是把获取的 html 内容临时存储在了 <em>i</em> 这个变量里，然后对第二个 p 元素进行替换的时候更新了变量的值？</p>
+<blockquote>
+<p>更新：在手机端预览时遇到了 <code>replaceAll</code> 不执行的状况<br>　　　初步判断是 api 兼容性有些问题，改用普通正则后可以正常输出<br>　　　代价是加载速度肉眼可见地变慢了……</p>
+</blockquote>
+<h4 id="css"><a href="#css" class="headerlink" title="css"></a>css</h4><p>　　西柚子的 emoji span 是全部在同一个 classname 下然后用不同的 id 来区分样式的，但是这几天在查资料的时候发现规范的 html 页面下每一个 id 应该仅对应一个元素，于是生成了带空格的 classname。<br>　　是说其实我不知道为什么要这么写……但是实际结果好像就是把元素归类到了两个不同层级的 classname 下。</p>
+<blockquote>
+<p>举例：有 <code>class=&quot;.aa bb&quot;</code> 和 <code>class=&quot;.aa cc&quot;</code> 两个元素<br>　　　css 中输入 <code>.aa</code> 可以同时选中两个元素<br>　　　输入 <code>.bb</code> 和 <code>.aa.bb</code> 只能访问前者，输入 <code>.cc</code> 和 <code>.aa.cc</code> 只能访问后者</p>
+</blockquote>
+<p>　　最终的 css 文件如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.emoji</span> &#123;</span><br><span class="line">	<span class="attribute">display</span>: inline-block;</span><br><span class="line">	<span class="attribute">position</span>: relative;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">2.2em</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">1em</span>;</span><br><span class="line">	<span class="attribute">vertical-align</span>: sub;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.emoji</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">	<span class="attribute">content</span>: <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">top</span>:-<span class="number">0.9em</span>;</span><br><span class="line">	<span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">2.2em</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">2.2em</span>;</span><br><span class="line">	<span class="attribute">background-size</span>: cover;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.emojiName1</span><span class="selector-pseudo">::before</span>&#123;<span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">&#x27;emojiUrl-1.png&#x27;</span>);&#125;</span><br><span class="line"><span class="selector-class">.emojiName2</span><span class="selector-pseudo">::before</span>&#123;<span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">&#x27;emojiUrl-2.png&#x27;</span>);&#125;</span><br><span class="line"><span class="selector-class">.emojiName3</span>...</span><br></pre></td></tr></table></figure>
+
+<h3 id="踩坑"><a href="#踩坑" class="headerlink" title="踩坑"></a>踩坑</h3><p>　　css 貌似无法识别以数字开头的类名，导致我一度以为无法通过双重类名定位到同一个伪元素……解决方法就是在生成类名的时候在前面加一个字母，所以 4o 就变成了 e4o【乐<br>　　另外还有 jQuery 在用 each 访问数组的时候似乎是会固定先输出内容的编号，比如上面那段代码如果我只写 <code>$.each(emojiList, function(emojiName)</code> 的话输出的就是我需要的 <code>emojiName</code> 在 <code>emojiList</code> 中的编号，构建的 <code>emojiTag</code> 也变成了 <code>:0: :1: :2:</code>，需要在前面再加一个输入值 <code>ii</code> 才能正常使用数组里写入的内容。</p>
+<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://www.tsukimi.net/jquery_replace_in_bulk.html">jQuery で replace を使って複数箇所の複数の文字列を一括置換する方法</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/shioko/co5emoji">co5emoji</a></li>
+</ul>
+
+  </div>
+  <div class="clear" style="clear:both;"></div>
+  <footer class="article-footer">
+  </footer>
+</article>
+
+
+  <div class="comment-block">
+    <hr>
+  <div id="waline"></div>
+  </div>
+
+
+<div class="main-footer">
+  <span>© 2023 無色人間。-<a rel="me noopener" target="_blank" href="https://bgme.me/@suzushi">「e686a7e3828c」</a></span>
+  <span>转载本站图文请附上<a href="">「原始链接」</a></span>
+  <span class="description">已收录数据
+    <em class="word-count-symbol">&nbsp;186k&nbsp;</em>
+    字，登记访客&nbsp;
+    <em id="/" class="waline-visitor-count">...</em>
+    &nbsp;人。
+  </span>
+</div>
+</div>
+
+
+
+  <div class="article-toc">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.</span> <span class="toc-text">实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5"><span class="toc-number">1.1.</span> <span class="toc-text">输入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JS-%E5%A4%84%E7%90%86-%E8%BE%93%E5%87%BA"><span class="toc-number">1.2.</span> <span class="toc-text">JS 处理 + 输出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#css"><span class="toc-number">1.3.</span> <span class="toc-text">css</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B8%A9%E5%9D%91"><span class="toc-number">2.</span> <span class="toc-text">踩坑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="toc-number">3.</span> <span class="toc-text">参考链接</span></a></li></ol>
+  </div>
+
+
+
+          
+  
+  </div>
+  <div class="hekation">
+
+<svg class="HKT-block" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <circle class="HKT-item" id="HKT-1" cx="128" cy="128" r="120"/>
+  <circle class="HKT-item" id="HKT-2" cx="128" cy="128" r="127"/>
+  <circle class="HKT-item" id="HKT-3" cx="128" cy="128" r="96"/>
+  <circle class="HKT-item" id="HKT-4" cx="128" cy="128" r="72"/>
+  <circle class="HKT-item" id="HKT-5" cx="128" cy="128" r="94"/>
+  <circle class="HKT-item" id="HKT-6" cx="128" cy="128" r="80"/>
+  <circle class="HKT-item" id="HKT-7" cx="128" cy="128" r="47"/>
+  <circle class="HKT-item" id="HKT-8" cx="128" cy="128" r="32"/>
+  <circle class="HKT-item" id="HKT-9" cx="128" cy="128" r="28"/>
+  <circle class="HKT-item" id="HKT-10" cx="128" cy="128" r="24"/>
+</svg>
+
+</div>
+
+  
+
+    <div class="search-block">
+      <div id="site_search">
+        <div class="form-group">
+          <input type="text" id="local-search-input" name="q" results="0" placeholder="search" class="st-search-input st-default-search-input form-control"/>
+        </div>
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+
+
+
+</body>
+<footer>
+  
+<script src="https://co5.me/lib/jquery/index.js?v=2.1.3.js"></script>
+
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<script src="/PhotoSwipe/photoswipe.js"></script>
+
+  
+<script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+
+
+<script src="/scripts/main.js"></script>
+
+
+<script src="/scripts/score.js"></script>
+
+
+<script src="/scripts/waline.js"></script>
+
+
+<script src="/scripts/search.js"></script>
+
+
+  
+
+  
+    
+      <script type="text/javascript">
+      Waline({
+        el: '#waline',
+        serverURL: 'https://waline-4o-cx.vercel.app/',
+        emoji: [],
+        uploadImage: false,
+        visitor: true,
+        requiredMeta: ['nick', 'mail'],
+        placeholder:"欢迎留言 ~ 登录非必选项，填上昵称和邮箱即可提交评论并显示 Libravatar / Gravatar",
+      });
+      window.onload = function(){
+        $("#waline-nick" ).attr( "placeholder" , "昵称" );
+        $("#waline-mail" ).attr( "placeholder" , "邮箱" );
+        $("#waline-link" ).attr( "placeholder" , "链接" );
+      }
+      </script>
+    
+  
+
+
+  
+  <script type="text/javascript">      
+    var path = "/search.xml";
+    searchFunc(path, 'local-search-input', 'local-search-result');
+  </script>
+
+  
+<script src="/hekation/emoji.js"></script>
+
+
+<link rel="stylesheet" href="/hekation/emoji.css">
+
+
+<script src="/scripts/HKT-63.js"></script>
+
+</footer>
+</html>

@@ -1,0 +1,25 @@
+.sidebar,
+.post-body,
+.article-toc,
+.toc,
+.highlight table {
+  overflow: hidden;
+}
+.post-body,
+.highlight table {
+  position: relative;
+}
+.ps-scrollbar-y-rail {
+  right: 0 !important;
+  background: transparent !important;
+}
+.ps-scrollbar-x-rail {
+  background: transparent !important;
+}
+.ps-scrollbar-y,
+.ps-scrollbar-x {
+  background: rgba(0,0,0,0.8) !important;
+}
+.search-block .ps-scrollbar-y {
+  background: #fff !important;
+}

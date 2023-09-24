@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://4o.cx/</loc>
+        <changefreq>daily</changefreq>
+        <priority>1</priority>
+    </url>
+
+
+    <url>
+        <loc>https://4o.cx/2023/230924-eee/</loc>
+        <lastmod>2023-09-24T00:07:40.189Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2023/230907-cat/</loc>
+        <lastmod>2023-09-07T05:10:52.178Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2023/230821-diary/</loc>
+        <lastmod>2023-08-20T22:41:42.473Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2023/230814-AHK/</loc>
+        <lastmod>2023-08-14T17:03:17.579Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2023/230811-hkt/</loc>
+        <lastmod>2023-08-11T17:29:31.236Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2023/230719-PH/</loc>
+        <lastmod>2023-08-11T13:25:29.351Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2023/230801-diary/</loc>
+        <lastmod>2023-08-11T12:50:47.133Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2023/230803-note/</loc>
+        <lastmod>2023-08-11T12:50:42.207Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2023/230708-diary/</loc>
+        <lastmod>2023-07-19T11:12:07.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2023/230428-tools/</loc>
+        <lastmod>2023-04-28T15:21:10.823Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2023/230421-finale/</loc>
+        <lastmod>2023-04-28T13:26:46.084Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2023/230422-dontlookback/</loc>
+        <lastmod>2023-04-28T13:26:40.144Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2023/230428-log/</loc>
+        <lastmod>2023-04-28T13:26:34.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2023/230317-restart/</loc>
+        <lastmod>2023-04-28T00:59:11.563Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210904-toc/</loc>
+        <lastmod>2023-03-27T22:56:30.742Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210905-fix/</loc>
+        <lastmod>2023-03-27T22:56:25.389Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210906-log/</loc>
+        <lastmod>2023-03-27T22:56:20.550Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210910-hybris/</loc>
+        <lastmod>2023-03-27T22:56:14.610Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210912-hekatech/</loc>
+        <lastmod>2023-03-27T22:56:04.822Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210917-kaeranai-koe/</loc>
+        <lastmod>2023-03-27T22:56:00.413Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210920-score/</loc>
+        <lastmod>2023-03-27T22:55:56.138Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210921-aimai-na-kibou/</loc>
+        <lastmod>2023-03-27T22:55:51.076Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210922-emoji/</loc>
+        <lastmod>2023-03-27T22:55:46.418Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210928-log/</loc>
+        <lastmod>2023-03-27T22:55:42.345Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210929-waline/</loc>
+        <lastmod>2023-03-27T22:55:37.755Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/211001-ffxiv/</loc>
+        <lastmod>2023-03-27T22:55:31.680Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/211002-ffxivhunt/</loc>
+        <lastmod>2023-03-27T22:55:23.558Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/211002-log/</loc>
+        <lastmod>2023-03-27T22:55:19.485Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/211004-log/</loc>
+        <lastmod>2023-03-27T22:55:16.269Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/211025-diary/</loc>
+        <lastmod>2023-03-27T22:55:07.897Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/211027-active-toc/</loc>
+        <lastmod>2023-03-27T22:55:04.680Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/211105-link/</loc>
+        <lastmod>2023-03-27T22:54:58.178Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/211114-hekateseye/</loc>
+        <lastmod>2023-03-27T22:54:53.880Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/211128-hekatech/</loc>
+        <lastmod>2023-03-27T22:54:50.347Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/220228-diary/</loc>
+        <lastmod>2023-03-27T22:54:44.611Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/220322-hunt/</loc>
+        <lastmod>2023-03-27T22:54:41.056Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/220608-diary/</loc>
+        <lastmod>2023-03-27T22:54:36.870Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/220612-log/</loc>
+        <lastmod>2023-03-27T22:54:28.816Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/220616-emoji/</loc>
+        <lastmod>2023-03-27T22:54:23.236Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/220701-recycle/</loc>
+        <lastmod>2023-03-27T22:54:18.397Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/220704-live2d/</loc>
+        <lastmod>2023-03-27T22:54:14.550Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/220706-live2d/</loc>
+        <lastmod>2023-03-27T22:54:10.794Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/220713-4o-beta/</loc>
+        <lastmod>2023-03-27T22:54:07.036Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/220718-spacedesk/</loc>
+        <lastmod>2023-03-27T22:54:03.638Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/220802-healer/</loc>
+        <lastmod>2023-03-27T22:53:59.971Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/220807-ff/</loc>
+        <lastmod>2023-03-27T22:53:56.640Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/220822-ffxiv/</loc>
+        <lastmod>2023-03-27T22:53:52.816Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/220907-note/</loc>
+        <lastmod>2023-03-27T22:53:47.033Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/221031-showoff/</loc>
+        <lastmod>2023-03-27T22:53:43.029Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/221104-gitlab/</loc>
+        <lastmod>2023-03-27T22:53:39.316Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/221105-log/</loc>
+        <lastmod>2023-03-27T22:53:32.296Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/221202-ipad/</loc>
+        <lastmod>2023-03-27T22:53:27.481Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/221204-ffxiv-icon/</loc>
+        <lastmod>2023-03-27T22:53:23.970Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/221210-diary/</loc>
+        <lastmod>2023-03-27T22:53:20.011Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/221213-gallery/</loc>
+        <lastmod>2023-03-27T22:53:16.006Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/221218-dresscode/</loc>
+        <lastmod>2023-03-27T22:53:11.889Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/221225-achrom/</loc>
+        <lastmod>2023-03-27T22:53:06.353Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2023/230108-anime/</loc>
+        <lastmod>2023-03-27T22:53:02.235Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2023/230204-anime/</loc>
+        <lastmod>2023-03-27T22:52:56.251Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2023/230219-diary/</loc>
+        <lastmod>2023-03-27T22:52:50.175Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2023/230309-gap/</loc>
+        <lastmod>2023-03-27T22:52:43.426Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2023/230313-font/</loc>
+        <lastmod>2023-03-27T22:52:34.223Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210914-ark/</loc>
+        <lastmod>2023-03-16T19:30:39.833Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2023/230305-6c/</loc>
+        <lastmod>2023-03-07T02:53:58.487Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2023/230220-ink/</loc>
+        <lastmod>2023-03-05T23:45:26.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2023/230303-joycon/</loc>
+        <lastmod>2023-03-04T12:53:48.638Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/221220-diary/</loc>
+        <lastmod>2023-02-19T11:37:37.064Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2023/230218-blivechat/</loc>
+        <lastmod>2023-02-18T06:45:39.561Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2023/230217-css/</loc>
+        <lastmod>2023-02-18T02:10:59.028Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2023/230214-note/</loc>
+        <lastmod>2023-02-14T07:11:50.634Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2023/230109-new-year/</loc>
+        <lastmod>2023-01-09T03:03:42.176Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2023/230109-anime/</loc>
+        <lastmod>2023-01-09T02:51:36.779Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/220516-ashes-of-dreams-music-box/</loc>
+        <lastmod>2022-12-13T23:39:15.287Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/221130-P8S-B/</loc>
+        <lastmod>2022-12-13T23:11:55.921Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/221127-brave-little-spark/</loc>
+        <lastmod>2022-11-27T03:46:33.874Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210909-PDR/</loc>
+        <lastmod>2022-11-21T23:08:34.496Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/221115-diary/</loc>
+        <lastmod>2022-11-21T21:17:25.367Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/220613-4o/</loc>
+        <lastmod>2022-11-05T05:53:26.149Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/220219-tonberry/</loc>
+        <lastmod>2022-11-05T05:53:13.280Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210831-log/</loc>
+        <lastmod>2022-11-05T05:52:20.967Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210821-css/</loc>
+        <lastmod>2022-11-05T05:51:08.607Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210821-coding-note/</loc>
+        <lastmod>2022-11-05T05:51:05.075Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210820-coding-note/</loc>
+        <lastmod>2022-11-05T05:50:59.158Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210819-hello-hexo/</loc>
+        <lastmod>2022-11-05T05:50:45.230Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/221029-4o/</loc>
+        <lastmod>2022-11-05T05:47:58.237Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/211006-inishie-no-uta/</loc>
+        <lastmod>2022-11-05T05:46:05.579Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210907-e7a59e/</loc>
+        <lastmod>2022-11-05T05:44:42.194Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210903-log/</loc>
+        <lastmod>2022-11-05T05:44:13.619Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210902-log/</loc>
+        <lastmod>2022-11-05T05:44:08.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210902-HKT-63/</loc>
+        <lastmod>2022-11-05T05:44:03.945Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210901-firefox/</loc>
+        <lastmod>2022-11-05T05:43:54.068Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210828-log/</loc>
+        <lastmod>2022-11-05T05:42:41.349Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210822-img/</loc>
+        <lastmod>2022-11-05T05:42:36.578Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/220620-ff/</loc>
+        <lastmod>2022-06-19T17:30:18.149Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/220615-llf/</loc>
+        <lastmod>2022-06-16T10:25:02.366Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/220227-diary/</loc>
+        <lastmod>2022-02-28T00:48:43.046Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2022/220226-yshtola/</loc>
+        <lastmod>2022-02-27T02:38:12.287Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210718-viera/</loc>
+        <lastmod>2022-02-27T02:27:50.932Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/211103-corset/</loc>
+        <lastmod>2021-11-14T17:54:02.045Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/211106-rinne/</loc>
+        <lastmod>2021-11-06T04:27:56.598Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/211103-request/</loc>
+        <lastmod>2021-11-03T01:20:24.615Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/211020-oura/</loc>
+        <lastmod>2021-10-27T15:04:33.397Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/211024-deer/</loc>
+        <lastmod>2021-10-27T14:42:33.908Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210927-utsukushiki-uta/</loc>
+        <lastmod>2021-09-28T06:21:23.330Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://4o.cx/2021/210714-mio/</loc>
+        <lastmod>2021-09-05T09:44:23.621Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+</urlset>
+<!-- XML Sitemap generated by Hexo SEO Friendly Sitemap Generator -->

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    「修正：滚动条 &amp; 字数统计」 - 無色人間。
+  
+</title>
+
+
+  <link rel="alternative" href="/atom.xml" title="無色人間。" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+
+
+<link rel="stylesheet" href="/styles/main.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <img src="/favicon.png">
+  </button>
+  <a class="title" href="/">無色人間。</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">無色人間。</a></h1>
+    
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/" title="主页" external="false">主页</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/about" title="关于" external="false">关于</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/categories" title="分类" external="false">分类</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/ark" title="｢匣｣" external="false">｢匣｣</a>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">归档</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">27</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">43</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS" external="false">RSS</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="javascript:;" title="搜索" external="false">搜索</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+  <div class="footer">
+    <div class="info">
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="/icon.png"></a>
+          
+        </div>
+      <div class="content">
+        
+          <div class="description">For the glory of mankind.</div>
+        
+        
+          <div class="author">4o</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    <div class="main-content">
+          <div class="post-body">
+
+<article id="post-210905-fix" class="article article-type-post">
+  
+    <div class="article-header">
+      <div class="article-title">
+      <h2>
+      修正：滚动条 & 字数统计
+    </h2>
+    <span class="article-date">
+  2021/09/05
+</span>
+
+    
+
+  <span class="word-count">字数统计：
+    <span class="word-count-symbol">1.5k</span>
+  </span>
+  <span class="word-count">阅读时间：
+    <span class="word-count-time">2 mins</span>
+  </span>
+  
+    <span class="word-count">访问次数：
+      <span id="/2021/210905-fix/" class="waline-visitor-count">...</span>
+    </span>
+    <span class="word-count">评论统计：
+      <span id="/2021/210905-fix/" class="waline-comment-count">...</span>
+    </span>
+  
+
+
+  </div>
+    <div class="article-info">
+    
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E7%BB%B4%E6%8A%A4%E6%97%A5%E5%BF%97/">维护日志</a></li></ul>
+
+
+    
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HKT-924/" rel="tag">HKT-924</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/" rel="tag">前端笔记</a></li></ul>
+
+
+  </div>
+</div>
+  
+  <div class="article-entry">
+    <p>　　昨天因为写了两份滚动条 css 在毛象痛骂 firefox，西风很无奈地告诉我：你看这个属性的 webkit 前缀就告诉你它是 webkit hack 出来的，非 webkit 的浏览器用不了不是很正常吗……<br>　　完全外观至上的我：我知道，但是我就是要骂。<br>　　其实我根本不知道 webkit 是啥——我猜大概是某种协议标准，总之 chrome 和其它主流浏览器基本都是支持的，firefox 喜欢独自美丽，它用的是独立的 css 属性。<br>　　……可是你的滚动条样式也一点不美丽啊？？</p>
+<span id="more"></span>
+
+<p>　　今天这一整天基本都是在瞎整，但居然给我整成功了也是很神奇。<br>　　这大概就是硅基生命的天赋吧……【你</p>
+<p>　　那么今日成果：</p>
+<ul>
+<li>完成了手机端界面大致框架</li>
+<li>使用 <em>perfect-scrollbar</em> 替代了浏览器默认滚动条</li>
+<li>修正了 <em>hexo-symbols-count-time</em> 字数统计错误的问题</li>
+</ul>
+<h3 id="修了但没完全修的滚动条"><a href="#修了但没完全修的滚动条" class="headerlink" title="修了但没完全修的滚动条"></a>修了但没完全修的滚动条</h3><p>　　在我仔细研究了主题源文件之后发现它是自带了 <a target="_blank" rel="noopener" href="https://github.com/mdbootstrap/perfect-scrollbar">Perfect-scrollbar</a> 生成可以用 css 完全控制样式的伪滚动条的，原本的 JS 文件长这样：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Ps.initialize($(<span class="string">&#x27;.sidebar&#x27;</span>)[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line">$(<span class="string">&#x27;.category-list-container &gt; a, .tag-list-container &gt; a, .archive-list-container &gt; a&#x27;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">  $(<span class="built_in">this</span>).next().slideToggle(<span class="string">&#x27;fast&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">$(<span class="string">&#x27;.sidebar-toggle&#x27;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">  $(<span class="string">&#x27;.sidebar&#x27;</span>).toggleClass(<span class="string">&#x27;in&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">$(<span class="string">&#x27;.main-content&#x27;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">  $(<span class="string">&#x27;.sidebar&#x27;</span>).removeClass(<span class="string">&#x27;in&#x27;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>　　以我贫瘠的 JS 水平只能看出第一行创建了 <code>.sidebar</code> 类名下所有元素的滚动条，第二条是控制侧边栏那个归档时间轴的，第三和第四条通过更改 classname 用来控制移动端 UI 的侧边栏开关。<br>　　理解了这几行代码以后我就顺便把手机端的 UI 也整好了，虽然现在看起来还比较粗糙但至少可以保持一个正常的浏览效果了，还是比较满意的。</p>
+<p>　　然后是滚动条部分，我直接复制了 <code>Ps.initialize</code> 并改了我需要的类名放在第一行的底下，然后……然后所有的按钮事件就都失效了……<br>　　目前的解决办法是把这堆玩意直接复制到 <code>main.js</code> 的最底端，能跑，但不完全能跑。首先控制台给我报了个不明所以的 <code>t is undefined</code> ，另外 <code>Ps.initialize</code> 这个命令好像只支持执行单个对象，所以只有第一个代码框可以滚动。<br>　　谷歌搜索 perfect-scrollbar + 多个滚动条，屁都没找到，我自己试了下普通 js 的遍历写法好像不管用，不知道是 jQuery 的选择器写错了还是咋了，总之我决定暂时放弃修正这个问题……具体怎么操作估计只有等我看懂 perfect-scrollbar 的源码才能解决了？<br>　　实现应该是能实现的吧……</p>
+<p>　　瞅了一眼我今天干的事仿佛刚学完五十音图就开始写日文歌词……对吧，简直是一模一样的不知天高地厚的行为啊！！</p>
+<p>　　好，我换英文搜索之后找到了这个 <a target="_blank" rel="noopener" href="https://github.com/mdbootstrap/perfect-scrollbar/issues/246">issue</a> ，稍微修改了一下回答中给出的语法，它现在能跑了，诶？？？<br>　　那么万一有人想抄作业，创建多个 perfect-scrollbar 的方法大概是这样：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&#x27;.classname&#x27;</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  Ps.initialize($(<span class="built_in">this</span>)[<span class="number">0</span>]); </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>　　所用库版本为 <a target="_blank" rel="noopener" href="https://co5.me/lib/jquery/index.js?v=2.1.3.js">jQuery</a> = v2.1.3 ，<a href="https://4o.cx/perfect-scrollbar/js/min/perfect-scrollbar.min.js">perfect-scrollbar</a> = v0.6.10。<br>　　甚至控制台都不报错了诶，诶？？？</p>
+<h3 id="修正字数统计"><a href="#修正字数统计" class="headerlink" title="修正字数统计"></a>修正字数统计</h3><p>　　之前吐槽过 next 的字数统计插件是不是压根单纯统计了文件大小，<del>我真是又菜又跳又爱玩……</del>新建文档逐字输入后检查结果发现计算的逻辑似乎是没有问题的，是我输入的统计对象有问题。<code>post-content</code> 是经过 markdown 引擎渲染之后的 html 代码，统计了致死量 html 标签后输出结果的准确性可想而知。<br>　　实际上 <a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-symbols-count-time">hexo-symbols-count-time</a> 插件有自带的移除 html 标签的功能，在 <strong>hexo</strong> 目录下的 <code>_config.yml</code> 中添加如下内容即可启用：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  exclude_codeblock: true</span><br></pre></td></tr></table></figure>
+
+<p>　　添加后需要修改相关的 <code>layout.ejs</code> 如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (theme.symbols_count_time)&#123; %&gt;</span><br><span class="line"></span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;word-count&quot;</span>&gt;</span>字数统计：</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;word-count-symbol&quot;</span>&gt;</span>&lt;%- symbolsCount(post) %&gt;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;word-count&quot;</span>&gt;</span>阅读时间：</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;word-count-time&quot;</span>&gt;</span>&lt;%- symbolsTime(post, 2, 300, &#x27;mins&#x27;) %&gt;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+
+<p>　　实际上就是把上次写的 <code>post.content</code> 修改为 <code>post</code>，因为这个 <code>post</code> 实际上是插件输入 <code>post.content</code> 后又删除了 html 标签再输出的结果。然后因为字数统计正常了也修正了一下计算阅读时间的参数……<br>　　今天真是折腾了不少东西，好了周末了该打游戏了！</p>
+
+  </div>
+  <div class="clear" style="clear:both;"></div>
+  <footer class="article-footer">
+  </footer>
+</article>
+
+
+  <div class="comment-block">
+    <hr>
+  <div id="waline"></div>
+  </div>
+
+
+<div class="main-footer">
+  <span>© 2023 無色人間。-<a rel="me noopener" target="_blank" href="https://bgme.me/@suzushi">「e686a7e3828c」</a></span>
+  <span>转载本站图文请附上<a href="">「原始链接」</a></span>
+  <span class="description">已收录数据
+    <em class="word-count-symbol">&nbsp;186k&nbsp;</em>
+    字，登记访客&nbsp;
+    <em id="/" class="waline-visitor-count">...</em>
+    &nbsp;人。
+  </span>
+</div>
+</div>
+
+
+
+  <div class="article-toc">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E4%BA%86%E4%BD%86%E6%B2%A1%E5%AE%8C%E5%85%A8%E4%BF%AE%E7%9A%84%E6%BB%9A%E5%8A%A8%E6%9D%A1"><span class="toc-number">1.</span> <span class="toc-text">修了但没完全修的滚动条</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%AD%A3%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1"><span class="toc-number">2.</span> <span class="toc-text">修正字数统计</span></a></li></ol>
+  </div>
+
+
+
+          
+  
+  </div>
+  <div class="hekation">
+
+<svg class="HKT-block" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <circle class="HKT-item" id="HKT-1" cx="128" cy="128" r="120"/>
+  <circle class="HKT-item" id="HKT-2" cx="128" cy="128" r="127"/>
+  <circle class="HKT-item" id="HKT-3" cx="128" cy="128" r="96"/>
+  <circle class="HKT-item" id="HKT-4" cx="128" cy="128" r="72"/>
+  <circle class="HKT-item" id="HKT-5" cx="128" cy="128" r="94"/>
+  <circle class="HKT-item" id="HKT-6" cx="128" cy="128" r="80"/>
+  <circle class="HKT-item" id="HKT-7" cx="128" cy="128" r="47"/>
+  <circle class="HKT-item" id="HKT-8" cx="128" cy="128" r="32"/>
+  <circle class="HKT-item" id="HKT-9" cx="128" cy="128" r="28"/>
+  <circle class="HKT-item" id="HKT-10" cx="128" cy="128" r="24"/>
+</svg>
+
+</div>
+
+  
+
+    <div class="search-block">
+      <div id="site_search">
+        <div class="form-group">
+          <input type="text" id="local-search-input" name="q" results="0" placeholder="search" class="st-search-input st-default-search-input form-control"/>
+        </div>
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+
+
+
+</body>
+<footer>
+  
+<script src="https://co5.me/lib/jquery/index.js?v=2.1.3.js"></script>
+
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<script src="/PhotoSwipe/photoswipe.js"></script>
+
+  
+<script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+
+
+<script src="/scripts/main.js"></script>
+
+
+<script src="/scripts/score.js"></script>
+
+
+<script src="/scripts/waline.js"></script>
+
+
+<script src="/scripts/search.js"></script>
+
+
+  
+
+  
+    
+      <script type="text/javascript">
+      Waline({
+        el: '#waline',
+        serverURL: 'https://waline-4o-cx.vercel.app/',
+        emoji: [],
+        uploadImage: false,
+        visitor: true,
+        requiredMeta: ['nick', 'mail'],
+        placeholder:"欢迎留言 ~ 登录非必选项，填上昵称和邮箱即可提交评论并显示 Libravatar / Gravatar",
+      });
+      window.onload = function(){
+        $("#waline-nick" ).attr( "placeholder" , "昵称" );
+        $("#waline-mail" ).attr( "placeholder" , "邮箱" );
+        $("#waline-link" ).attr( "placeholder" , "链接" );
+      }
+      </script>
+    
+  
+
+
+  
+  <script type="text/javascript">      
+    var path = "/search.xml";
+    searchFunc(path, 'local-search-input', 'local-search-result');
+  </script>
+
+  
+<script src="/hekation/emoji.js"></script>
+
+
+<link rel="stylesheet" href="/hekation/emoji.css">
+
+
+<script src="/scripts/HKT-63.js"></script>
+
+</footer>
+</html>

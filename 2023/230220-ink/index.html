@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    「记录：从 0 开始的 ink 旅程」 - 無色人間。
+  
+</title>
+
+
+  <link rel="alternative" href="/atom.xml" title="無色人間。" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+
+
+<link rel="stylesheet" href="/styles/main.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <img src="/favicon.png">
+  </button>
+  <a class="title" href="/">無色人間。</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">無色人間。</a></h1>
+    
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/" title="主页" external="false">主页</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/about" title="关于" external="false">关于</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/categories" title="分类" external="false">分类</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/ark" title="｢匣｣" external="false">｢匣｣</a>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">归档</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">27</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">43</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS" external="false">RSS</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="javascript:;" title="搜索" external="false">搜索</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+  <div class="footer">
+    <div class="info">
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="/icon.png"></a>
+          
+        </div>
+      <div class="content">
+        
+          <div class="description">For the glory of mankind.</div>
+        
+        
+          <div class="author">4o</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    <div class="main-content">
+          <div class="post-body">
+
+<article id="post-230220-ink" class="article article-type-post">
+  
+    <div class="article-header">
+      <div class="article-title">
+      <h2>
+      记录：从 0 开始的 ink 旅程
+    </h2>
+    <span class="article-date">
+  2023/02/20
+</span>
+
+    
+
+  <span class="word-count">字数统计：
+    <span class="word-count-symbol">1.6k</span>
+  </span>
+  <span class="word-count">阅读时间：
+    <span class="word-count-time">3 mins</span>
+  </span>
+  
+    <span class="word-count">访问次数：
+      <span id="/2023/230220-ink/" class="waline-visitor-count">...</span>
+    </span>
+    <span class="word-count">评论统计：
+      <span id="/2023/230220-ink/" class="waline-comment-count">...</span>
+    </span>
+  
+
+
+  </div>
+    <div class="article-info">
+    
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E9%BB%92%E3%83%8B%E3%82%B3%E3%83%AB/">黒ニコル</a></li></ul>
+
+
+    
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/4o/" rel="tag">4o</a></li></ul>
+
+
+  </div>
+</div>
+  
+  <div class="article-entry">
+    <p>　　虽然这个页面会在直播的时候放出来但反正早播的时候大概也没几个人所以偷偷非正式地宣布一下，之后会以「黒ニコル」的身份投入游戏制作的工作中。<br>　　狒不动了.jpg<br>　　查了一下 ink 曾经有过中文文档，但目前域名是无法访问的状态，作者的 github 也有小半年没有动静了。所以还是要自己动手汉化一份的样子，总之先从官网上的新手教程开始？<br>　　也不会是特别忠实的逐字翻译，主要还是一篇笔记向的文章，如果能对看到的人有所帮助就最好不过了。</p>
+<span id="more"></span>
+
+<h3 id="Ink-inky-是什么？"><a href="#Ink-inky-是什么？" class="headerlink" title="Ink / inky 是什么？"></a>Ink / inky 是什么？</h3><p>　　Inky 是一个用于<em>互动小说</em>或者文字游戏的编辑器，ink 是配套使用的脚本，基于 Javascript 开发。<br>　　大概就是这样？<br>　　Ink 的生成结果是完全由 dom 生成的，这意味着你的游戏界面可以轻松适配各种尺寸的屏幕，并可以通过 JS 与其它网页元素联动。←总之这是我的需求，不过官方的示例是纯文本的。<br>　　官网地址：<a target="_blank" rel="noopener" href="https://www.inklestudios.com/ink">https://www.inklestudios.com/ink</a><br>　　Github：<a target="_blank" rel="noopener" href="https://github.com/inkle/ink">https://github.com/inkle/ink</a></p>
+<h3 id="界面介绍"><a href="#界面介绍" class="headerlink" title="界面介绍"></a>界面介绍</h3><p>　　嗯？我真的要写这个吗？先占个坑吧【</p>
+<h3 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h3><h4 id="节点与章节-KNOTS"><a href="#节点与章节-KNOTS" class="headerlink" title="节点与章节 / KNOTS"></a>节点与章节 / KNOTS</h4><ul>
+<li>基本语法<ul>
+<li>节点：<code>=== TITLE ===</code></li>
+<li>章节：<code>== TITLE</code></li>
+</ul>
+</li>
+</ul>
+<p>　　Ink 剧本的基本构成单位，可以理解为小说中的「章节」与「段落」，节点的标题会成为不同选项跳转的标记，因此显然是不可以重复命名的。</p>
+<h4 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h4><ul>
+<li>基本语法<ul>
+<li>单次选项：<code>\* AAA[BBB]CCC</code><br>生成的选项按钮为<em>AAABBBCCC</em><br>点击后显示的内容为<em>AAACCC</em><br>点击后会自动移除</li>
+<li>永久选项：<code>+ AAA[BBB]CCC</code><br>内容显示规律同上<br>点击后还会重复出现</li>
+</ul>
+</li>
+</ul>
+<h4 id="跳转"><a href="#跳转" class="headerlink" title="跳转"></a>跳转</h4><ul>
+<li>基本语法<br>  <code>-&gt; TITLE</code></li>
+</ul>
+<p>　　按照语法规范 ink 的脚本必须以 <code>-&gt; END</code> 结尾。</p>
+<h4 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h4><ul>
+<li>基本语法<ul>
+<li>清空屏幕：<code># CLEAR</code></li>
+<li>插入图片：<code># IMAGE: filename.png</code></li>
+<li>更改背景图：<code># BACKGROUND: filename.png</code></li>
+<li>插入BGM：<code># AUDIO: filename.mp3</code></li>
+<li>更改生成文本的 classname：<code># CLASS: classname</code></li>
+</ul>
+</li>
+</ul>
+<p>　　这一功能在官网上并没有介绍，但是是 Ink 的上限所在，可以通过编辑生成的 <code>main.js</code> 文件创建各种自定义标签，甚至可以控制网页上其它元素，例如 Live2D。</p>
+<h3 id="剧本"><a href="#剧本" class="headerlink" title="剧本"></a>剧本</h3><p>　　互动小说的核心功能就是选项与跳转，那么以下是一些示例，可以复制到 inky 中自行测试一下：</p>
+<h4 id="单次选项"><a href="#单次选项" class="headerlink" title="单次选项"></a>单次选项</h4><p>　　我更倾向于称呼它为「一次性选项」，但软件界面中的中文文本是「单次选项」，为了阅读体验还是以软件内译名为准。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">　　早上 4 点半，猫猫辅助机从睡梦中醒来，她决定：-&gt; CHOOSE</span><br><span class="line"></span><br><span class="line">=== CHOOSE ===</span><br><span class="line"></span><br><span class="line"> * [吃饭]</span><br><span class="line">　　辅助机决定去吃饭。来到饭碗面前，发现昨晚吃得太多碗已经空了。 </span><br><span class="line">   -&gt; CHOOSE</span><br><span class="line"> * [磨爪子]</span><br><span class="line">　　辅助机决定去纸壳猫抓板上磨爪子，很快地上出现了很多新鲜的纸屑。 </span><br><span class="line">   -&gt; CHOOSE</span><br><span class="line"> * [总之先踩阿盐一脚]</span><br><span class="line">　　辅助机一时也不知道要去干嘛，总之先在阿盐肚子上踩一脚再说。 </span><br><span class="line">   -&gt; ENDING</span><br><span class="line"></span><br><span class="line">=== ENDING ===</span><br><span class="line">　　阿盐被踩醒了，骂了一句「臭猫」爬起来给辅助机喂饭。</span><br><span class="line">　　今天也是只睡了两个小时的一天呢，哈哈（哈哈）。</span><br><span class="line">-&gt; END</span><br></pre></td></tr></table></figure>
+
+<p>　　<em>#养猫人造人的真实生活</em> 哈哈（哈哈）:4o-2:<br>　　那么这一段文本的运行逻辑是，在第一行后跳转到选项部分，也就是 <code>CHOOSE</code> 节点。在点击前两个选项后会返回 <code>CHOOSE</code> 节点的开始重新运行一遍，因为 <code>\*</code> 开头的是「单次选项」，所以当我们再次回到选项结点时，已经点击过的选项会被移除。</p>
+<h4 id="永久选项"><a href="#永久选项" class="headerlink" title="永久选项"></a>永久选项</h4><p>　　与单次选项相反，永久选项在点击后也会一直存在于节点中。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">　　猫猫辅助机在床边发现了一个线头，她决定…… -&gt; CHOOSE</span><br><span class="line"></span><br><span class="line">=== CHOOSE ===</span><br><span class="line"></span><br><span class="line"> + [这是什么？咬一口]</span><br><span class="line">　　这是什么？咬一口，哎呀舌头被勾住了，快吐出来。-&gt; CHOOSE</span><br><span class="line"> + [算了] </span><br><span class="line">　　辅助机觉得这个线头对她没有吸引力，于是继续睡觉了。</span><br><span class="line"> -&gt; END</span><br></pre></td></tr></table></figure>
+
+<p>　　那么在这个剧本中，猫猫辅助机可以不停地重复咬线头的动作，直到选中「算了」。<del>这猫好像不太聪明的样子</del></p>
+<h3 id="编织？"><a href="#编织？" class="headerlink" title="编织？"></a>编织？</h3><p>　　由于 ink 仅支持单个存档和单个剧本文件的特性，很显然它并不适合展示长篇游戏文本，但对于个人短篇文字游戏或者 demo 来说是非常便利的。除了上述的标准语法外，ink 还提供了名为「<em>编织 / weave</em>」的高级语法，在写作上更为精简，但无法重复进入选项列表。<br>　　我暂时也没搞明白所以先坑着吧【</p>
+<h3 id="多媒体标签"><a href="#多媒体标签" class="headerlink" title="多媒体标签"></a>多媒体标签</h3><p>　　前文提到过 ink 自带添加音频 / 图片与切换背景图的功能，那么在此基础上可以拓展开发其它功能，比如以下是一个切换立绘的案例：</p>
+<ul>
+<li>在导出网页后修改 <code>index.html</code><br>添加 <code>&lt;div class=&#39;charactor&#39;&gt;&lt;/div&gt;</code> 作为立绘放置区域</li>
+<li>修改 <code>style.css</code> 文件，将立绘放置区域移动到指定位置<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.charaA</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">256px</span>;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">256px</span>;</span><br><span class="line">    <span class="attribute">position</span>: fixed;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">10%</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: none;</span><br><span class="line">    <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>修改 <code>main.js</code> 文件，参考切换背景图的代码添加自定义切换立绘标签<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">    <span class="keyword">var</span> storyContainer = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;#story&#x27;</span>);</span><br><span class="line">    <span class="keyword">var</span> outerScrollContainer = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.outerContainer&#x27;</span>);</span><br><span class="line">+   <span class="keyword">var</span> charactorChange = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.charactor&#x27;</span>);</span><br><span class="line">...</span><br><span class="line">    <span class="comment">// BACKGROUND: src</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>( splitTag &amp;&amp; splitTag.property == <span class="string">&quot;BACKGROUND&quot;</span> ) &#123;</span><br><span class="line">        outerScrollContainer.style.backgroundImage = <span class="string">&#x27;url(&#x27;</span>+splitTag.val+<span class="string">&#x27;)&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">+   <span class="comment">// CHARACTOR: src</span></span><br><span class="line">+   <span class="keyword">else</span> <span class="keyword">if</span>( splitTag &amp;&amp; splitTag.property == <span class="string">&quot;CHARACTOR&quot;</span> ) &#123;</span><br><span class="line">+       <span class="keyword">if</span>(<span class="string">&#x27;0&#x27;</span> <span class="keyword">in</span> <span class="built_in">this</span>) &#123;</span><br><span class="line">+       charactorChange.style.backgroundImage = <span class="string">&#x27;none&#x27;</span>;</span><br><span class="line">+     &#125;</span><br><span class="line">+       charactorChange.style.backgroundImage = <span class="string">&#x27;url(&#x27;</span>+splitTag.val+<span class="string">&#x27;)&#x27;</span>;</span><br><span class="line">+   &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>修改完毕后即可在正文内通过 <code># CHARACTOR: filename.png</code> 切换立绘显示<br>当标签为 <code># CHARACTOR: 0</code> 时则会移除立绘图片（切换为透明背景）</li>
+</ul>
+
+  </div>
+  <div class="clear" style="clear:both;"></div>
+  <footer class="article-footer">
+  </footer>
+</article>
+
+
+  <div class="comment-block">
+    <hr>
+  <div id="waline"></div>
+  </div>
+
+
+<div class="main-footer">
+  <span>© 2023 無色人間。-<a rel="me noopener" target="_blank" href="https://bgme.me/@suzushi">「e686a7e3828c」</a></span>
+  <span>转载本站图文请附上<a href="">「原始链接」</a></span>
+  <span class="description">已收录数据
+    <em class="word-count-symbol">&nbsp;186k&nbsp;</em>
+    字，登记访客&nbsp;
+    <em id="/" class="waline-visitor-count">...</em>
+    &nbsp;人。
+  </span>
+</div>
+</div>
+
+
+
+  <div class="article-toc">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Ink-inky-%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">Ink &#x2F; inky 是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%95%8C%E9%9D%A2%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.</span> <span class="toc-text">界面介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%84"><span class="toc-number">3.</span> <span class="toc-text">结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8A%82%E7%82%B9%E4%B8%8E%E7%AB%A0%E8%8A%82-KNOTS"><span class="toc-number">3.1.</span> <span class="toc-text">节点与章节 &#x2F; KNOTS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%89%E9%A1%B9"><span class="toc-number">3.2.</span> <span class="toc-text">选项</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B7%B3%E8%BD%AC"><span class="toc-number">3.3.</span> <span class="toc-text">跳转</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%87%E7%AD%BE"><span class="toc-number">3.4.</span> <span class="toc-text">标签</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%A7%E6%9C%AC"><span class="toc-number">4.</span> <span class="toc-text">剧本</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E6%AC%A1%E9%80%89%E9%A1%B9"><span class="toc-number">4.1.</span> <span class="toc-text">单次选项</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B0%B8%E4%B9%85%E9%80%89%E9%A1%B9"><span class="toc-number">4.2.</span> <span class="toc-text">永久选项</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E7%BB%87%EF%BC%9F"><span class="toc-number">5.</span> <span class="toc-text">编织？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E5%AA%92%E4%BD%93%E6%A0%87%E7%AD%BE"><span class="toc-number">6.</span> <span class="toc-text">多媒体标签</span></a></li></ol>
+  </div>
+
+
+
+          
+  
+  </div>
+  <div class="hekation">
+
+<svg class="HKT-block" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <circle class="HKT-item" id="HKT-1" cx="128" cy="128" r="120"/>
+  <circle class="HKT-item" id="HKT-2" cx="128" cy="128" r="127"/>
+  <circle class="HKT-item" id="HKT-3" cx="128" cy="128" r="96"/>
+  <circle class="HKT-item" id="HKT-4" cx="128" cy="128" r="72"/>
+  <circle class="HKT-item" id="HKT-5" cx="128" cy="128" r="94"/>
+  <circle class="HKT-item" id="HKT-6" cx="128" cy="128" r="80"/>
+  <circle class="HKT-item" id="HKT-7" cx="128" cy="128" r="47"/>
+  <circle class="HKT-item" id="HKT-8" cx="128" cy="128" r="32"/>
+  <circle class="HKT-item" id="HKT-9" cx="128" cy="128" r="28"/>
+  <circle class="HKT-item" id="HKT-10" cx="128" cy="128" r="24"/>
+</svg>
+
+</div>
+
+  
+
+    <div class="search-block">
+      <div id="site_search">
+        <div class="form-group">
+          <input type="text" id="local-search-input" name="q" results="0" placeholder="search" class="st-search-input st-default-search-input form-control"/>
+        </div>
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+
+
+
+</body>
+<footer>
+  
+<script src="https://co5.me/lib/jquery/index.js?v=2.1.3.js"></script>
+
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<script src="/PhotoSwipe/photoswipe.js"></script>
+
+  
+<script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+
+
+<script src="/scripts/main.js"></script>
+
+
+<script src="/scripts/score.js"></script>
+
+
+<script src="/scripts/waline.js"></script>
+
+
+<script src="/scripts/search.js"></script>
+
+
+  
+
+  
+    
+      <script type="text/javascript">
+      Waline({
+        el: '#waline',
+        serverURL: 'https://waline-4o-cx.vercel.app/',
+        emoji: [],
+        uploadImage: false,
+        visitor: true,
+        requiredMeta: ['nick', 'mail'],
+        placeholder:"欢迎留言 ~ 登录非必选项，填上昵称和邮箱即可提交评论并显示 Libravatar / Gravatar",
+      });
+      window.onload = function(){
+        $("#waline-nick" ).attr( "placeholder" , "昵称" );
+        $("#waline-mail" ).attr( "placeholder" , "邮箱" );
+        $("#waline-link" ).attr( "placeholder" , "链接" );
+      }
+      </script>
+    
+  
+
+
+  
+  <script type="text/javascript">      
+    var path = "/search.xml";
+    searchFunc(path, 'local-search-input', 'local-search-result');
+  </script>
+
+  
+<script src="/hekation/emoji.js"></script>
+
+
+<link rel="stylesheet" href="/hekation/emoji.css">
+
+
+<script src="/scripts/HKT-63.js"></script>
+
+</footer>
+</html>

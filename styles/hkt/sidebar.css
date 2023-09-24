@@ -1,0 +1,106 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  justify-content: space-between;
+  z-index: 9;
+}
+.sidebar .header {
+  flex-basis: 30%;
+  text-align: left;
+  padding-top: 1.5em;
+  padding-left: 2em;
+}
+.sidebar .header a {
+  color: l-gray;
+  font-size: 35px;
+}
+.sidebar .body .nav {
+  padding-left: 0;
+  margin-left: 30%;
+}
+.sidebar .body li {
+  display: block;
+}
+.sidebar .body li >a {
+  padding: 0.2em 2em;
+  margin: 0.3em 0;
+  display: block;
+  color: l-gray;
+  position: relative;
+}
+.sidebar .body li >a::before {
+  content: '';
+  background: l-gray;
+  width: 0.8em;
+  height: 0.8em;
+  display: inline-flex;
+  position: absolute;
+  left: 1em;
+  top: 13px;
+  box-shadow: text-light;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.sidebar .body li >a:hover,
+.sidebar .body li >a.active {
+  padding-right: 1.5em;
+  color: #fff;
+  background-color: o-light;
+  text-shadow: text-light;
+}
+.sidebar .body li >a:hover::before,
+.sidebar .body li >a.active::before {
+  opacity: 1;
+}
+.sidebar .body li .archive-list {
+  padding-left: 0;
+}
+.sidebar .body li .archive-list-item {
+  margin-right: 2em;
+  line-height: 2em;
+  display: inline-block;
+}
+.sidebar .body li .archive-list-link {
+  margin-top: 0;
+  padding: 0;
+  display: inline-block;
+  font-size: 14px;
+}
+.sidebar .body li .archive-list-link::before {
+  content: none;
+}
+.sidebar .body li .archive-list-link:hover,
+.sidebar .body li .archive-list-link.active {
+  background: none;
+  padding: 0;
+}
+.sidebar .body li .archive-list-count {
+  font-size: 14px;
+  flex-shrink: 0;
+  width: 15px;
+  text-align: left;
+  color: h-light;
+  margin-left: 1em;
+}
+.sidebar .footer {
+  margin: 2em 1.5em 2em 2em;
+  flex-grow: 0;
+}
+.sidebar .footer .description {
+  font-size: 14px;
+}
+.sidebar .footer .author {
+  font-size: 20px;
+}
+.sidebar .footer .avatar img {
+  border-radius: 50%;
+  width: 120px;
+  max-width: 50%;
+  border: 2px solid l-gray;
+  margin-bottom: 1em;
+}
+.sidebar .footer .avatar img:hover {
+  border-color: h-light;
+  opacity: 0.9;
+}

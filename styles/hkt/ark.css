@@ -1,0 +1,53 @@
+.ark-box {
+  display: flex;
+  width: 1200px;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  margin-bottom: 2em;
+}
+.ark-box .box-in {
+  width: 32%;
+  display: block;
+  border: 0;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: init-shadow;
+}
+.ark-box .box-in span {
+  position: absolute;
+  left: 10px;
+  bottom: 16px;
+  font-size: 24px;
+  opacity: 0;
+  color: l-gray;
+  transition: all 0.5s;
+  text-shadow: none;
+}
+.ark-box .box-in .box-cover {
+  width: 100%;
+  height: 0px;
+  padding-bottom: 100%;
+  background-size: cover;
+  opacity: 0.9;
+  filter: grayscale(50%);
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+.ark-box .box-in:hover {
+  background-color: #000 !important;
+}
+.ark-box .box-in:hover span {
+  opacity: 1;
+  text-shadow: 0 0 7px h-light;
+}
+.ark-box .box-in:hover .box-cover {
+  opacity: 0.2;
+  background-color: h-light;
+}
+@media mq-normal {
+  .ark-box {
+    aspect-ratio: 1;
+  }
+}

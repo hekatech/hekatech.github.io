@@ -1,0 +1,224 @@
+.article-gallery-img {
+  display: inline-flex;
+  flex-direction: column;
+  margin: 0;
+  transition: all 0.5s;
+}
+.article-gallery-img a {
+  border-bottom: 0;
+  line-height: 0;
+  flex-shrink: 1;
+  flex-grow: 1;
+  min-height: 0;
+}
+.article-gallery-img a img {
+  opacity: 0.8;
+  object-fit: cover;
+}
+.article-gallery-img span {
+  display: block;
+  flex-shrink: 0;
+  line-height: 1.5em;
+  font-size: 14px;
+  padding: 6px 10px;
+  background: rgba(0,0,0,0.2);
+  color: #000;
+  transition: all 0.5s;
+}
+.article-gallery-img a:hover img {
+  opacity: 1;
+}
+.article-gallery-img:hover span {
+  background: #000;
+  color: #fff;
+}
+.article-gallery-img span::before {
+  content: ' ■ ';
+}
+.img-inline {
+  margin: 0;
+}
+.img-left,
+.img-center,
+.img-right {
+  position: relative;
+  max-width: 100%;
+  background-color: rgba(0,0,0,0.1);
+  border: 1px solid #808080;
+  border-radius: 0;
+}
+.img-left img,
+.img-center img,
+.img-right img {
+  max-width: calc(100% - 40px);
+  border: 1px solid #808080;
+  margin: 15px 0 15px 25px;
+  height: auto;
+}
+.img-left .caption,
+.img-center .caption,
+.img-right .caption {
+  transition: all 0.5s;
+  color: d-gray;
+  padding: 1em 0;
+}
+.img-left .caption::before,
+.img-center .caption::before,
+.img-right .caption::before {
+  content: '||';
+  font-size: 10px;
+  margin-right: 5px;
+  vertical-align: top;
+}
+.img-left::before,
+.img-center::before,
+.img-right::before {
+  content: ' ';
+  width: 5px;
+  height: calc(100% + 2px);
+  position: absolute;
+  top: -1px;
+  left: -2px;
+  border-left: 8px solid #000;
+  border-right: 2px solid #000;
+}
+.img-left:hover,
+.img-center:hover,
+.img-right:hover {
+  border-radius: 0 2em 2em 0;
+  box-shadow: init-shadow;
+  background-color: rgba(0,0,0,0.2);
+}
+.img-left:hover img,
+.img-center:hover img,
+.img-right:hover img {
+  border-radius: 0 1.5em 1.5em 0;
+}
+.img-left:hover .caption,
+.img-center:hover .caption,
+.img-right:hover .caption {
+  color: #000;
+}
+.img-left {
+  margin: 0 2em 1em 0;
+  float: left;
+  max-width: calc(50% - 1.5em);
+}
+.img-left img {
+  max-height: 500px;
+}
+.img-right {
+  margin: 0 0 0 2em;
+  float: right;
+  max-width: calc(50% - 1.5em);
+}
+.img-right img {
+  margin: 15px;
+  max-height: 500px;
+}
+.img-right:hover {
+  border-radius: 2em 0 0 2em;
+}
+.img-right:hover img {
+  border-radius: 1.5em 0 0 1.5em;
+}
+.img-right::before {
+  display: none;
+}
+.img-right::after {
+  content: ' ';
+  width: 5px;
+  height: calc(100% + 2px);
+  position: absolute;
+  top: -1px;
+  right: -2px;
+  border-right: 8px solid #000;
+  border-left: 2px solid #000;
+}
+.img-center {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+.img-box {
+  display: flex;
+  line-height: 0;
+  margin: 1em;
+  max-width: 816px;
+}
+.img-box .img-column {
+  max-width: 50%;
+}
+.img-box .x11 {
+  width: 400px;
+  height: 392px;
+  object-fit: cover;
+  border-radius: 1em;
+  max-width: 100%;
+  box-shadow: init-shadow;
+}
+.img-box .x12 {
+  width: 400px;
+  height: 800px;
+  object-fit: cover;
+  border-radius: 1em;
+  box-shadow: init-shadow;
+}
+.img-box .dot {
+  background: rgba(0,0,0,0.2);
+}
+.img-box .note {
+  border-top: 1px solid l-gray;
+  border-bottom: 1px solid #808080;
+  line-height: 2em;
+  background: rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 1em;
+  box-sizing: border-box;
+  margin-right: 1em;
+  max-width: calc(100% - 16px);
+}
+.img-box .note >ul >li::before {
+  content: '▞';
+  margin-right: 0.5em;
+  color: #000;
+  margin-left: -1.5em;
+}
+.img-box .note >ul >li >ul >li::before {
+  content: '▚';
+  margin-right: 0.5em;
+  color: #000;
+  margin-left: -1.5em;
+}
+.img-box .note.null {
+  background: rgba(0,0,0,0.2);
+}
+.gallery ul {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1em;
+  max-height: 450px;
+  padding: 0;
+}
+.gallery .article-gallery-img,
+.gallery .article-gallery-img a img {
+  height: 100%;
+  width: 100%;
+}
+.gallery ul li::before {
+  content: '';
+  margin: 0;
+}
+.gallery ul li {
+  flex-shrink: 1.1;
+  transition: all 0.5s;
+  min-width: 0;
+}
+.gallery ul li:hover {
+  flex-shrink: 1;
+}
+.gallery .article-gallery-img a:hover img {
+  padding-right: 2em;
+}

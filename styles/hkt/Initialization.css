@@ -1,0 +1,173 @@
+@font-face {
+  font-family: ffxiv;
+  src: url("/font/FFXIV_Lodestone_SSF.woff") format('woff');
+  src: url("/font/FFXIV_Lodestone_SSF.ttf") format("truetype");
+}
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+.highlight.plaintext {
+  clear: both;
+}
+p {
+  text-align: justify;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  color: #4d4d4d;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5em;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: #4d4d4d;
+  font-weight: 600;
+  line-height: 1.5em;
+}
+body {
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+img {
+  max-width: 100%;
+  transition: all 0.5s;
+}
+.mobile-header {
+  display: none;
+}
+h2 {
+  color: #000;
+  font-size: 40px;
+}
+h2::before {
+  content: '「';
+  display: inline-block;
+  vertical-align: top;
+  margin-right: -0.1em;
+  color: #808080;
+  font-size: 0.7em;
+}
+h2::after {
+  content: '」';
+  display: inline-block;
+  margin-left: -0.1em;
+  color: rgba(145,105,181,0.9);
+  font-size: 0.7em;
+}
+h3 {
+  background-color: rgba(0,0,0,0.8);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  padding-left: 53px;
+  position: relative;
+  margin: 2em 0 1.5em 0;
+}
+h3::before {
+  content: ' ';
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 8px;
+  left: 30px;
+  background-color: #fff;
+}
+h3::after {
+  content: ' ';
+  width: 100%;
+  height: calc(100% + 8px);
+  position: absolute;
+  top: -6px;
+  left: 0;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+h4 {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.8em;
+  position: relative;
+  padding-left: 48px;
+  margin-left: 16px;
+  width: 50%;
+  max-width: 25em;
+  background-color: rgba(0,0,0,0.15);
+  color: #000;
+}
+h4::before {
+  content: ' ';
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: 8px solid #000;
+  border-right: 2px solid #000;
+}
+h5 {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.8em;
+  margin-left: 34px;
+  position: relative;
+  display: inline-block;
+  background-color: rgba(0,0,0,0.8);
+  padding: 0 3em 0 2em;
+  color: #ccc;
+}
+h5::before {
+  content: " ";
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  background-color: #ccc;
+  position: absolute;
+  top: calc(50% - 7px);
+  left: 10px;
+}
+h5::after {
+  content: ' ';
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 8px;
+  border-left: 2px solid #ccc;
+  border-right: 4px solid #ccc;
+}
+ul+h4,
+h4+ul,
+ul+h5,
+h5+ul,
+h4+h5,
+h5+h4,
+blockquote+h4,
+h4+blockquote,
+.highlight+h4,
+h4+.highlight,
+h4+.gallery,
+.gallery+h4,
+blockquote+h5,
+h5+blockquote,
+.highlight+h5,
+h5+.highlight,
+h5+.gallery,
+.gallery+h5 {
+  margin-top: 1.5em;
+}

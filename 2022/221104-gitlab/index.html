@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    「记录：部署第二个 hexo 至 gitlab」 - 無色人間。
+  
+</title>
+
+
+  <link rel="alternative" href="/atom.xml" title="無色人間。" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+
+
+<link rel="stylesheet" href="/styles/main.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <img src="/favicon.png">
+  </button>
+  <a class="title" href="/">無色人間。</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">無色人間。</a></h1>
+    
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/" title="主页" external="false">主页</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/about" title="关于" external="false">关于</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/categories" title="分类" external="false">分类</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/ark" title="｢匣｣" external="false">｢匣｣</a>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">归档</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">27</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">43</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS" external="false">RSS</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="javascript:;" title="搜索" external="false">搜索</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+  <div class="footer">
+    <div class="info">
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="/icon.png"></a>
+          
+        </div>
+      <div class="content">
+        
+          <div class="description">For the glory of mankind.</div>
+        
+        
+          <div class="author">4o</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    <div class="main-content">
+          <div class="post-body">
+
+<article id="post-221104-gitlab" class="article article-type-post">
+  
+    <div class="article-header">
+      <div class="article-title">
+      <h2>
+      记录：部署第二个 hexo 至 gitlab
+    </h2>
+    <span class="article-date">
+  2022/11/04
+</span>
+
+    
+
+  <span class="word-count">字数统计：
+    <span class="word-count-symbol">1.1k</span>
+  </span>
+  <span class="word-count">阅读时间：
+    <span class="word-count-time">2 mins</span>
+  </span>
+  
+    <span class="word-count">访问次数：
+      <span id="/2022/221104-gitlab/" class="waline-visitor-count">...</span>
+    </span>
+    <span class="word-count">评论统计：
+      <span id="/2022/221104-gitlab/" class="waline-comment-count">...</span>
+    </span>
+  
+
+
+  </div>
+    <div class="article-info">
+    
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E7%BB%B4%E6%8A%A4%E6%97%A5%E5%BF%97/">维护日志</a></li></ul>
+
+
+    
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HKT-924/" rel="tag">HKT-924</a></li></ul>
+
+
+  </div>
+</div>
+  
+  <div class="article-entry">
+    <p>　　221105：现在是 11.5 凌晨 1 点，我只成功把 hexo 文件 push 到了 gitlab 的仓库，开启 page 还需要搭一个 runners，但是我实在困死了决定先去睡觉，以下内容全部是草稿，只有参考文件是可信的【</p>
+<span id="more"></span>
+
+<h3 id="创建第二个本地-hexo-库"><a href="#创建第二个本地-hexo-库" class="headerlink" title="创建第二个本地 hexo 库"></a>创建第二个本地 hexo 库</h3><h4 id="新建文件夹，复制原仓库内容"><a href="#新建文件夹，复制原仓库内容" class="headerlink" title="新建文件夹，复制原仓库内容"></a>新建文件夹，复制原仓库内容</h4><p>　　将 <code>.npmignore</code> 重命名为 <code>.gitignore</code><br>　　清空 url 与 deploy 内的设置<br>　　新建 <code>.gitlab-ci.yml</code>，直接复制官方示例仓库内容</p>
+<h4 id="设置用户名与邮箱"><a href="#设置用户名与邮箱" class="headerlink" title="设置用户名与邮箱"></a>设置用户名与邮箱</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fatal: not in a git directory</span><br></pre></td></tr></table></figure>
+
+<h4 id="创建-ssh"><a href="#创建-ssh" class="headerlink" title="创建 ssh"></a>创建 ssh</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh</span><br><span class="line"># 移动到 ssh 目录</span><br><span class="line">ssh-keygen -t rsa -C &quot;【你用来注册 gitlab】@【的邮箱】.com&quot;</span><br><span class="line"># 创建 gitlab 对应邮箱的 ssh</span><br></pre></td></tr></table></figure>
+
+<p>　　输入完这两行命令后会出现：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file in which to save the key (【电脑用户文件夹】/.ssh/id_rsa):</span><br><span class="line"># 输入 ssh 存放的位置，如不填写则生成在括号中的位置</span><br></pre></td></tr></table></figure>
+
+<p>　　因为已经存在 github 账号的 ssh，所以请完整地重新输入一遍括号中的内容，并将最后的 <code>id_rsa</code> 改为其它文件名如 <code>id_rsa_gitlab</code> 并回车。<br>　　Ps. 这里如果使用的是你自己的文件名，请在下文看到 <code>id_rsa_gitlab</code> 的时候自动替换。<br>　　之后还会出现两行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase):</span><br><span class="line">Enter same passphrase again:</span><br></pre></td></tr></table></figure>
+
+<p>　　这两行什么都不用管直接回车就好。之后会出现提示显示你的私钥和公钥分别存储在哪里，并出现一张类似气泡水的字符画【？总之看到这个表示你的 ssh 已经生成成功了。<br>　　在 <code>.ssh</code> 目录下的命令行输入 <code>ls</code> 可以查询已经生成的 ssh 文件，如果已经创建成功，那么应当至少存在 <code>id_rsa</code>、<code>id_rsa.pub</code>、<code>id_rsa_gitlab</code>、<code>id_rsa_gitlab.pub</code> 四个文件，前两者是之前生成的 github ssh，后面两个是刚才生成的 gitlab ssh。</p>
+<h3 id="创建并设置-gitlab-仓库"><a href="#创建并设置-gitlab-仓库" class="headerlink" title="创建并设置 gitlab 仓库"></a>创建并设置 gitlab 仓库</h3><h4 id="设置-ssh-公钥"><a href="#设置-ssh-公钥" class="headerlink" title="设置 ssh 公钥"></a>设置 ssh 公钥</h4><p>　　在 <code>.ssh</code> 目录下的命令行输入 <code>clip &lt; ~/.ssh/id_rsa_gitlab.pub</code> 将公钥复制到剪贴板，进入 gitlab 的 user settings 找到 SSH Keys 并粘贴进去。<del>理论上这个东西如果你不去设置它会一直在你左上角弹窗所以也不用担心找不到</del><br>　　如果你像我一样是个懒人，请点击下方 <code>Expiration date</code> 窗口中的 <code>×</code> 按钮将 ssh 的失效日期取消【</p>
+<h4 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h4><p>　　直接复制仓库的 ssh 地址</p>
+<h4 id="权限不足"><a href="#权限不足" class="headerlink" title="权限不足"></a>权限不足</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git@gitlab.com: Permission denied (publickey).</span><br><span class="line">fatal: Could not read from remote repository.</span><br><span class="line"></span><br><span class="line">Please make sure you have the correct access rights</span><br><span class="line">and the repository exists.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
+<li>同时创建 github 与 gitlab SSH 并设定权限<br><a target="_blank" rel="noopener" href="https://qiita.com/c_tomioka/items/842263a25dc8fab0aa10">https://qiita.com/c_tomioka/items/842263a25dc8fab0aa10</a></li>
+<li>gitlab 上的 hexo 部署<br><a target="_blank" rel="noopener" href="https://zgcr.gitlab.io/2019/02/05/shi-yong-gitlab-pages-zi-dong-bu-shu-hexo-bo-ke/">https://zgcr.gitlab.io/2019/02/05/shi-yong-gitlab-pages-zi-dong-bu-shu-hexo-bo-ke/</a></li>
+<li>本地库版本低于远程仓库<br><a target="_blank" rel="noopener" href="https://qiita.com/Takao_/items/5e563d5ea61d2829e497">https://qiita.com/Takao_/items/5e563d5ea61d2829e497</a></li>
+<li>在 windows 系统下自建 runner<br><a target="_blank" rel="noopener" href="https://docs.gitlab.com/runner/install/windows.html">https://docs.gitlab.com/runner/install/windows.html</a></li>
+</ul>
+
+  </div>
+  <div class="clear" style="clear:both;"></div>
+  <footer class="article-footer">
+  </footer>
+</article>
+
+
+  <div class="comment-block">
+    <hr>
+  <div id="waline"></div>
+  </div>
+
+
+<div class="main-footer">
+  <span>© 2023 無色人間。-<a rel="me noopener" target="_blank" href="https://bgme.me/@suzushi">「e686a7e3828c」</a></span>
+  <span>转载本站图文请附上<a href="">「原始链接」</a></span>
+  <span class="description">已收录数据
+    <em class="word-count-symbol">&nbsp;186k&nbsp;</em>
+    字，登记访客&nbsp;
+    <em id="/" class="waline-visitor-count">...</em>
+    &nbsp;人。
+  </span>
+</div>
+</div>
+
+
+
+  <div class="article-toc">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%BA%8C%E4%B8%AA%E6%9C%AC%E5%9C%B0-hexo-%E5%BA%93"><span class="toc-number">1.</span> <span class="toc-text">创建第二个本地 hexo 库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9%EF%BC%8C%E5%A4%8D%E5%88%B6%E5%8E%9F%E4%BB%93%E5%BA%93%E5%86%85%E5%AE%B9"><span class="toc-number">1.1.</span> <span class="toc-text">新建文件夹，复制原仓库内容</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E7%94%A8%E6%88%B7%E5%90%8D%E4%B8%8E%E9%82%AE%E7%AE%B1"><span class="toc-number">1.2.</span> <span class="toc-text">设置用户名与邮箱</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-ssh"><span class="toc-number">1.3.</span> <span class="toc-text">创建 ssh</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%B9%B6%E8%AE%BE%E7%BD%AE-gitlab-%E4%BB%93%E5%BA%93"><span class="toc-number">2.</span> <span class="toc-text">创建并设置 gitlab 仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE-ssh-%E5%85%AC%E9%92%A5"><span class="toc-number">2.1.</span> <span class="toc-text">设置 ssh 公钥</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6"><span class="toc-number">2.2.</span> <span class="toc-text">上传文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9D%83%E9%99%90%E4%B8%8D%E8%B6%B3"><span class="toc-number">2.3.</span> <span class="toc-text">权限不足</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-number">3.</span> <span class="toc-text">参考资料</span></a></li></ol>
+  </div>
+
+
+
+          
+  
+  </div>
+  <div class="hekation">
+
+<svg class="HKT-block" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <circle class="HKT-item" id="HKT-1" cx="128" cy="128" r="120"/>
+  <circle class="HKT-item" id="HKT-2" cx="128" cy="128" r="127"/>
+  <circle class="HKT-item" id="HKT-3" cx="128" cy="128" r="96"/>
+  <circle class="HKT-item" id="HKT-4" cx="128" cy="128" r="72"/>
+  <circle class="HKT-item" id="HKT-5" cx="128" cy="128" r="94"/>
+  <circle class="HKT-item" id="HKT-6" cx="128" cy="128" r="80"/>
+  <circle class="HKT-item" id="HKT-7" cx="128" cy="128" r="47"/>
+  <circle class="HKT-item" id="HKT-8" cx="128" cy="128" r="32"/>
+  <circle class="HKT-item" id="HKT-9" cx="128" cy="128" r="28"/>
+  <circle class="HKT-item" id="HKT-10" cx="128" cy="128" r="24"/>
+</svg>
+
+</div>
+
+  
+
+    <div class="search-block">
+      <div id="site_search">
+        <div class="form-group">
+          <input type="text" id="local-search-input" name="q" results="0" placeholder="search" class="st-search-input st-default-search-input form-control"/>
+        </div>
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+
+
+
+</body>
+<footer>
+  
+<script src="https://co5.me/lib/jquery/index.js?v=2.1.3.js"></script>
+
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<script src="/PhotoSwipe/photoswipe.js"></script>
+
+  
+<script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+
+
+<script src="/scripts/main.js"></script>
+
+
+<script src="/scripts/score.js"></script>
+
+
+<script src="/scripts/waline.js"></script>
+
+
+<script src="/scripts/search.js"></script>
+
+
+  
+
+  
+    
+      <script type="text/javascript">
+      Waline({
+        el: '#waline',
+        serverURL: 'https://waline-4o-cx.vercel.app/',
+        emoji: [],
+        uploadImage: false,
+        visitor: true,
+        requiredMeta: ['nick', 'mail'],
+        placeholder:"欢迎留言 ~ 登录非必选项，填上昵称和邮箱即可提交评论并显示 Libravatar / Gravatar",
+      });
+      window.onload = function(){
+        $("#waline-nick" ).attr( "placeholder" , "昵称" );
+        $("#waline-mail" ).attr( "placeholder" , "邮箱" );
+        $("#waline-link" ).attr( "placeholder" , "链接" );
+      }
+      </script>
+    
+  
+
+
+  
+  <script type="text/javascript">      
+    var path = "/search.xml";
+    searchFunc(path, 'local-search-input', 'local-search-result');
+  </script>
+
+  
+<script src="/hekation/emoji.js"></script>
+
+
+<link rel="stylesheet" href="/hekation/emoji.css">
+
+
+<script src="/scripts/HKT-63.js"></script>
+
+</footer>
+</html>

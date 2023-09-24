@@ -1,0 +1,47 @@
+body {
+  overflow: hidden;
+}
+.hekation {
+  background-color: #808080;
+  background-attachment: fixed;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -999;
+}
+.main-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.sidebar {
+  background-color: rgba(0,0,0,0.8);
+  color: l-gray;
+  width: 20%;
+}
+.main-content {
+  display: flex;
+  width: 80%;
+}
+.post-body {
+  width: 1000px;
+  background-color: rgba(255,255,255,0.7);
+  box-shadow: page-shadow;
+  padding: 3em 2em 0 2em;
+}
+.pagination,
+.article-toc {
+  width: 20%;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.pagination {
+  height: 90%;
+}
+article {
+  display: block;
+}

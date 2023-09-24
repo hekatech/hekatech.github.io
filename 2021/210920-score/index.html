@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    「开发：乐谱注入」 - 無色人間。
+  
+</title>
+
+
+  <link rel="alternative" href="/atom.xml" title="無色人間。" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+
+
+<link rel="stylesheet" href="/styles/main.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <img src="/favicon.png">
+  </button>
+  <a class="title" href="/">無色人間。</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">無色人間。</a></h1>
+    
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/" title="主页" external="false">主页</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/about" title="关于" external="false">关于</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/categories" title="分类" external="false">分类</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/ark" title="｢匣｣" external="false">｢匣｣</a>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">归档</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">27</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">43</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS" external="false">RSS</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="javascript:;" title="搜索" external="false">搜索</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+  <div class="footer">
+    <div class="info">
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="/icon.png"></a>
+          
+        </div>
+      <div class="content">
+        
+          <div class="description">For the glory of mankind.</div>
+        
+        
+          <div class="author">4o</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    <div class="main-content">
+          <div class="post-body">
+
+<article id="post-210920-score" class="article article-type-post">
+  
+    <div class="article-header">
+      <div class="article-title">
+      <h2>
+      开发：乐谱注入
+    </h2>
+    <span class="article-date">
+  2021/09/20
+</span>
+
+    
+
+  <span class="word-count">字数统计：
+    <span class="word-count-symbol">1.1k</span>
+  </span>
+  <span class="word-count">阅读时间：
+    <span class="word-count-time">2 mins</span>
+  </span>
+  
+    <span class="word-count">访问次数：
+      <span id="/2021/210920-score/" class="waline-visitor-count">...</span>
+    </span>
+    <span class="word-count">评论统计：
+      <span id="/2021/210920-score/" class="waline-comment-count">...</span>
+    </span>
+  
+
+
+  </div>
+    <div class="article-info">
+    
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E7%BB%B4%E6%8A%A4%E6%97%A5%E5%BF%97/">维护日志</a></li></ul>
+
+
+    
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HKT-924/" rel="tag">HKT-924</a></li></ul>
+
+
+  </div>
+</div>
+  
+  <div class="article-entry">
+    <p>　　重生之我又在禁绝幻想打白占之因为下本忘关 BGM 导致满脑子啊——→啊——↗↘啊↗啊↘啊↗啊↘甚至做梦都在躲飞翎雨以致睡了四个小时就醒了起来头昏脑涨但还是身残志坚地坐到了电脑前开始写代码。</p>
+<span id="more"></span>
+
+<h3 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h3><p>　　其实前两天在发 <a href="/2021/210917-kaeranai-koe/">不归之声</a> 的时候已经实现基本功能了，只不过实现的方式不太优雅，我直接把整个 svg 文件的代码复制出来然后 var 了一个变量【<br>　　然后因为用算法精简了的缘故音符之间都黏在了一起变得不太能交互，想着这样不行还是要想办法直接用 JS 读取 svg 再作为字符串导入……<br>　　大体上是实现了，但是 musescore 导出的 svg 还是不太符合我的标准，我原本以为它能自带一些 musicXML 的特性 ex 保留音名记号，结果只是单纯的蝌蚪，如果想要标注的话还是需要进一步开发……</p>
+<h3 id="实施：乐谱导入"><a href="#实施：乐谱导入" class="headerlink" title="实施：乐谱导入"></a>实施：乐谱导入</h3><h4 id="html-部分"><a href="#html-部分" class="headerlink" title="html 部分"></a>html 部分</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;score&quot;</span>&gt;</span></span><br><span class="line">	loading </span><br><span class="line">	<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;score-name&quot;</span>&gt;</span></span><br><span class="line">		(filename)</span><br><span class="line">	<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">	 ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>　　应该算是挺直观的一个格式，之后看看能不能直接写进模板……然后如果乐谱没有加载出来的话就会显示 <em>loading (filename) ...</em> 加载完毕后会直接覆盖掉 div 中的文字内容。</p>
+<h4 id="JS-部分"><a href="#JS-部分" class="headerlink" title="JS 部分"></a>JS 部分</h4><p>　　又名 <em>re：从 0 开始的 jQuery 学习生活</em>【不是<br>　　其实实现起来也就几行字，主要是我花了很多时间来解决什么是 ajax 和 jQuery 的基本语法问题，而且主要问题其实也不是我自己解决的，是馒头帮我解决的【</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> scoreURL = <span class="string">&#x27;/score/&#x27;</span> + $(<span class="string">&quot;#score-name&quot;</span>).text() + <span class="string">&#x27;.svg&#x27;</span>;</span><br><span class="line"><span class="comment">// 获取 id=&quot;score-name&quot; 元素中写入的内容，并拼接成所需要的图片链接</span></span><br><span class="line">$.ajax(&#123;</span><br><span class="line">  <span class="attr">type</span>: <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">  <span class="attr">url</span>: scoreURL,</span><br><span class="line">  <span class="attr">dataType</span>: <span class="string">&#x27;text&#x27;</span>,</span><br><span class="line"><span class="comment">// 使用 ajax 通过连接获取 svg 并转换成文本</span></span><br><span class="line"><span class="attr">success</span>: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">    $(<span class="string">&#x27;#score&#x27;</span>).html(data);</span><br><span class="line"><span class="comment">// 查找 id=&quot;score&quot; 的元素，并将其中的内容替换成 svg 文本</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>　　从缩进格式就能一眼看出不是我自己写的代码呢！（只写了第一行）<br>　　其实我感觉这第一行也可以直接写在下面那个括号里，但是我对 JS 和 jQuery 的掌握程度就好像对日文和法语的掌握程度差别那么大，能跑就行了，我实在是不想再改了【</p>
+<h3 id="计划：演奏教学"><a href="#计划：演奏教学" class="headerlink" title="计划：演奏教学"></a>计划：演奏教学</h3><p><img src="/img/210920-score.png" alt="img-right"></p>
+<p>　　是说我有尝试做简谱标注，然而实施出来的效果是这样的→<br>　　虽然有现成的插件可以直接用，只要调一下字体就行，但是这玩意的可读性难道真的会比五线谱高吗，我完全不觉得……<br>　　想起当年我辛辛苦苦手动给人挨个标好音名然后对方冷冰冰地甩给我一句「看不懂，我只会简谱」，也一时不知道该骂谁是啥比比较好【手动流汗黄豆<br>　　但是 musescore 的插件看起来长得好像和 JS 差不多，或许我可以自己魔改一下整个键位标注版的？<br>　　其实还是很纠结，首先五线谱标这一堆玩意实在是称不上好看，如果直接把标注文字截出来时值的显示又会成问题，可能比起捣鼓乐谱还是录个键盘教学比较有效果……以及标简谱数字可读性成迷，标键位又并不能帮助识谱，我个人还是觉得至少在键盘乐器演奏上五线谱的识别效率还是远高于简谱的，这个时候就又要痛骂中国音乐教育了【</p>
+<p>　　说起来我为什么不直接转成 Lilypond 源码呢……我觉得那玩意都比这个可读性高吧，唯一的问题就是它两个声部是分段的，那我直接写个 css 做两列对照不就得了？</p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://design-tera.com/blog/archives/1965/">svg データを外部にまとめて ajax で読み込む方法</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/jquery/jquery_dom_get.asp">jQuery - 获得内容和属性</a></li>
+</ul>
+
+  </div>
+  <div class="clear" style="clear:both;"></div>
+  <footer class="article-footer">
+  </footer>
+</article>
+
+
+  <div class="comment-block">
+    <hr>
+  <div id="waline"></div>
+  </div>
+
+
+<div class="main-footer">
+  <span>© 2023 無色人間。-<a rel="me noopener" target="_blank" href="https://bgme.me/@suzushi">「e686a7e3828c」</a></span>
+  <span>转载本站图文请附上<a href="">「原始链接」</a></span>
+  <span class="description">已收录数据
+    <em class="word-count-symbol">&nbsp;186k&nbsp;</em>
+    字，登记访客&nbsp;
+    <em id="/" class="waline-visitor-count">...</em>
+    &nbsp;人。
+  </span>
+</div>
+</div>
+
+
+
+  <div class="article-toc">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF"><span class="toc-number">1.</span> <span class="toc-text">设计思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E6%96%BD%EF%BC%9A%E4%B9%90%E8%B0%B1%E5%AF%BC%E5%85%A5"><span class="toc-number">2.</span> <span class="toc-text">实施：乐谱导入</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#html-%E9%83%A8%E5%88%86"><span class="toc-number">2.1.</span> <span class="toc-text">html 部分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JS-%E9%83%A8%E5%88%86"><span class="toc-number">2.2.</span> <span class="toc-text">JS 部分</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E5%88%92%EF%BC%9A%E6%BC%94%E5%A5%8F%E6%95%99%E5%AD%A6"><span class="toc-number">3.</span> <span class="toc-text">计划：演奏教学</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-number">4.</span> <span class="toc-text">参考</span></a></li></ol>
+  </div>
+
+
+
+          
+  
+  </div>
+  <div class="hekation">
+
+<svg class="HKT-block" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <circle class="HKT-item" id="HKT-1" cx="128" cy="128" r="120"/>
+  <circle class="HKT-item" id="HKT-2" cx="128" cy="128" r="127"/>
+  <circle class="HKT-item" id="HKT-3" cx="128" cy="128" r="96"/>
+  <circle class="HKT-item" id="HKT-4" cx="128" cy="128" r="72"/>
+  <circle class="HKT-item" id="HKT-5" cx="128" cy="128" r="94"/>
+  <circle class="HKT-item" id="HKT-6" cx="128" cy="128" r="80"/>
+  <circle class="HKT-item" id="HKT-7" cx="128" cy="128" r="47"/>
+  <circle class="HKT-item" id="HKT-8" cx="128" cy="128" r="32"/>
+  <circle class="HKT-item" id="HKT-9" cx="128" cy="128" r="28"/>
+  <circle class="HKT-item" id="HKT-10" cx="128" cy="128" r="24"/>
+</svg>
+
+</div>
+
+  
+
+    <div class="search-block">
+      <div id="site_search">
+        <div class="form-group">
+          <input type="text" id="local-search-input" name="q" results="0" placeholder="search" class="st-search-input st-default-search-input form-control"/>
+        </div>
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+
+
+
+</body>
+<footer>
+  
+<script src="https://co5.me/lib/jquery/index.js?v=2.1.3.js"></script>
+
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<script src="/PhotoSwipe/photoswipe.js"></script>
+
+  
+<script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+
+
+<script src="/scripts/main.js"></script>
+
+
+<script src="/scripts/score.js"></script>
+
+
+<script src="/scripts/waline.js"></script>
+
+
+<script src="/scripts/search.js"></script>
+
+
+  
+
+  
+    
+      <script type="text/javascript">
+      Waline({
+        el: '#waline',
+        serverURL: 'https://waline-4o-cx.vercel.app/',
+        emoji: [],
+        uploadImage: false,
+        visitor: true,
+        requiredMeta: ['nick', 'mail'],
+        placeholder:"欢迎留言 ~ 登录非必选项，填上昵称和邮箱即可提交评论并显示 Libravatar / Gravatar",
+      });
+      window.onload = function(){
+        $("#waline-nick" ).attr( "placeholder" , "昵称" );
+        $("#waline-mail" ).attr( "placeholder" , "邮箱" );
+        $("#waline-link" ).attr( "placeholder" , "链接" );
+      }
+      </script>
+    
+  
+
+
+  
+  <script type="text/javascript">      
+    var path = "/search.xml";
+    searchFunc(path, 'local-search-input', 'local-search-result');
+  </script>
+
+  
+<script src="/hekation/emoji.js"></script>
+
+
+<link rel="stylesheet" href="/hekation/emoji.css">
+
+
+<script src="/scripts/HKT-63.js"></script>
+
+</footer>
+</html>

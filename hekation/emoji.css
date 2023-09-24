@@ -1,0 +1,41 @@
+.hkt-emoji {
+	display: inline-block;
+	position: relative;
+	width: 2.2em;
+	height: 1em;
+	vertical-align: sub;
+}
+.hkt-emoji::before {
+	content: ' ';
+	position: absolute;
+	top:-0.75em;
+	left: 0;
+	width: 2.2em;
+	height: 2.2em;
+	background-size: cover;
+}
+
+del .hkt-emoji {
+	opacity: 0.3;
+	transition: all 0.5s;
+}
+del:hover .hkt-emoji {
+	opacity: 1;
+}
+
+.e4o-1::before{background-image:url('./emoji/4o-1.png');}
+.e4o-2::before{background-image:url('./emoji/4o-2.png');}
+.e4o-3::before{background-image:url('./emoji/4o-3.png');}
+.e4o-4::before{background-image:url('./emoji/4o-4.png');}
+.e4o-5::before{background-image:url('./emoji/4o-5.png');}
+.e4o-6::before{background-image:url('./emoji/4o-6.png');}
+.e4o-7::before{background-image:url('./emoji/4o-7.png');}
+
+.e027-1::before{background-image:url('./emoji/027-1.png');}
+.e027-2::before{background-image:url('./emoji/027-2.png');}
+.e027-3::before{background-image:url('./emoji/027-3.png');}
+.e027-4::before{background-image:url('./emoji/027-4.png');}
+.e027-5::before{background-image:url('./emoji/027-5.png');}
+.e027-6::before{background-image:url('./emoji/027-6.png');}
+.e027-7::before{background-image:url('./emoji/027-7.png');}
+.e027-8::before{background-image:url('./emoji/027-8.png');}

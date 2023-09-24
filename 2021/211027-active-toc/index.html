@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    「开发：折叠式目录」 - 無色人間。
+  
+</title>
+
+
+  <link rel="alternative" href="/atom.xml" title="無色人間。" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+
+
+<link rel="stylesheet" href="/styles/main.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <img src="/favicon.png">
+  </button>
+  <a class="title" href="/">無色人間。</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">無色人間。</a></h1>
+    
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/" title="主页" external="false">主页</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/about" title="关于" external="false">关于</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/categories" title="分类" external="false">分类</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/ark" title="｢匣｣" external="false">｢匣｣</a>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">归档</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">27</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">43</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS" external="false">RSS</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="javascript:;" title="搜索" external="false">搜索</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+  <div class="footer">
+    <div class="info">
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="/icon.png"></a>
+          
+        </div>
+      <div class="content">
+        
+          <div class="description">For the glory of mankind.</div>
+        
+        
+          <div class="author">4o</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    <div class="main-content">
+          <div class="post-body">
+
+<article id="post-211027-active-toc" class="article article-type-post">
+  
+    <div class="article-header">
+      <div class="article-title">
+      <h2>
+      开发：折叠式目录
+    </h2>
+    <span class="article-date">
+  2021/10/27
+</span>
+
+    
+
+  <span class="word-count">字数统计：
+    <span class="word-count-symbol">2.1k</span>
+  </span>
+  <span class="word-count">阅读时间：
+    <span class="word-count-time">4 mins</span>
+  </span>
+  
+    <span class="word-count">访问次数：
+      <span id="/2021/211027-active-toc/" class="waline-visitor-count">...</span>
+    </span>
+    <span class="word-count">评论统计：
+      <span id="/2021/211027-active-toc/" class="waline-comment-count">...</span>
+    </span>
+  
+
+
+  </div>
+    <div class="article-info">
+    
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E7%BB%B4%E6%8A%A4%E6%97%A5%E5%BF%97/">维护日志</a></li></ul>
+
+
+    
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HKT-924/" rel="tag">HKT-924</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/" rel="tag">前端笔记</a></li></ul>
+
+
+  </div>
+</div>
+  
+  <div class="article-entry">
+    <p>　　是说我也病倒了，可恶，人类的身体真是脆弱啊【振声<br>　　昨天折腾造语折腾到凌晨四五点，然后眼前开始忽明忽暗脑子像进了水一样摇摇晃晃，我以为我是用脑过度就咣当倒在床上睡了，结果一觉醒来发现：喜报，我发烧了！<br>　　以及天冷了在床上搭了个桌子把鼠标键盘都挪远了，大概是手机玩太多了看屏幕有点费劲……总之除了睡觉以外好像做什么都不太行的样子。<br>　　但是因为昨天写造语文档哗啦啦列了一大串目录我还是决定要搞一个和 next 一样的自动折叠展开目录……所以我为什么不一开始就直接用 next 算了……</p>
+<span id="more"></span>
+
+<h3 id="事前吐槽"><a href="#事前吐槽" class="headerlink" title="事前吐槽"></a>事前吐槽</h3><p><img src="/img/211027-active-toc.png" alt="img-right"></p>
+<p>　　本来我还想给滚动条做个平滑效果的，结果搜了半天都是原生滚动条的事件，尝试搜索 Perfect-scrollbar 的中文文档，找到了 <a target="_blank" rel="noopener" href="https://www.axihe.com/edu/jquery-plugin/scroll/jquery-perfect-scrollbar.html">这么个东西</a>。<br>　　<strong>你好，到底是你不会中文还是我不会中文？</strong></p>
+<p>　　还有这么个东西→<br>　　<strong>那你 close 你 emoji 呢？</strong></p>
+<p>　　总之平滑滚动的功能就先放一边了……但是我整个页面用的都是这个第三方滚动条，估计 JS 自带的那些监听事件不一定管用，最后大概率还是要改它的源码的。<br>　　哎反正今天眼睛和脑子都不太好使，先把思路记下来放着有空再说。</p>
+<p>　　说起来这个两侧 float 的图片和标题相接的位置似乎有一些问题，如果图片高度太大文字内容太少的话会和下一个标题咬在一起，就不太好看的样子……但是 <code>clear:both</code> 之后似乎把原本设置的上下 margin 也一起忽略了，暂时只能多 BB 一点废话把这个问题掩盖过去……嗯，这么多废话差不多就够了【</p>
+<h3 id="功能设计"><a href="#功能设计" class="headerlink" title="功能设计"></a>功能设计</h3><h4 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h4><ol>
+<li>右侧 TOC 的二级目录默认隐藏（对应的是正文的 H4 内容）</li>
+<li>滚动到相应一级目录时展开相应的二级目录</li>
+<li>滚动到下一条目录时取消激活之前的目录</li>
+</ol>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><ul>
+<li>触发时间：滚动停止 0.5s 后<ul>
+<li>遍历所有标题链接 <code>$(.headerlink).each</code>，执行<ul>
+<li>如果链接与父元素的相对高度 <code>.positon().top</code> - 父元素的滚动距离 <code>scrollTop</code> &lt; 0，执行<ul>
+<li>var x = <code>$(&#39;.toc-link[href*=&#39;</code> + 当前标题链接 + <code>&#39;]&#39;);</code><br>// 获取 toc 中能跳转到当前标题的链接</li>
+<li><code>x.siblings(&#39;a&#39;).removeClass(&#39;active&#39;);</code><br>// 为所有同级元素取消激活状态</li>
+<li><code>x.addClass(&#39;active&#39;);</code><br>// 激活当前链接</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>　　昨晚睡前是这样想的，睡醒琢磨了一下感觉不对，如果这样写的话每一个已经滚出屏幕外的链接也要跑一遍「为所有同级元素取消激活状态」的流程，请求就太过冗余了。<br>　　尝试使用 css 的 <code>last-child</code> 伪类，发现没办法定位到我想要的元素，每个父元素下的最后一个链接都会被选中，结果就是多个标题一起亮起。查询了一下 jquery 选择器，发现可以用 <code>:last</code> 选中单个同位子元素。<br>　　说起来好像蛮绕的但是我也不知道怎么用中文表达了【总之菜鸟教程的实例在 <a target="_blank" rel="noopener" href="https://www.runoob.com/try/try.php?filename=tryjquery_sel_ullifirst">这里</a></p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><h4 id="测试用二级标题-1"><a href="#测试用二级标题-1" class="headerlink" title="测试用二级标题 1"></a>测试用二级标题 1</h4><p>　　不知道发生了什么神秘 bug 总之 <code>.positon().top</code> 输出的不是标题和 <code>.article-entry</code> 之间的距离而是与窗口的某条不可见基准线之间的距离……仔细看了一下等于 0 的时候似乎是和网页的主标题（就是旁边那个无色人间）对齐的，至于到底为什么会这样，我也不敢深究……<br>　　总之按结论来看这个输出数据 &lt; 0 的时候就可以进行下一步操作了，嗯【<br>　　另外因为猜到滚动条触发的事件请求会特别多 <del>以及我的代码写得像屎山</del>，于是抄了一个 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/cc-freiheit/p/10827372.html">定时器</a> 用来过滤多余的请求，然而电脑还是蜜汁卡顿，打开任务管理器研究了半天发现是 QQ 在疯狂读写硬盘 :4o-4: 退出之后就不卡了，emmmm</p>
+<h4 id="测试用二级标题-2"><a href="#测试用二级标题-2" class="headerlink" title="测试用二级标题 2"></a>测试用二级标题 2</h4><p>　　于是当你看到这篇文章的时候这堆屎山代码已经顺利跑起来了！<br>　　其实我大概研究了一下 next 的目录类名，大胆推测一下它的源码大概也和我差不多，甚至可能比我还…… <del>毕竟它的目录展开是没有动画效果的诶</del><br>　　大概的实现方法和功能设计里的一样，但是遇到几个坑点：</p>
+<ol>
+<li>主题生成的链接是 html 代码，获取标题链接的 title 之后需要经过转义才能成功匹配到 toc 上的按钮</li>
+<li>直接为所有同级元素 <code>removeClass</code> 会造成 css 动画抖动，最直观的就是这个折起来的二级目录上蹿下跳，最后实现方法是这个样子的：<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&#x27;.toc-level-3 &gt;.toc-link&#x27;</span>).not(<span class="string">&#x27;.visited-h3:last&#x27;</span>).removeClass(<span class="string">&#x27;active&#x27;</span>);</span><br><span class="line">$(<span class="string">&#x27;.toc-level-4 &gt;.toc-link&#x27;</span>).not(<span class="string">&#x27;.visited-h4:last&#x27;</span>).removeClass(<span class="string">&#x27;active&#x27;</span>);</span><br><span class="line">$(<span class="string">&#x27;.visited-h3:last, .visited-h4:last&#x27;</span>).addClass(<span class="string">&#x27;active&#x27;</span>);</span><br><span class="line">$(<span class="string">&#x27;.toc-link&#x27;</span>).not(<span class="string">&#x27;.visited-h3.active&#x27;</span>).next().slideUp(<span class="string">&#x27;0.3s&#x27;</span>);</span><br><span class="line">$(<span class="string">&#x27;.visited-h3.active&#x27;</span>).next().slideDown(<span class="string">&#x27;0.3s&#x27;</span>);</span><br></pre></td></tr></table></figure>
+总之就是为一级目录（h3）和二级目录（h4）添加不同的 visited 类名，然后为二者的最后一个元素都添加上 <code>.active</code> class；然后用 <code>.not()</code> 从选择器中排除最后一个元素，再为剩下的元素都删去 <code>.active</code> class。</li>
+<li>手机页面下目录的 css 样式为 <code>display:none</code>，但依然会被 JS 代码处理<br>解决方式：在滚动函数内添加了条件 <code>if ($(&#39;.article-toc&#39;).is(&#39;:visible&#39;))</code>，只有在 toc 可见时才会执行</li>
+</ol>
+<p>　　实现效果是很满意的，包括点击目录跳转和页面刷新后都会自动展开，也没有多余的动画抖动，甚至优化了一下请求次数，只是这个代码看起来实在是有点惨不忍睹……不过想了想 SE 给每个 HQ 物品都单独做了一张图片，我觉得我这个写法也不是不可原谅，能跑就行.jpg</p>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/jquery-ref-html.html">jQuery HTML / CSS 方法</a></li>
+<li><a target="_blank" rel="noopener" href="https://techacademy.jp/magazine/26999">JavaScript で URL をエンコードする方法を現役エンジニアが解説【初心者向け】</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/cc-freiheit/p/10827372.html">js 函数的防抖 (debounce) 与节流 (throttle)</a></li>
+</ul>
+
+  </div>
+  <div class="clear" style="clear:both;"></div>
+  <footer class="article-footer">
+  </footer>
+</article>
+
+
+  <div class="comment-block">
+    <hr>
+  <div id="waline"></div>
+  </div>
+
+
+<div class="main-footer">
+  <span>© 2023 無色人間。-<a rel="me noopener" target="_blank" href="https://bgme.me/@suzushi">「e686a7e3828c」</a></span>
+  <span>转载本站图文请附上<a href="">「原始链接」</a></span>
+  <span class="description">已收录数据
+    <em class="word-count-symbol">&nbsp;186k&nbsp;</em>
+    字，登记访客&nbsp;
+    <em id="/" class="waline-visitor-count">...</em>
+    &nbsp;人。
+  </span>
+</div>
+</div>
+
+
+
+  <div class="article-toc">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E5%89%8D%E5%90%90%E6%A7%BD"><span class="toc-number">1.</span> <span class="toc-text">事前吐槽</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E8%AE%BE%E8%AE%A1"><span class="toc-number">2.</span> <span class="toc-text">功能设计</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9C%80%E6%B1%82"><span class="toc-number">2.1.</span> <span class="toc-text">需求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF"><span class="toc-number">2.2.</span> <span class="toc-text">思路</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-number">3.</span> <span class="toc-text">测试</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98-1"><span class="toc-number">3.1.</span> <span class="toc-text">测试用二级标题 1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98-2"><span class="toc-number">3.2.</span> <span class="toc-text">测试用二级标题 2</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-number">4.</span> <span class="toc-text">参考资料</span></a></li></ol>
+  </div>
+
+
+
+          
+  
+  </div>
+  <div class="hekation">
+
+<svg class="HKT-block" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <circle class="HKT-item" id="HKT-1" cx="128" cy="128" r="120"/>
+  <circle class="HKT-item" id="HKT-2" cx="128" cy="128" r="127"/>
+  <circle class="HKT-item" id="HKT-3" cx="128" cy="128" r="96"/>
+  <circle class="HKT-item" id="HKT-4" cx="128" cy="128" r="72"/>
+  <circle class="HKT-item" id="HKT-5" cx="128" cy="128" r="94"/>
+  <circle class="HKT-item" id="HKT-6" cx="128" cy="128" r="80"/>
+  <circle class="HKT-item" id="HKT-7" cx="128" cy="128" r="47"/>
+  <circle class="HKT-item" id="HKT-8" cx="128" cy="128" r="32"/>
+  <circle class="HKT-item" id="HKT-9" cx="128" cy="128" r="28"/>
+  <circle class="HKT-item" id="HKT-10" cx="128" cy="128" r="24"/>
+</svg>
+
+</div>
+
+  
+
+    <div class="search-block">
+      <div id="site_search">
+        <div class="form-group">
+          <input type="text" id="local-search-input" name="q" results="0" placeholder="search" class="st-search-input st-default-search-input form-control"/>
+        </div>
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+
+
+
+</body>
+<footer>
+  
+<script src="https://co5.me/lib/jquery/index.js?v=2.1.3.js"></script>
+
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<script src="/PhotoSwipe/photoswipe.js"></script>
+
+  
+<script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+
+
+<script src="/scripts/main.js"></script>
+
+
+<script src="/scripts/score.js"></script>
+
+
+<script src="/scripts/waline.js"></script>
+
+
+<script src="/scripts/search.js"></script>
+
+
+  
+
+  
+    
+      <script type="text/javascript">
+      Waline({
+        el: '#waline',
+        serverURL: 'https://waline-4o-cx.vercel.app/',
+        emoji: [],
+        uploadImage: false,
+        visitor: true,
+        requiredMeta: ['nick', 'mail'],
+        placeholder:"欢迎留言 ~ 登录非必选项，填上昵称和邮箱即可提交评论并显示 Libravatar / Gravatar",
+      });
+      window.onload = function(){
+        $("#waline-nick" ).attr( "placeholder" , "昵称" );
+        $("#waline-mail" ).attr( "placeholder" , "邮箱" );
+        $("#waline-link" ).attr( "placeholder" , "链接" );
+      }
+      </script>
+    
+  
+
+
+  
+  <script type="text/javascript">      
+    var path = "/search.xml";
+    searchFunc(path, 'local-search-input', 'local-search-result');
+  </script>
+
+  
+<script src="/hekation/emoji.js"></script>
+
+
+<link rel="stylesheet" href="/hekation/emoji.css">
+
+
+<script src="/scripts/HKT-63.js"></script>
+
+</footer>
+</html>

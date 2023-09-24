@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    「FF14 副本 buff 图标 &amp; 全站统计」 - 無色人間。
+  
+</title>
+
+
+  <link rel="alternative" href="/atom.xml" title="無色人間。" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+
+
+<link rel="stylesheet" href="/styles/main.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <img src="/favicon.png">
+  </button>
+  <a class="title" href="/">無色人間。</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">無色人間。</a></h1>
+    
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/" title="主页" external="false">主页</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/about" title="关于" external="false">关于</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/categories" title="分类" external="false">分类</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/ark" title="｢匣｣" external="false">｢匣｣</a>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">归档</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">27</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">43</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS" external="false">RSS</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="javascript:;" title="搜索" external="false">搜索</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+  <div class="footer">
+    <div class="info">
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="/icon.png"></a>
+          
+        </div>
+      <div class="content">
+        
+          <div class="description">For the glory of mankind.</div>
+        
+        
+          <div class="author">4o</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    <div class="main-content">
+          <div class="post-body">
+
+<article id="post-221204-ffxiv-icon" class="article article-type-post">
+  
+    <div class="article-header">
+      <div class="article-title">
+      <h2>
+      FF14 副本 buff 图标 & 全站统计
+    </h2>
+    <span class="article-date">
+  2022/12/04
+</span>
+
+    
+
+  <span class="word-count">字数统计：
+    <span class="word-count-symbol">2.7k</span>
+  </span>
+  <span class="word-count">阅读时间：
+    <span class="word-count-time">5 mins</span>
+  </span>
+  
+    <span class="word-count">访问次数：
+      <span id="/2022/221204-ffxiv-icon/" class="waline-visitor-count">...</span>
+    </span>
+    <span class="word-count">评论统计：
+      <span id="/2022/221204-ffxiv-icon/" class="waline-comment-count">...</span>
+    </span>
+  
+
+
+  </div>
+    <div class="article-info">
+    
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E7%BB%B4%E6%8A%A4%E6%97%A5%E5%BF%97/">维护日志</a></li></ul>
+
+
+    
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HKT-924/" rel="tag">HKT-924</a></li></ul>
+
+
+  </div>
+</div>
+  
+  <div class="article-entry">
+    <p>　　昨天（12/04）更新了炼狱篇的图标。<br>　　今天（12/05）折腾了一下全站访客统计和字数统计，写在同一篇里记录一下吧。<br>　　……真的我没想到用 waline 来统计访客会这么麻烦的，好想死（好想死）</p>
+<span id="more"></span>
+
+<h3 id="副本图标"><a href="#副本图标" class="headerlink" title="副本图标"></a>副本图标</h3><p><img src="/img/221205-ffxiv-icon.png" alt="img-right"></p>
+<p>　　基于已有的 emoji 系统 :4o-1: 追加了副本 buff 图标显示。<br>　　本来打算用 JS 直接获取文件名查找替换生成 css，后来发现除了获取难度比较高以外还有以下几个问题：</p>
+<ul>
+<li>目前的 emoji 是用伪元素 <code>::before</code> 显示的，用 JS 选取会比较麻烦</li>
+<li>用于书写的 <code>emojiTag</code> 与文件名并不同<br>因为角色名是 <code>4o</code> ，所以文件名也是数字开头的<br>但 css 似乎并不能选中以数字开头的 classname 或 id<br>所以实际使用的时候加了一个 <code>e</code> 解决</li>
+</ul>
+<p>　　所以最后还是决定手动填写 emojiList 数组以及所有的 css 选择器，效果如图↗<br>　　emmmmm 也算一种对 SE 程序员的致敬吧 :4o-6: <del>怎么不算呢</del><br>　　解决方法应该也不是没有，比如用实体 dom 替代伪元素，再手动更改文件名使其与 <code>emojiTag</code> 相同。但是还有一个比较奇妙的执念就是我不太想破坏拆包获得的文件名（比如伤害降低的图片编号结尾居然是 520 草），所以应该很长一段时间都会用这样手动更新的方式先撑着。<del>没准在失去写 css 的耐心之前我就先失去做攻略的耐心了呢哈哈</del></p>
+<h4 id="P5S"><a href="#P5S" class="headerlink" title="P5S"></a>P5S</h4><p>　　<del>啊？一时想不起来有什么要看的 buff 了</del><br>　　翻了一下录像这层确实没有特殊 buff（如果不算伤害降低 :damage-down: 的话哈哈）</p>
+<h4 id="P6S"><a href="#P6S" class="headerlink" title="P6S"></a>P6S</h4><ul>
+<li>对狙：:p6s-fr: :p6s-bk:</li>
+<li>鸳鸯锅：:p6s-pur: :p6s-gre:</li>
+<li>蛇背翅前，紫左绿右</li>
+</ul>
+<h4 id="P7S"><a href="#P7S" class="headerlink" title="P7S"></a>P7S</h4><ul>
+<li>四风：<ul>
+<li>风分散：:p7s-w: :p7s-w1: :p7s-w2: :p7s-w3: :p7s-w4:</li>
+<li>光分摊：:p7s-l: :p7s-l1: :p7s-l2: :p7s-l3: :p7s-l4:</li>
+</ul>
+</li>
+</ul>
+<h4 id="P8S"><a href="#P8S" class="headerlink" title="P8S"></a>P8S</h4><ul>
+<li>门神<ul>
+<li>蛇：:p8s-i: :p8s-ii: :p8s-sna: :p8s-ptf:</li>
+<li>强化蛇：:p8s-poi: :p8s-cir:</li>
+</ul>
+</li>
+<li>本体<ul>
+<li>术式：:p8s-mag: :p8s-rev:</li>
+<li>毒：:p8s-A: :p8s-B: :p8s-Y:</li>
+<li>分摊：:p8s-2: :p8s-3: :p8s-1:</li>
+<li>概念拒绝：:p8s-rej:</li>
+<li>完成概念：:p8s-aa: :p8s-bb: :p8s-yy:</li>
+<li>合成兽：:p8s-blu: :p8s-gre: :p8s-pur:</li>
+<li>高亮合成：:p8s-red: :p8s-ora: :p8s-yel: </li>
+<li>万象灰烬：:fire-down:</li>
+<li>不死鸟：:p8s-fur: :p8s-phn: :p8s-2x:</li>
+<li>移动塔：:earth-down:</li>
+</ul>
+</li>
+</ul>
+<h3 id="全站字数-amp-访客统计"><a href="#全站字数-amp-访客统计" class="headerlink" title="全站字数 &amp; 访客统计"></a>全站字数 &amp; 访客统计</h3><p>　　在毛象上看见塔塔表示博客字数已经 20w，突然想知道我自己写了多少，于是稍微折腾了一下在 footer 添加了字数统计和访客统计。<br>　　字数统计的过程还是比较顺利的，用的是 next 的插件，在 footer 里加上这么一行就可以：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;description&quot;</span>&gt;已收录数据</span><br><span class="line">    &lt;em <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;word-count-symbol&quot;</span>&gt;&amp;nbsp;&lt;%- symbolsCountTotal(site) %&gt;&amp;nbsp;&lt;/em&gt;</span><br><span class="line">字。&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+
+<p>　　直接写空格好像有概率识别不了，于是用 <code>&amp;nbsp;</code> 代替了。另外用 <code>em</code> 是为了自带紫色发光格式，标准一点写应该还是用 <code>span</code>。<br>　　访客统计则有些头疼，因为我的 blog 用的还是 2021 年版的 waline，去官网看了一下经过一系列更新迭代之后这个玩意已经连文档都删了，作者表示「因为我觉得使用方式差别不大」，然而实际上数据的渲染从<em>查找 id 替换</em>变成了 <code>data-path</code>，如果更新版本要重写全部的 layout……<br>　　<em><strong>那我必然是不会更的</strong></em>。凭借记忆捣鼓出了 waline v1.3.8 的全站访客统计：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;em id=<span class="string">&quot;/&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;waline-visitor-count&quot;</span>&gt;...&lt;/em&gt;</span><br></pre></td></tr></table></figure>
+
+<p>　　其实也没什么难度就是了【<br>　　不过还有一个问题就是因为这个访客统计是与评论插件关联的，所以在禁用了评论（与单页访客统计）的页面同样无法获取主页访客数，在官方文档被删除的情况下似乎暂时没办法解决这个问题，<del>等以后有空再研究一下代码好了 :4o-3:</del><br>　　研究完了，我明明写了在关闭评论的情况下保留访客统计的！！！搞什么啊！！！</p>
+<p>　　最后的暂时解决办法：只保留了首页的访客统计，其它页面仅保留字数统计。<br>　　感觉更新 + 重写 layout 也不是很好使，因为一开始关掉评论的原因是我<em>不希望在本地写东西疯狂刷新浏览排版的期间被统计访问量</em>，但 waline 似乎是把「统计」和「显示」绑定在一起的，我其实只是想显示那个数据但不想统计这个页面的访问量啊……</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;main-footer&quot;</span>&gt;</span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;description&quot;</span>&gt;</span>已收录数据</span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">em</span> <span class="attr">class</span>=<span class="string">&quot;word-count-symbol&quot;</span>&gt;</span><span class="symbol">&amp;nbsp;</span>&lt;%- symbolsCountTotal(site) %&gt;<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;/<span class="name">em</span>&gt;</span></span></span><br><span class="line"><span class="xml">  &lt;% if (is_home()) &#123; %&gt;</span></span><br><span class="line"><span class="xml">    字，登记访客<span class="symbol">&amp;nbsp;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">em</span> <span class="attr">id</span>=<span class="string">&quot;/&quot;</span> <span class="attr">class</span>=<span class="string">&quot;waline-visitor-count&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">em</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="symbol">&amp;nbsp;</span>人。</span></span><br><span class="line"><span class="xml">&lt;% &#125; else &#123; %&gt;</span></span><br><span class="line"><span class="xml">    字。</span></span><br><span class="line"><span class="xml">  &lt;% &#125; %&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="最终解决"><a href="#最终解决" class="headerlink" title="最终解决"></a>最终解决</h3><p>　　使用<a target="_blank" rel="noopener" href="https://www.html.cn/tool/js_beautify/">这个工具</a>成功展开了手头的 waline 代码试图自己解决这个问题，但是妄想我现在的水平能搞懂这个显然还是太科幻了……【注：大概格式化了一下后总共 5764 行，应该包含了一些没换行的括号，因为还保留了非常多诸如 <code>(((</code> 这样的内容……<br>　　那么只能另谋出路，首先整理一下我的需求：</p>
+<ul>
+<li>在首页显示访问量 ✓</li>
+<li>在关闭评论后停止统计访问量 ✓</li>
+<li>在关闭评论的页面同时显示首页的访问量 ×</li>
+</ul>
+<p>　　备用的方案：</p>
+<ul>
+<li>站点统计更换为不蒜子<ul>
+<li>会丢失当前的统计数据</li>
+</ul>
+</li>
+<li>用 AJAX 获取首页的计数复制到其它页面<ul>
+<li><em><strong>看不懂</strong></em><br>而且按我的理解 AJAX 只能获取整个页面的 dom 再把要用的东西剥出来<br>对访问统计来说数据交互量有点太恐怖了</li>
+</ul>
+</li>
+<li>为访客统计添加单独的参数<ul>
+<li>目前这个似乎是最好实现的？</li>
+</ul>
+</li>
+</ul>
+<p>　　啊用脑量超标了我要滚去睡一会……</p>
+<hr>
+<p>　　没睡，但是解决了，原来是我自己的问题……原本普通的 page 应该是能显示全站访问统计的，layout 的逻辑如下：</p>
+<ul>
+<li>如果当前页面为 <code>post</code><ul>
+<li>如果 <code>comment</code> 不为 <code>false</code> 则显示评论</li>
+<li>否则不添加任何代码（即无法评论也不启用访客统计）</li>
+</ul>
+</li>
+<li>如果当前页面不是 <code>post</code>，则单独开启访客统计</li>
+</ul>
+<p>　　所以原本普通的 page 页面是不会显示评论且能正常统计访客的，但前几天为了能给新建的<a href="/ffxiv/">FF14 工具箱</a>页面添加评论框，我修改了 layout 的逻辑，变成了这样：</p>
+<ul>
+<li>如果当前页面为 <code>post</code> 或 <code>page</code><ul>
+<li>如果 <code>comment</code> 不为 <code>false</code> 则显示评论</li>
+<li>否则不添加任何代码（即无法评论也不启用访客统计）</li>
+</ul>
+</li>
+<li>如果当前页面不是 <code>post</code> 或 <code>page</code>，则单独开启访客统计</li>
+</ul>
+<p>　　那么禁用了评论的 page 页面显然就无法显示访客统计了，最后折腾一番把逻辑变成了这样：</p>
+<ul>
+<li>如果当前页面为 <code>post</code> 或 <code>page</code><ul>
+<li>如果 <code>comment</code> 不为 <code>false</code>（即开启评论）<ul>
+<li>如果 <code>visitcount</code> 为 <code>false</code>，则显示不统计访客的评论框</li>
+<li>否则显示统计访客的评论框</li>
+</ul>
+</li>
+<li>否则（即禁用评论）<ul>
+<li>如果 <code>visitcount</code> 不为 <code>false</code>，则单独开启访客统计</li>
+<li>否则不添加任何代码</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>如果当前页面不是 <code>post</code> 或 <code>page</code>，则单独开启访客统计</li>
+</ul>
+<p>　　以上就是新 layout 的 if / else 嵌套规则，我尝试过使用 else if，但是似乎不起作用，总之现在成功实现了：</p>
+<ul>
+<li>默认新文章开启评论并禁用访客统计</li>
+<li>不添加任何参数的文章默认开启评论并显示访客统计</li>
+<li>可以使用 <code>visitcount: false</code> 和 <code>comment: false</code> 单独控制评论和访客统计的开关</li>
+<li>不包含正文的页面（如 tag 和归档）默认显示访客统计</li>
+</ul>
+<p>　　那么现在是 17:20，为了晚上龙诗队上班我得继续紧急睡觉了…… :4o-3:</p>
+
+  </div>
+  <div class="clear" style="clear:both;"></div>
+  <footer class="article-footer">
+  </footer>
+</article>
+
+
+  <div class="comment-block">
+    <hr>
+  <div id="waline"></div>
+  </div>
+
+
+<div class="main-footer">
+  <span>© 2023 無色人間。-<a rel="me noopener" target="_blank" href="https://bgme.me/@suzushi">「e686a7e3828c」</a></span>
+  <span>转载本站图文请附上<a href="">「原始链接」</a></span>
+  <span class="description">已收录数据
+    <em class="word-count-symbol">&nbsp;186k&nbsp;</em>
+    字，登记访客&nbsp;
+    <em id="/" class="waline-visitor-count">...</em>
+    &nbsp;人。
+  </span>
+</div>
+</div>
+
+
+
+  <div class="article-toc">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%AF%E6%9C%AC%E5%9B%BE%E6%A0%87"><span class="toc-number">1.</span> <span class="toc-text">副本图标</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#P5S"><span class="toc-number">1.1.</span> <span class="toc-text">P5S</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#P6S"><span class="toc-number">1.2.</span> <span class="toc-text">P6S</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#P7S"><span class="toc-number">1.3.</span> <span class="toc-text">P7S</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#P8S"><span class="toc-number">1.4.</span> <span class="toc-text">P8S</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E7%AB%99%E5%AD%97%E6%95%B0-amp-%E8%AE%BF%E5%AE%A2%E7%BB%9F%E8%AE%A1"><span class="toc-number">2.</span> <span class="toc-text">全站字数 &amp; 访客统计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E7%BB%88%E8%A7%A3%E5%86%B3"><span class="toc-number">3.</span> <span class="toc-text">最终解决</span></a></li></ol>
+  </div>
+
+
+
+          
+  
+  </div>
+  <div class="hekation">
+
+<svg class="HKT-block" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <circle class="HKT-item" id="HKT-1" cx="128" cy="128" r="120"/>
+  <circle class="HKT-item" id="HKT-2" cx="128" cy="128" r="127"/>
+  <circle class="HKT-item" id="HKT-3" cx="128" cy="128" r="96"/>
+  <circle class="HKT-item" id="HKT-4" cx="128" cy="128" r="72"/>
+  <circle class="HKT-item" id="HKT-5" cx="128" cy="128" r="94"/>
+  <circle class="HKT-item" id="HKT-6" cx="128" cy="128" r="80"/>
+  <circle class="HKT-item" id="HKT-7" cx="128" cy="128" r="47"/>
+  <circle class="HKT-item" id="HKT-8" cx="128" cy="128" r="32"/>
+  <circle class="HKT-item" id="HKT-9" cx="128" cy="128" r="28"/>
+  <circle class="HKT-item" id="HKT-10" cx="128" cy="128" r="24"/>
+</svg>
+
+</div>
+
+  
+
+    <div class="search-block">
+      <div id="site_search">
+        <div class="form-group">
+          <input type="text" id="local-search-input" name="q" results="0" placeholder="search" class="st-search-input st-default-search-input form-control"/>
+        </div>
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+
+
+
+</body>
+<footer>
+  
+<script src="https://co5.me/lib/jquery/index.js?v=2.1.3.js"></script>
+
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<script src="/PhotoSwipe/photoswipe.js"></script>
+
+  
+<script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+
+
+<script src="/scripts/main.js"></script>
+
+
+<script src="/scripts/score.js"></script>
+
+
+<script src="/scripts/waline.js"></script>
+
+
+<script src="/scripts/search.js"></script>
+
+
+  
+
+  
+    
+      <script type="text/javascript">
+      Waline({
+        el: '#waline',
+        serverURL: 'https://waline-4o-cx.vercel.app/',
+        emoji: [],
+        uploadImage: false,
+        visitor: true,
+        requiredMeta: ['nick', 'mail'],
+        placeholder:"欢迎留言 ~ 登录非必选项，填上昵称和邮箱即可提交评论并显示 Libravatar / Gravatar",
+      });
+      window.onload = function(){
+        $("#waline-nick" ).attr( "placeholder" , "昵称" );
+        $("#waline-mail" ).attr( "placeholder" , "邮箱" );
+        $("#waline-link" ).attr( "placeholder" , "链接" );
+      }
+      </script>
+    
+  
+
+
+  
+  <script type="text/javascript">      
+    var path = "/search.xml";
+    searchFunc(path, 'local-search-input', 'local-search-result');
+  </script>
+
+  
+<script src="/hekation/emoji.js"></script>
+
+
+<link rel="stylesheet" href="/hekation/emoji.css">
+
+
+<script src="/scripts/HKT-63.js"></script>
+
+</footer>
+</html>

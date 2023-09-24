@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    「记录：侧边栏激活 &amp; 高亮代码框」 - 無色人間。
+  
+</title>
+
+
+  <link rel="alternative" href="/atom.xml" title="無色人間。" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+
+
+<link rel="stylesheet" href="/styles/main.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <img src="/favicon.png">
+  </button>
+  <a class="title" href="/">無色人間。</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">無色人間。</a></h1>
+    
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/" title="主页" external="false">主页</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/about" title="关于" external="false">关于</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/categories" title="分类" external="false">分类</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/ark" title="｢匣｣" external="false">｢匣｣</a>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">归档</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">27</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">43</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS" external="false">RSS</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="javascript:;" title="搜索" external="false">搜索</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+  <div class="footer">
+    <div class="info">
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="/icon.png"></a>
+          
+        </div>
+      <div class="content">
+        
+          <div class="description">For the glory of mankind.</div>
+        
+        
+          <div class="author">4o</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    <div class="main-content">
+          <div class="post-body">
+
+<article id="post-211002-log" class="article article-type-post">
+  
+    <div class="article-header">
+      <div class="article-title">
+      <h2>
+      记录：侧边栏激活 & 高亮代码框
+    </h2>
+    <span class="article-date">
+  2021/10/02
+</span>
+
+    
+
+  <span class="word-count">字数统计：
+    <span class="word-count-symbol">1.6k</span>
+  </span>
+  <span class="word-count">阅读时间：
+    <span class="word-count-time">3 mins</span>
+  </span>
+  
+    <span class="word-count">访问次数：
+      <span id="/2021/211002-log/" class="waline-visitor-count">...</span>
+    </span>
+    <span class="word-count">评论统计：
+      <span id="/2021/211002-log/" class="waline-comment-count">...</span>
+    </span>
+  
+
+
+  </div>
+    <div class="article-info">
+    
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E7%BB%B4%E6%8A%A4%E6%97%A5%E5%BF%97/">维护日志</a></li></ul>
+
+
+    
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HKT-924/" rel="tag">HKT-924</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/" rel="tag">前端笔记</a></li></ul>
+
+
+  </div>
+</div>
+  
+  <div class="article-entry">
+    <p>　　一种迷惑行为：嫌 Next 过于臃肿选了个简洁版的主题然后挨个往里重写 Next 自带的功能，最后搞出来了一个不是 Next 胜似 Next 的更加臃肿的东西……<br>　　<strong>但是今天也是没做搜索的一天</strong>，我甚至直接把搜索按钮给隐藏了，哈哈 :4o-3:</p>
+<span id="more"></span>
+
+<p>　　是说昨天说好剪固定队笑话视频，结果只剪了个音频，视频连新建工程都没有开【小声，一整天全扑在折腾博客上了。<br>　　今天的代码也是用 jQuery 写的，为什么这么快就接受了 jQuery 呢，主要是因为 jQuery 的选择器语法和 css 基本一模一样，极大程度减少了我的学习成本。</p>
+<h3 id="侧边栏激活"><a href="#侧边栏激活" class="headerlink" title="侧边栏激活"></a>侧边栏激活</h3><p>　　所以这具体是个什么需求呢，需求就是当你点开这篇文章的时候，左边侧边栏归档列表里的 <code>2021</code> 是亮着的。<br>　　其实代码给我的折磨远远没有 css 给我的多。昨天晚上我为了显示简洁直接把除了正文页面以外的浏览统计都清空了，然后修正好所有的代码和 css 样式以后去 leancloud 瞅了一眼数据，首页访问量赫然一个 <em>389</em>，我觉得再折腾几次 Leancloud 的免费请求次数都不够我霍霍的……</p>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>　　这次在代码构思上没走什么弯路，一开始就是打算：</p>
+<ul>
+<li>获取当前页面链接</li>
+<li>遍历侧边栏按钮的 <code>href</code> 属性，检查返回的字符串中是否含有当前页面链接<br>如果有，则添加 class <code>active</code></li>
+<li>修改 css，将 <code>a:hover</code> 的样式复制给 <code>a.active</code></li>
+</ul>
+<p>　　然而在实现的过程中真是走了不少弯路……<br>　　开始试图利用 hexo 自带的函数 <code>url_for()</code>，但是研究了半天也不知道怎么把这玩意写进 JS，于是放弃了，改用 JS 直接获取页面链接：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> actURL = <span class="built_in">window</span>.location.pathname.split(<span class="string">&#x27;/&#x27;</span>)[<span class="number">1</span>]</span><br><span class="line"><span class="comment">// 将当前页面的 url 按 `/` 切分，并将所有部分收集到一个数组中</span></span><br><span class="line"><span class="comment">// [0] 会返回主域名，[1] 则返回主域名之后的第一截，以此类推</span></span><br></pre></td></tr></table></figure>
+<p>　　追加一行 <code>console.log(actURL)</code> 就可以在控制台检查获得的结果了。</p>
+<p>　　然后在匹配链接的时候真是频频遭遇滑铁卢，错误的代码就不放了，反正要么不亮要么全亮，气得我晚饭都吃得郁郁寡欢……</p>
+<h4 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h4><p>　　最终实现的代码如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> actURL = <span class="built_in">window</span>.location.pathname.split(<span class="string">&#x27;/&#x27;</span>)[<span class="number">1</span>],</span><br><span class="line"><span class="comment">// 获取普通分页链接</span></span><br><span class="line">  actYear = <span class="built_in">window</span>.location.pathname.split(<span class="string">&#x27;/&#x27;</span>)[<span class="number">2</span>];</span><br><span class="line">  <span class="comment">// 获取归档分页的年份</span></span><br><span class="line"><span class="keyword">if</span> (actURL.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line"><span class="comment">// 在首页执行第一行代码会返回一个空字符串</span></span><br><span class="line"><span class="comment">// 从而导致之后的事件报错</span></span><br><span class="line"><span class="comment">// 所以先判断一下字符串是否有内容，如果没有就直接激活主页链接</span></span><br><span class="line">  <span class="keyword">if</span> (actURL.indexOf(<span class="string">&#x27;archives&#x27;</span>) &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">  <span class="comment">// 判断页面链接中是否包含关键字 `archives`</span></span><br><span class="line">  <span class="comment">// 直译是请求关键字在对象内第一次出现的位置</span></span><br><span class="line">    $(<span class="string">&#x27;.archive-list-container a:first&#x27;</span>).addClass(<span class="string">&#x27;active&#x27;</span>);</span><br><span class="line">    <span class="comment">// 激活归档按钮</span></span><br><span class="line">    $(<span class="string">&#x27;#linklist a[href*=&#x27;</span> + actYear + <span class="string">&#x27;]&#x27;</span>).addClass(<span class="string">&#x27;active&#x27;</span>);</span><br><span class="line">    <span class="comment">// 激活匹配链接的侧边栏按钮</span></span><br><span class="line">    <span class="comment">// 因为归档年份是唯一的，所以不用 each 遍历</span></span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    $(<span class="string">&#x27;#linklist a[href*=&#x27;</span> + actURL + <span class="string">&#x27;]&#x27;</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      $(<span class="built_in">this</span>).addClass(<span class="string">&#x27;active&#x27;</span>);</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="comment">// 如果不是归档页面，则激活所有匹配链接的按钮</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  $(<span class="string">&#x27;#linklist a:first&#x27;</span>).addClass(<span class="string">&#x27;active&#x27;</span>);</span><br><span class="line">  <span class="comment">// 如果未获取到分页链接，则激活首页按钮</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>　　是说我也开始用两个半角空格缩进了，这个 tab 排版实在是太丑了……<br>　　不知道手机端的支持情况怎么样，如果不支持……那也算了，反正手机端平时也看不到侧边栏，加不上 class 也不影响普通 css 样式，摸了摸了【</p>
+<h3 id="高亮代码框"><a href="#高亮代码框" class="headerlink" title="高亮代码框"></a>高亮代码框</h3><p>　　显然本篇发送的时候高亮代码框已经实现了，虽然配色并不是很高亮，但是我只是想大概分一下颜色而已……<br>　　毕竟这个站整体配色还是黑白为主，实测代码框如果用了很鲜艳的颜色会非常突兀。以及页面主体实际上是灰色的，所以也在一定程度上限制了配色的明度……总之暂时调试的结果就是这样。<br>　　是说其实绝大多数主题都是自带高亮代码框的，我现在用的这个也不例外，写 markdown 的时候在代码框开头标记好文字就会自动把关键词切分好，只要自己在 css 里调整需要的颜色就行。</p>
+<p>　　是说开始折腾这个玩意我才发现我之前做的所有代码框样式包括 PS 滚动条，全部都是「未知文本」限定……</p>
+<p>　　如果你的主题没有自带高亮代码框，那么可以看看这个库：<a target="_blank" rel="noopener" href="https://highlightjs.org/">highlight.js</a> ，把 JS 和 css 链接进 layout 文件应该就可以用了。</p>
+<h3 id="修正：减少无效-waline-请求"><a href="#修正：减少无效-waline-请求" class="headerlink" title="修正：减少无效 waline 请求"></a>修正：减少无效 waline 请求</h3><p>　　之前就有说过我写东西的时候喜欢一边写 md 一边在网页里疯狂刷新预览排版效果，然后 waline 自带的访问统计就嗖嗖往上涨，一篇文章（尤其是笔记类）从起稿到发布起码要刷新 50+ 次，多发几篇数据就很感人了。<br>　　而且白嫖的 Leancloud 是有请求次数限制的！！！这样下去绝对不行！！！</p>
+<p>　　于是把 waline 的设置代码放进了 layout 文件里，如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (page.comment != <span class="literal">false</span>) &#123; %&gt;</span><br><span class="line"></span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    Waline(&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      <span class="attr">el</span>: <span class="string">&#x27;#waline&#x27;</span>,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      <span class="attr">serverURL</span>: <span class="string">&#x27;https://waline-4o-cx.vercel.app/&#x27;</span>,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      <span class="attr">visitor</span>: <span class="literal">true</span>,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">  </span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+
+<p>　　其实我自己还追加了很多功能开关 ex 只有 post 页面显示评论框但所有的页面都要开启访客统计（因为关掉访客统计的同时也会关掉统计数据展示，我也是真™服了这个设计），如果没有那么多开关需求的话在 if 里放一个 <code>waline-set.js</code> 的链接就可以了。<br>　　写完 layout 以后修改所有的 <code>scaffolds</code> 模板文件，在前缀部分加上 <code>comment: false</code>，等写作完毕之后再删掉这一行就可以避免本地浏览时发送过多请求的问题……<br>　　好嘛我知道这个方法不太优雅，但是有用，能跑就行 :4o-3:</p>
+<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/ask/37236">如何在 jQuery 选择器中使用 javascript 变量？</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/jquery-selectors.html">jQuery 选择器</a></li>
+</ul>
+
+  </div>
+  <div class="clear" style="clear:both;"></div>
+  <footer class="article-footer">
+  </footer>
+</article>
+
+
+  <div class="comment-block">
+    <hr>
+  <div id="waline"></div>
+  </div>
+
+
+<div class="main-footer">
+  <span>© 2023 無色人間。-<a rel="me noopener" target="_blank" href="https://bgme.me/@suzushi">「e686a7e3828c」</a></span>
+  <span>转载本站图文请附上<a href="">「原始链接」</a></span>
+  <span class="description">已收录数据
+    <em class="word-count-symbol">&nbsp;186k&nbsp;</em>
+    字，登记访客&nbsp;
+    <em id="/" class="waline-visitor-count">...</em>
+    &nbsp;人。
+  </span>
+</div>
+</div>
+
+
+
+  <div class="article-toc">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%A7%E8%BE%B9%E6%A0%8F%E6%BF%80%E6%B4%BB"><span class="toc-number">1.</span> <span class="toc-text">侧边栏激活</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF"><span class="toc-number">1.1.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.2.</span> <span class="toc-text">实现</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E4%BA%AE%E4%BB%A3%E7%A0%81%E6%A1%86"><span class="toc-number">2.</span> <span class="toc-text">高亮代码框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%AD%A3%EF%BC%9A%E5%87%8F%E5%B0%91%E6%97%A0%E6%95%88-waline-%E8%AF%B7%E6%B1%82"><span class="toc-number">3.</span> <span class="toc-text">修正：减少无效 waline 请求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="toc-number">4.</span> <span class="toc-text">参考链接</span></a></li></ol>
+  </div>
+
+
+
+          
+  
+  </div>
+  <div class="hekation">
+
+<svg class="HKT-block" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <circle class="HKT-item" id="HKT-1" cx="128" cy="128" r="120"/>
+  <circle class="HKT-item" id="HKT-2" cx="128" cy="128" r="127"/>
+  <circle class="HKT-item" id="HKT-3" cx="128" cy="128" r="96"/>
+  <circle class="HKT-item" id="HKT-4" cx="128" cy="128" r="72"/>
+  <circle class="HKT-item" id="HKT-5" cx="128" cy="128" r="94"/>
+  <circle class="HKT-item" id="HKT-6" cx="128" cy="128" r="80"/>
+  <circle class="HKT-item" id="HKT-7" cx="128" cy="128" r="47"/>
+  <circle class="HKT-item" id="HKT-8" cx="128" cy="128" r="32"/>
+  <circle class="HKT-item" id="HKT-9" cx="128" cy="128" r="28"/>
+  <circle class="HKT-item" id="HKT-10" cx="128" cy="128" r="24"/>
+</svg>
+
+</div>
+
+  
+
+    <div class="search-block">
+      <div id="site_search">
+        <div class="form-group">
+          <input type="text" id="local-search-input" name="q" results="0" placeholder="search" class="st-search-input st-default-search-input form-control"/>
+        </div>
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+
+
+
+</body>
+<footer>
+  
+<script src="https://co5.me/lib/jquery/index.js?v=2.1.3.js"></script>
+
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<script src="/PhotoSwipe/photoswipe.js"></script>
+
+  
+<script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+
+
+<script src="/scripts/main.js"></script>
+
+
+<script src="/scripts/score.js"></script>
+
+
+<script src="/scripts/waline.js"></script>
+
+
+<script src="/scripts/search.js"></script>
+
+
+  
+
+  
+    
+      <script type="text/javascript">
+      Waline({
+        el: '#waline',
+        serverURL: 'https://waline-4o-cx.vercel.app/',
+        emoji: [],
+        uploadImage: false,
+        visitor: true,
+        requiredMeta: ['nick', 'mail'],
+        placeholder:"欢迎留言 ~ 登录非必选项，填上昵称和邮箱即可提交评论并显示 Libravatar / Gravatar",
+      });
+      window.onload = function(){
+        $("#waline-nick" ).attr( "placeholder" , "昵称" );
+        $("#waline-mail" ).attr( "placeholder" , "邮箱" );
+        $("#waline-link" ).attr( "placeholder" , "链接" );
+      }
+      </script>
+    
+  
+
+
+  
+  <script type="text/javascript">      
+    var path = "/search.xml";
+    searchFunc(path, 'local-search-input', 'local-search-result');
+  </script>
+
+  
+<script src="/hekation/emoji.js"></script>
+
+
+<link rel="stylesheet" href="/hekation/emoji.css">
+
+
+<script src="/scripts/HKT-63.js"></script>
+
+</footer>
+</html>

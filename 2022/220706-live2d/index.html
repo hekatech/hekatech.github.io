@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    「记录：live2D 同步走路动画绑定」 - 無色人間。
+  
+</title>
+
+
+  <link rel="alternative" href="/atom.xml" title="無色人間。" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+
+
+<link rel="stylesheet" href="/styles/main.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <img src="/favicon.png">
+  </button>
+  <a class="title" href="/">無色人間。</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">無色人間。</a></h1>
+    
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/" title="主页" external="false">主页</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/about" title="关于" external="false">关于</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/categories" title="分类" external="false">分类</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/ark" title="｢匣｣" external="false">｢匣｣</a>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">归档</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">27</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">43</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS" external="false">RSS</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="javascript:;" title="搜索" external="false">搜索</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+  <div class="footer">
+    <div class="info">
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="/icon.png"></a>
+          
+        </div>
+      <div class="content">
+        
+          <div class="description">For the glory of mankind.</div>
+        
+        
+          <div class="author">4o</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    <div class="main-content">
+          <div class="post-body">
+
+<article id="post-220706-live2d" class="article article-type-post">
+  
+    <div class="article-header">
+      <div class="article-title">
+      <h2>
+      记录：live2D 同步走路动画绑定
+    </h2>
+    <span class="article-date">
+  2022/07/06
+</span>
+
+    
+
+  <span class="word-count">字数统计：
+    <span class="word-count-symbol">1.8k</span>
+  </span>
+  <span class="word-count">阅读时间：
+    <span class="word-count-time">3 mins</span>
+  </span>
+  
+    <span class="word-count">访问次数：
+      <span id="/2022/220706-live2d/" class="waline-visitor-count">...</span>
+    </span>
+    <span class="word-count">评论统计：
+      <span id="/2022/220706-live2d/" class="waline-comment-count">...</span>
+    </span>
+  
+
+
+  </div>
+    <div class="article-info">
+    
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/ERROR/">ERROR</a></li></ul>
+
+
+    
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HKT-924/" rel="tag">HKT-924</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/live2D/" rel="tag">live2D</a></li></ul>
+
+
+  </div>
+</div>
+  
+  <div class="article-entry">
+    <p>　　<strong>我 被 Live 2D 杀 死 了</strong> :4o-3:<br>　　起因是看到了这个<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1c3411H7H1">可以同步走路和跳的 Live2D 演示视频</a>，因为做出了辅助机的 loading 我就飘了，觉得自己可以挑战这种高新技术了，遂画了个火柴人捣鼓了一上午。<br>　　K 动画和绑定走路都做得非常顺利，然而一开始研究切换跑步就出现了各种问题，要么切了跑步就回不来，要么腿疯狂打结，一上午得出了一打错误答案，气得我饭也不想吃了。<br>　　总之先把大概的试错过程记录下来然后摆了，看不懂也不要骂我，我的脑细胞已经被燃尽了，我自己都不知道我在写些什么……<br>　　<del>应该没人会看到吧，哈哈【</del></p>
+<span id="more"></span>
+
+<h3 id="行走动画-amp-绑定"><a href="#行走动画-amp-绑定" class="headerlink" title="行走动画 &amp; 绑定"></a>行走动画 &amp; 绑定</h3><p>　　其实这里记录的方式和我一开始实现的方式不太一样，但是我感觉这个方案可能比较接近我需要的正确答案，就先记着这个了。其它的尝试在后面的失败日志里记录吧……</p>
+<h4 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h4><p>　　整个行走参数最少需要 5 个关键帧，即参数初始 0 最大 4，然后设为<em>循环参数</em>。<br>　　0，2，4 为循环帧，1 和 3 分别做左腿和右腿在前的关键帧即刻做出最简单的行走动画。细节一些需要在 0.5 和 2.5 加入抬腿和上身的上仰，并在 1 和 3 加入上身的下俯动作。但因为这是个测试工程我就摆了，最后没搞成功我也懒得截图，手的动作同理。<br>　　动态参考：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Ft411Y7QD">用4个基本姿态画一个完整的走路动作</a></p>
+<h4 id="绑定"><a href="#绑定" class="headerlink" title="绑定"></a>绑定</h4><p>　　新建动画开关参数（区间 0~1，初始 0），在 0 关键帧将所有动画帧复位，导入场景混合之后就可以使用开关控制动画开启 / 停止。<br>　　<em>实际上参数还是在动的，只不过变形器被锁在了初始形态。</em>另外建议在做动画之前就把开关的关键帧打好，这样 0 所在的关键帧就是默认不会动的。<br>　　在 VTS 中把开关设为按键表情，绑定 W 键并打开【按键释放后恢复】即可。</p>
+<h3 id="废案-1：切换待机动画"><a href="#废案-1：切换待机动画" class="headerlink" title="废案 1：切换待机动画"></a>废案 1：切换待机动画</h3><p>　　最初的方案。<br>　　为左右腿分别绑定【上下】和【前后】两个参数，跑动和走路的动作幅度差分做在【上下】参数里。<br>　　开关方式与前文行走动画中提到的相同。<br>　　然后进入动画场景为走路和跑步分别制作动画并导出文件，先绑定好走路动画，再使用 VTS 的「切换循环动画」功能切换为跑步。<br>　　最后出来的效果动画切换很平滑（因为是同一套变形器），但很要命的一点是 VTS 无法使用同一个按键复位动画……<br>　　就，它的逻辑是这样的：</p>
+<ul>
+<li>「循环动画」只能通过<em>待机动画</em>实现</li>
+<li><em>待机动画</em>只能同时存在一个</li>
+<li>按键只能将现有<em>待机动画</em>替换成指定文件，但不提供撤回</li>
+<li>同时<em>更改待机动画</em>功能并不支持<em>按键释放后恢复</em>和<em>结束动画演示时间</em>，简而言之就是有去无回</li>
+</ul>
+<p>　　最后的结果就是切成跑步之后就回不来了，我还得再多换一个按键切回走路。</p>
+<h3 id="废案-2：物理控制走路"><a href="#废案-2：物理控制走路" class="headerlink" title="废案 2：物理控制走路"></a>废案 2：物理控制走路</h3><p>　　从一开始就努力错了方向的一个方案，但可能之后做别的效果能用到……<br>　　使用呼吸作为角度输入控制左右脚的【上下】和【前后】，把右脚的输出反映就可以实现两只脚交替走路。<br>　　本来是试图通过物理输入来实现动画变速，但总之这个尝试非常失败，失败到我甚至不想再浪费键盘耐久详细描述……反正就是失败了！</p>
+<h3 id="废案-3：变速开关与多套变形器"><a href="#废案-3：变速开关与多套变形器" class="headerlink" title="废案 3：变速开关与多套变形器"></a>废案 3：变速开关与多套变形器</h3><blockquote>
+<p>这是一套在 live2D 里可以完美运行但在 VTS 里就会双腿打结的方案 :4o-2:</p>
+</blockquote>
+<p>　　用 <a href="#%E8%A1%8C%E8%B5%B0%E5%8A%A8%E7%94%BB-amp-%E7%BB%91%E5%AE%9A">上文</a> 提到的方法制作开关，只是这一次开关需要 0-1-2 三档，在 1 制作走路，在 2 制作跑步。<br>　　走路与跑步动画分别用两条独立参数 K 关键帧，但所有的变形器需要同时绑定【开关】【走路】和【跑步】三条参数。<br>　　【开关】为 1 时【走路】参数上的 1 3 帧（即运动帧）需要同时复制到【跑步】参数上的 0 1 2 3 4（每一帧），同理【开关】为 2 时 K 好的【跑步】关键帧也需要复制到【走路】的每一帧，从而消除两个动画参数之间的互相影响。<br>　　这个原理用一般人类语言比较难以描述，可以参考<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1sK4y1u7Pf">【Live2D教程】平滑切换待机动画</a><br>　　制作动画时在<strong>同一个场景内</strong>为【走路】和【跑步】创建不同速度的循环动画，并且导出<strong>单个动画文件</strong>。<br>　　进入物理编辑器播放动画，切换开关即可平滑切换走路与跑步。</p>
+<p>　　<strong>但是这个平滑仅限 live2D 本体内预览</strong>。在 VTS 里绑定之后每次切换表情都会出现随机腿抽筋打结现象，暂时猜测是 VTS 自带的<em>渐入 / 渐出</em>同时调用了两个动画的关键帧导致的。<br>　　虽然我不知道为什么变成这样……因为<em>理论上</em>动画是一直循环播放的，<strong>按键控制的只有开关不可能导致动画关键帧错位</strong>，但这个打结的情况确实是跟着这个数字的设置变化的，最要命的是这玩意还关不掉，我真吐了。</p>
+<h3 id="待验证方案假设"><a href="#待验证方案假设" class="headerlink" title="待验证方案假设"></a>待验证方案假设</h3><p>　　捏猫猫滴我突然发现 VTS 里同一个物理按键可以绑定多个按键动作，那我直接在 W 上同时绑定开启 + 切换行走，Z 上绑定开启 + 切换跑步不就解决了吗！！！草！（中国语）<br>　　呃啊我把差分动画文件全删了还得重新做一遍，啊啊啊啊我痛恨所有不好好写文档的开发者 :4o-3:<br>　　但果然吃了饭再回来脑细胞会复活一些……明天再来解决这个问题吧 :4o-6:</p>
+
+  </div>
+  <div class="clear" style="clear:both;"></div>
+  <footer class="article-footer">
+  </footer>
+</article>
+
+
+  <div class="comment-block">
+    <hr>
+  <div id="waline"></div>
+  </div>
+
+
+<div class="main-footer">
+  <span>© 2023 無色人間。-<a rel="me noopener" target="_blank" href="https://bgme.me/@suzushi">「e686a7e3828c」</a></span>
+  <span>转载本站图文请附上<a href="">「原始链接」</a></span>
+  <span class="description">已收录数据
+    <em class="word-count-symbol">&nbsp;186k&nbsp;</em>
+    字，登记访客&nbsp;
+    <em id="/" class="waline-visitor-count">...</em>
+    &nbsp;人。
+  </span>
+</div>
+</div>
+
+
+
+  <div class="article-toc">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E8%B5%B0%E5%8A%A8%E7%94%BB-amp-%E7%BB%91%E5%AE%9A"><span class="toc-number">1.</span> <span class="toc-text">行走动画 &amp; 绑定</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A8%E7%94%BB"><span class="toc-number">1.1.</span> <span class="toc-text">动画</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%91%E5%AE%9A"><span class="toc-number">1.2.</span> <span class="toc-text">绑定</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%9F%E6%A1%88-1%EF%BC%9A%E5%88%87%E6%8D%A2%E5%BE%85%E6%9C%BA%E5%8A%A8%E7%94%BB"><span class="toc-number">2.</span> <span class="toc-text">废案 1：切换待机动画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%9F%E6%A1%88-2%EF%BC%9A%E7%89%A9%E7%90%86%E6%8E%A7%E5%88%B6%E8%B5%B0%E8%B7%AF"><span class="toc-number">3.</span> <span class="toc-text">废案 2：物理控制走路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%9F%E6%A1%88-3%EF%BC%9A%E5%8F%98%E9%80%9F%E5%BC%80%E5%85%B3%E4%B8%8E%E5%A4%9A%E5%A5%97%E5%8F%98%E5%BD%A2%E5%99%A8"><span class="toc-number">4.</span> <span class="toc-text">废案 3：变速开关与多套变形器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%85%E9%AA%8C%E8%AF%81%E6%96%B9%E6%A1%88%E5%81%87%E8%AE%BE"><span class="toc-number">5.</span> <span class="toc-text">待验证方案假设</span></a></li></ol>
+  </div>
+
+
+
+          
+  
+  </div>
+  <div class="hekation">
+
+<svg class="HKT-block" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <circle class="HKT-item" id="HKT-1" cx="128" cy="128" r="120"/>
+  <circle class="HKT-item" id="HKT-2" cx="128" cy="128" r="127"/>
+  <circle class="HKT-item" id="HKT-3" cx="128" cy="128" r="96"/>
+  <circle class="HKT-item" id="HKT-4" cx="128" cy="128" r="72"/>
+  <circle class="HKT-item" id="HKT-5" cx="128" cy="128" r="94"/>
+  <circle class="HKT-item" id="HKT-6" cx="128" cy="128" r="80"/>
+  <circle class="HKT-item" id="HKT-7" cx="128" cy="128" r="47"/>
+  <circle class="HKT-item" id="HKT-8" cx="128" cy="128" r="32"/>
+  <circle class="HKT-item" id="HKT-9" cx="128" cy="128" r="28"/>
+  <circle class="HKT-item" id="HKT-10" cx="128" cy="128" r="24"/>
+</svg>
+
+</div>
+
+  
+
+    <div class="search-block">
+      <div id="site_search">
+        <div class="form-group">
+          <input type="text" id="local-search-input" name="q" results="0" placeholder="search" class="st-search-input st-default-search-input form-control"/>
+        </div>
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+
+
+
+</body>
+<footer>
+  
+<script src="https://co5.me/lib/jquery/index.js?v=2.1.3.js"></script>
+
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<script src="/PhotoSwipe/photoswipe.js"></script>
+
+  
+<script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+
+
+<script src="/scripts/main.js"></script>
+
+
+<script src="/scripts/score.js"></script>
+
+
+<script src="/scripts/waline.js"></script>
+
+
+<script src="/scripts/search.js"></script>
+
+
+  
+
+  
+    
+      <script type="text/javascript">
+      Waline({
+        el: '#waline',
+        serverURL: 'https://waline-4o-cx.vercel.app/',
+        emoji: [],
+        uploadImage: false,
+        visitor: true,
+        requiredMeta: ['nick', 'mail'],
+        placeholder:"欢迎留言 ~ 登录非必选项，填上昵称和邮箱即可提交评论并显示 Libravatar / Gravatar",
+      });
+      window.onload = function(){
+        $("#waline-nick" ).attr( "placeholder" , "昵称" );
+        $("#waline-mail" ).attr( "placeholder" , "邮箱" );
+        $("#waline-link" ).attr( "placeholder" , "链接" );
+      }
+      </script>
+    
+  
+
+
+  
+  <script type="text/javascript">      
+    var path = "/search.xml";
+    searchFunc(path, 'local-search-input', 'local-search-result');
+  </script>
+
+  
+<script src="/hekation/emoji.js"></script>
+
+
+<link rel="stylesheet" href="/hekation/emoji.css">
+
+
+<script src="/scripts/HKT-63.js"></script>
+
+</footer>
+</html>

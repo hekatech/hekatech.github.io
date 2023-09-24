@@ -1,0 +1,190 @@
+.post-list-body {
+  display: block;
+  margin-top: 1em;
+  position: relative;
+}
+.post-list-body::before {
+  content: ' ';
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: 8px solid rgba(0,0,0,0.3);
+  border-right: 2px solid rgba(0,0,0,0.3);
+}
+.list-pointer {
+  position: absolute;
+  top: 68px;
+  left: -40px;
+  width: 32px;
+  height: 16px;
+  background-color: #000;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.post-list-item {
+  display: flex;
+  height: 150px;
+  margin-bottom: 1.5em;
+  margin-left: 2em;
+  position: relative;
+}
+.post-list-item .post-cover {
+  height: 150px;
+  width: 150px;
+  flex-shrink: 0;
+  background-color: rgba(0,0,0,0.15);
+  margin-right: 1em;
+  transition: all 0.5s;
+}
+.post-list-item .post-cover img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale(50%);
+  opacity: 0.8;
+}
+.post-list-item .post-article {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.post-list-item .list-header {
+  width: 100%;
+  background: rgba(0,0,0,0.3);
+  color: #000;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.5s;
+}
+.post-list-item .list-header .article-tag-list,
+.post-list-item .list-header .article-category-list {
+  display: inline-block;
+  list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0.8em;
+}
+.post-list-item .list-header .article-tag-list::before,
+.post-list-item .list-header .article-category-list::before {
+  content: " ";
+  vertical-align: middle;
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  background-color: #000;
+  margin-bottom: 0.2em;
+  margin-right: 0.5em;
+  transition: all 0.5s;
+}
+.post-list-item .list-header .article-tag-list-item,
+.post-list-item .list-header .article-category-list-item {
+  display: inline-block;
+  padding-right: 0.5em;
+}
+.post-list-item .list-header .article-tag-list-item a,
+.post-list-item .list-header .article-category-list-item a {
+  color: #000;
+}
+.post-list-item .list-header .article-date {
+  padding-right: 1em;
+}
+.post-list-item .list-info {
+  display: flex;
+  vertical-align: center;
+  margin-top: 12px;
+}
+.post-list-item .list-info h2 {
+  font-size: 20px;
+}
+.post-list-item .list-info h2 a {
+  font-size: 1em;
+  color: d-gray;
+}
+.post-list-item .list-info >ul {
+  padding-left: 0;
+  margin-left: 0.5em;
+  display: inline-flex;
+}
+.post-list-item .list-info >ul a {
+  font-size: 14px;
+  color: l-gray;
+  background: rgba(0,0,0,0.7);
+  padding: 0.2em 0.7em;
+  margin-right: 0.5em;
+  border-radius: 5px;
+}
+.post-list-item .list-entry {
+  margin: 0 0.5em 0 0;
+  opacity: 1;
+  transition: all 0.5s;
+  line-height: 18px;
+  position: absolute;
+  bottom: 4px;
+}
+.post-list-item .list-entry img {
+  display: none;
+}
+.post-list-item .list-entry .word-count,
+.post-list-item .list-entry .word-count span {
+  color: d-gray;
+  display: inline-flex;
+  font-size: 14px;
+  line-height: inherit;
+}
+.post-list-item .list-entry .word-count::before {
+  content: '||';
+  font-size: 10px;
+  margin: 0 8px;
+  vertical-align: bottom;
+  text-align: center;
+}
+.post-list-item:hover .list-pointer {
+  opacity: 1;
+}
+.post-list-item:hover .post-cover {
+  background-color: rgba(0,0,0,0.7);
+}
+.post-list-item:hover .list-header {
+  background: #000;
+  color: l-gray;
+}
+.post-list-item:hover .list-header .article-tag-list-item a,
+.post-list-item:hover .list-header .article-category-list-item a {
+  color: l-gray;
+}
+.post-list-item:hover .list-header .article-tag-list::before,
+.post-list-item:hover .list-header .article-category-list::before {
+  background-color: l-gray;
+}
+#show-more {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #000;
+  background-image: linear-gradient(rgba(255,255,255,0), rgba(250,250,250,0.7) 90%);
+}
+#show-more p {
+  display: block;
+  text-align: right;
+  margin: 110px 1em auto auto;
+  text-shadow: 0 0 5px #fff;
+}
+.post-list-item:hover .list-entry {
+  opacity: 0.2;
+}
+.post-list-item:hover #show-more {
+  opacity: 1;
+}
+.post-list-item:hover .list-info h2 a {
+  color: #000;
+}
+.post-list-item:hover .post-cover img {
+  opacity: 1;
+}

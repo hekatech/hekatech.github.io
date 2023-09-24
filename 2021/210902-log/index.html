@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    「纪念：电脑端初步建设完成」 - 無色人間。
+  
+</title>
+
+
+  <link rel="alternative" href="/atom.xml" title="無色人間。" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+
+
+<link rel="stylesheet" href="/styles/main.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <img src="/favicon.png">
+  </button>
+  <a class="title" href="/">無色人間。</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">無色人間。</a></h1>
+    
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/" title="主页" external="false">主页</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/about" title="关于" external="false">关于</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/categories" title="分类" external="false">分类</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/ark" title="｢匣｣" external="false">｢匣｣</a>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">归档</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">27</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">43</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS" external="false">RSS</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="javascript:;" title="搜索" external="false">搜索</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+  <div class="footer">
+    <div class="info">
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="/icon.png"></a>
+          
+        </div>
+      <div class="content">
+        
+          <div class="description">For the glory of mankind.</div>
+        
+        
+          <div class="author">4o</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    <div class="main-content">
+          <div class="post-body">
+
+<article id="post-210902-log" class="article article-type-post">
+  
+    <div class="article-header">
+      <div class="article-title">
+      <h2>
+      纪念：电脑端初步建设完成
+    </h2>
+    <span class="article-date">
+  2021/09/02
+</span>
+
+    
+
+  <span class="word-count">字数统计：
+    <span class="word-count-symbol">1.4k</span>
+  </span>
+  <span class="word-count">阅读时间：
+    <span class="word-count-time">2 mins</span>
+  </span>
+  
+    <span class="word-count">访问次数：
+      <span id="/2021/210902-log/" class="waline-visitor-count">...</span>
+    </span>
+    <span class="word-count">评论统计：
+      <span id="/2021/210902-log/" class="waline-comment-count">...</span>
+    </span>
+  
+
+
+  </div>
+    <div class="article-info">
+    
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E7%BB%B4%E6%8A%A4%E6%97%A5%E5%BF%97/">维护日志</a></li></ul>
+
+
+    
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HKT-924/" rel="tag">HKT-924</a></li></ul>
+
+
+  </div>
+</div>
+  
+  <div class="article-entry">
+    <p>　　本来说好今天下午整一下那个 HUD 的动画效果的，结果我果然还是对 JS 有蜜汁望而生畏的恐惧感，于是改变计划决定先把分类页面的 css 写好，最后再修正一下手机上的预览效果？</p>
+<span id="more"></span>
+
+<blockquote>
+<p>警告：今日工作量已严重超过额定计划<br>　　　剩余电量低于 15%，请及时充电</p>
+</blockquote>
+<p>　　我真是太看得起自己了……吃完午饭信誓旦旦说要搞什么手机 UI，结果 stylus 和 layout 相继出错搞得我心力交瘁。<br>　　layout 出了啥问题呢，分类的子页面和归档共用一个 <code>post-list.ejs</code> 作为主元素，但是不知道为什么一模一样的 layout 在渲染归档里的文章元素的时候就会少掉一个 <code>&lt;/div&gt;</code> 闭合标签。然后原作者选择用 JS 逐个补充标签，然后到我这的结果就是用来做 css 样式的 <code>list-body</code> 断成了一截一截。<br>　　其实理论上我换个元素做 css 就能解决了，但是在发现这个问题之前我又先被 stylus 狠狠搞了一把心态。我不知道是我在一个类标签里塞的子元素样式太多了超过它的处理上限了还是怎样，我把每个括号手动缩进之后挨个检查确定全部闭合了，但是动画效果就是 tmd 做不出来，最后我还是选择另起一行用传统 css 的语法一条一条地写动画，实在是不想再从头挨个修改类名，最后是另外新建了一个单独的 layout 解决的。<br>　　但总之我是做出来了……类似尼尔存档的 UI 界面……还解决了给文章添加指定封面参数……<br>　　好家伙，打出这行字的时候我真是跟虚脱一样……</p>
+<h3 id="工作小结"><a href="#工作小结" class="headerlink" title="工作小结"></a>工作小结</h3><p>　　那么本站基础 UI 已于地球时间 21.9.2 施工完毕，目前已实现的功能：</p>
+<ul>
+<li>两种文章列表形式<ul>
+<li>卡片瀑布流</li>
+<li>仿尼尔存档 UI<ul>
+<li>细节上还有亿点丑，但是一部分没什么思路另一部分改起来很快，先鸽置一下</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>分类列表页面<ul>
+<li>手写的【</li>
+</ul>
+</li>
+<li>相册展示<ul>
+<li>为文章单独指定了封面属性</li>
+<li>为封面添加了文章链接</li>
+</ul>
+</li>
+<li>自定义域名</li>
+<li>长毛象认证</li>
+<li>书签形翻页器</li>
+<li>RSS 订阅链接</li>
+<li>自定义浏览器图标</li>
+</ul>
+<h3 id="依然存在的问题"><a href="#依然存在的问题" class="headerlink" title="依然存在的问题"></a>依然存在的问题</h3><ul>
+<li>尼尔存档 UI 目前正文显示样式非常感人……<ul>
+<li>计划：引入字数统计后直接删掉正文</li>
+<li>read more 按钮也重新做成行内元素，现在这个样式太丑了</li>
+</ul>
+</li>
+<li>图片外链无法访问<ul>
+<li>好嘛我以为 dropbox 能直连结果拿手机看了看才发现它被墙了</li>
+</ul>
+</li>
+<li>三级列表没图标，我以为我用不到的结果最近天天在用，草啊</li>
+<li>滚动条好丑<ul>
+<li>另外代码框滚动的时候左侧的装饰线会消失，我大概应该把滚动条属性和伪类绑定在不同的位置</li>
+</ul>
+</li>
+</ul>
+<h3 id="尚未实现的功能"><a href="#尚未实现的功能" class="headerlink" title="尚未实现的功能"></a>尚未实现的功能</h3><p>　　高亮部分预计明天完成：</p>
+<ul>
+<li>颜文字插件<ul>
+<li>不然我直接把西柚子的插件 pull 下来用吧【你</li>
+</ul>
+</li>
+<li>背景动画：在做了</li>
+<li>移动端 UI：在做了</li>
+<li><em>字数统计</em>：明天就搞</li>
+<li>live2D：啊，对啊，我这个站是用来存稿的来着……</li>
+<li>音乐播放器：理想状态是能和背景动画做联动，做不了也算了，可以单独整个音乐可视化插件放在背景里也不错</li>
+<li><em>友链</em>：试图用 layout / JS 自动写入友链，搞不出来手写也行反正暂时没几个人【</li>
+<li>提问箱 / 评论<ul>
+<li>其实我真的很不想搞评论插件，我发现放这个玩意除了给普信简中用户提供随地大小便的场所以外并没有什么实际作用</li>
+<li>提问箱还是可以搞一下用来收约稿……其它公开问题直接毛象见吧，烦了</li>
+</ul>
+</li>
+<li>中文标点排版<ul>
+<li>手动输入方引号也没办法解决 <code>，「</code> 的问题，目前主要更新的是笔记，一开始写文这个问题马上又会暴露的……<ul>
+<li>思路是把需要处理的标点转换为特殊 span 再 <a target="_blank" rel="noopener" href="https://www.w3school.com.cn/cssref/pr_text_letter-spacing.asp">用 css 调整字符间距</a></li>
+</ul>
+</li>
+<li>还有这个省略号躺在地上，这不对</li>
+</ul>
+</li>
+<li>搜索<ul>
+<li>我认知里既然 RSS 已经生成了搞这个应该很快，但是明天要做的事还挺多的大概还是先鸽置……</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>警告：剩余电量已不足 1%，即将强制关机</p>
+</blockquote>
+<p>　　那么今天剪的代码就到这里！睡觉！</p>
+
+  </div>
+  <div class="clear" style="clear:both;"></div>
+  <footer class="article-footer">
+  </footer>
+</article>
+
+
+  <div class="comment-block">
+    <hr>
+  <div id="waline"></div>
+  </div>
+
+
+<div class="main-footer">
+  <span>© 2023 無色人間。-<a rel="me noopener" target="_blank" href="https://bgme.me/@suzushi">「e686a7e3828c」</a></span>
+  <span>转载本站图文请附上<a href="">「原始链接」</a></span>
+  <span class="description">已收录数据
+    <em class="word-count-symbol">&nbsp;186k&nbsp;</em>
+    字，登记访客&nbsp;
+    <em id="/" class="waline-visitor-count">...</em>
+    &nbsp;人。
+  </span>
+</div>
+</div>
+
+
+
+  <div class="article-toc">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E5%B0%8F%E7%BB%93"><span class="toc-number">1.</span> <span class="toc-text">工作小结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%9D%E7%84%B6%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">依然存在的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%9A%E6%9C%AA%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-number">3.</span> <span class="toc-text">尚未实现的功能</span></a></li></ol>
+  </div>
+
+
+
+          
+  
+  </div>
+  <div class="hekation">
+
+<svg class="HKT-block" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <circle class="HKT-item" id="HKT-1" cx="128" cy="128" r="120"/>
+  <circle class="HKT-item" id="HKT-2" cx="128" cy="128" r="127"/>
+  <circle class="HKT-item" id="HKT-3" cx="128" cy="128" r="96"/>
+  <circle class="HKT-item" id="HKT-4" cx="128" cy="128" r="72"/>
+  <circle class="HKT-item" id="HKT-5" cx="128" cy="128" r="94"/>
+  <circle class="HKT-item" id="HKT-6" cx="128" cy="128" r="80"/>
+  <circle class="HKT-item" id="HKT-7" cx="128" cy="128" r="47"/>
+  <circle class="HKT-item" id="HKT-8" cx="128" cy="128" r="32"/>
+  <circle class="HKT-item" id="HKT-9" cx="128" cy="128" r="28"/>
+  <circle class="HKT-item" id="HKT-10" cx="128" cy="128" r="24"/>
+</svg>
+
+</div>
+
+  
+
+    <div class="search-block">
+      <div id="site_search">
+        <div class="form-group">
+          <input type="text" id="local-search-input" name="q" results="0" placeholder="search" class="st-search-input st-default-search-input form-control"/>
+        </div>
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+
+
+
+</body>
+<footer>
+  
+<script src="https://co5.me/lib/jquery/index.js?v=2.1.3.js"></script>
+
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<script src="/PhotoSwipe/photoswipe.js"></script>
+
+  
+<script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+
+
+<script src="/scripts/main.js"></script>
+
+
+<script src="/scripts/score.js"></script>
+
+
+<script src="/scripts/waline.js"></script>
+
+
+<script src="/scripts/search.js"></script>
+
+
+  
+
+  
+    
+      <script type="text/javascript">
+      Waline({
+        el: '#waline',
+        serverURL: 'https://waline-4o-cx.vercel.app/',
+        emoji: [],
+        uploadImage: false,
+        visitor: true,
+        requiredMeta: ['nick', 'mail'],
+        placeholder:"欢迎留言 ~ 登录非必选项，填上昵称和邮箱即可提交评论并显示 Libravatar / Gravatar",
+      });
+      window.onload = function(){
+        $("#waline-nick" ).attr( "placeholder" , "昵称" );
+        $("#waline-mail" ).attr( "placeholder" , "邮箱" );
+        $("#waline-link" ).attr( "placeholder" , "链接" );
+      }
+      </script>
+    
+  
+
+
+  
+  <script type="text/javascript">      
+    var path = "/search.xml";
+    searchFunc(path, 'local-search-input', 'local-search-result');
+  </script>
+
+  
+<script src="/hekation/emoji.js"></script>
+
+
+<link rel="stylesheet" href="/hekation/emoji.css">
+
+
+<script src="/scripts/HKT-63.js"></script>
+
+</footer>
+</html>

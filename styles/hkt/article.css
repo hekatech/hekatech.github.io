@@ -1,0 +1,105 @@
+.article-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3em;
+}
+.article-header .article-title {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.article-header .article-title .article-date,
+.article-header .article-title .word-count,
+.article-header .article-title .word-count span {
+  color: d-gray;
+  display: inline-flex;
+  font-size: 14px;
+}
+.article-header .article-title .article-date::before,
+.article-header .article-title .word-count::before {
+  content: '||';
+  font-size: 10px;
+  margin: 0 8px;
+  vertical-align: bottom;
+  text-align: center;
+}
+.article-header .article-info {
+  text-align: right;
+  margin-left: 1em;
+}
+.article-header .article-info ul {
+  padding-left: 0;
+  text-align: right;
+}
+.article-header .article-info .article-tag-list,
+.article-header .article-info .article-category-list {
+  display: inline-block;
+  background: #000;
+  margin-bottom: 0.6em;
+  position: relative;
+  padding: 0 2em 0 3em;
+}
+.article-header .article-info .article-tag-list a,
+.article-header .article-info .article-category-list a {
+  word-break: normal;
+}
+.article-header .article-info .article-tag-list-item,
+.article-header .article-info .article-category-list-item {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+.article-header .article-tag-list::after,
+.article-header .article-category-list::after {
+  content: " ";
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  background-color: l-gray;
+  position: absolute;
+  top: calc(50% - 6px);
+  right: 8px;
+}
+.article-header .article-tag-list::before,
+.article-header .article-category-list::before {
+  content: ' ';
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 8px;
+  border-left: 4px solid l-gray;
+  border-right: 2px solid l-gray;
+}
+.article-entry >ul,
+.article-entry .hidden-post >ul {
+  color: d-gray;
+  margin-left: 2em;
+}
+.article-entry ul li::before {
+  content: '▞';
+  margin-right: 0.5em;
+  color: #000;
+  margin-left: -1.5em;
+}
+.article-entry li ul li::before {
+  content: '▚';
+  margin-right: 0.5em;
+  color: #000;
+  margin-left: -1.5em;
+}
+.article-entry a {
+  border-bottom: 1px solid d-gray;
+}
+.hidden-post {
+  max-height: 10em;
+  overflow: hidden;
+  margin-top: 1.5em;
+  opacity: 0.5;
+  position: relative;
+  padding-left: 2em;
+}
+.hidden-post .ps-scrollbar-y-rail {
+  left: 1em !important;
+}

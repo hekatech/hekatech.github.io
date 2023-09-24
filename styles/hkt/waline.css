@@ -1,0 +1,233 @@
+.comment-block {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1em;
+}
+.comment-block hr {
+  margin: 2em -0.5em;
+}
+.v {
+  max-width: 100%;
+}
+.v .vactions,
+.v .vmeta,
+.v .vbadge {
+  display: none;
+}
+.v img {
+  opacity: 0.9;
+}
+.v button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.v .vbtn {
+  background: rgba(0,0,0,0.5);
+  border: 0;
+  border-radius: 7px;
+  padding: 0 1em;
+  color: l-gray;
+  border: 1px solid d-gray;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.v .vbtn + .vbtn {
+  margin-left: 0.5em;
+}
+.v .vbtn:hover {
+  background: rgba(0,0,0,0.9);
+}
+.v input,
+.v textarea,
+.v .vinput.vnick {
+  background: rgba(0,0,0,0.3);
+  border: 0;
+  border-radius: 5px;
+  border: 1px solid d-gray;
+  color: #000;
+  transition: all 0.5s;
+  box-sizing: border-box;
+  padding: 0 0.5em;
+}
+.v .vheader {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.v .vheader .vheader-item + .vheader-item {
+  margin-left: 1em;
+}
+.v .vheader .vheader-item {
+  flex-grow: 1;
+  display: inline-flex;
+  justify-content: space-between;
+  position: relative;
+}
+.v .vheader .vheader-item input {
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  position: absolute;
+}
+.v .vheader .vheader-item input:focus-visible {
+  outline: none;
+  background: rgba(0,0,0,0.9);
+  color: l-gray;
+  border-color: #000;
+}
+.v .vheader .vheader-item label {
+  opacity: 0;
+}
+.v .vlogin-info {
+  display: flex;
+  align-items: center;
+}
+.v .vavatar {
+  display: inline-flex;
+  height: 2em;
+  width: 4em;
+}
+.v #waline-edit {
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 0;
+  min-height: 100px;
+  max-height: 200px;
+  border-radius: 5px;
+  background: rgba(0,0,0,0.1);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.5) transparent;
+}
+.v #waline-edit:focus-visible {
+  outline: none;
+  background: rgba(0,0,0,0.2);
+  color: #000;
+}
+.v .vinfo {
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+}
+.v .vinfo .vtext-number {
+  padding: 0.2em 0.5em;
+  font-family: font-mono;
+}
+.v .vcards {
+  display: block;
+}
+.v .vitem,
+.v .vquote {
+  display: flex;
+  align-items: flex-start;
+}
+.v .vquote {
+  flex-direction: column;
+}
+.v .vcard {
+  flex-grow: 1;
+}
+.v .vitem,
+.v .vcomment {
+  background: rgba(0,0,0,0.1);
+  width: 100%;
+  margin-bottom: 0.5em;
+  padding: 1em 1em 1em 2em;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 0 1em 1em 0;
+  border-top: 1px solid l-gray;
+  box-shadow: init-shadow;
+}
+.v .vitem::before,
+.v .vcomment::before {
+  content: ' ';
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: 8px solid #000;
+  border-right: 2px solid #000;
+}
+.v .vcards >.vitem {
+  margin-top: 1em;
+}
+.v .vcard {
+  margin-left: 1em;
+}
+.v .vhead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.v .vtime {
+  font-family: font-mono;
+  margin: 0 0.5em;
+  color: d-gray;
+  font-size: 14px;
+}
+.v .vreply {
+  line-height: 1em;
+  color: d-gray;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.v .at {
+  color: d-gray;
+}
+.v .at:hover,
+.v .vreply:hover {
+  color: h-light;
+  text-shadow: text-light;
+}
+.v .vnick {
+  padding: 0.2em 0.7em;
+  background: rgba(0,0,0,0.5);
+  border-radius: 5px;
+}
+.v .vnick,
+.v .vnick a {
+  line-height: 1em;
+  color: l-gray;
+  transition: all 0.5s;
+}
+.v .vinput.vnick {
+  line-height: inherit;
+}
+.v .vcards .vhead .vnick:hover {
+  background: rgba(0,0,0,0.9);
+}
+.v .vpower {
+  text-align: right;
+  font-size: 14px;
+  font-family: font-mono;
+}
+.v .vpower a {
+  font-family: inherit;
+  color: #808080;
+}
+.v .vpower a:hover {
+  color: h-light;
+}
+.v .vlogin-nick {
+  padding: 0.2em 0.7em;
+  background: rgba(0,0,0,0.5);
+  border-radius: 5px;
+}
+.v .vlogin-nick a,
+.v .vlogin-nick {
+  line-height: 1em;
+  color: l-gray;
+  transition: all 0.5s;
+}
+.v .vlogin-nick:hover {
+  background: rgba(0,0,0,0.9);
+}
+.v .vuser {
+  width: 3em;
+}

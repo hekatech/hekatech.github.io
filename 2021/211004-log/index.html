@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    「记录：搜索功能」 - 無色人間。
+  
+</title>
+
+
+  <link rel="alternative" href="/atom.xml" title="無色人間。" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+
+
+<link rel="stylesheet" href="/styles/main.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <img src="/favicon.png">
+  </button>
+  <a class="title" href="/">無色人間。</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">無色人間。</a></h1>
+    
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/" title="主页" external="false">主页</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/about" title="关于" external="false">关于</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/categories" title="分类" external="false">分类</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/ark" title="｢匣｣" external="false">｢匣｣</a>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">归档</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">27</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">43</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS" external="false">RSS</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="javascript:;" title="搜索" external="false">搜索</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+  <div class="footer">
+    <div class="info">
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="/icon.png"></a>
+          
+        </div>
+      <div class="content">
+        
+          <div class="description">For the glory of mankind.</div>
+        
+        
+          <div class="author">4o</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    <div class="main-content">
+          <div class="post-body">
+
+<article id="post-211004-log" class="article article-type-post">
+  
+    <div class="article-header">
+      <div class="article-title">
+      <h2>
+      记录：搜索功能
+    </h2>
+    <span class="article-date">
+  2021/10/04
+</span>
+
+    
+
+  <span class="word-count">字数统计：
+    <span class="word-count-symbol">1.6k</span>
+  </span>
+  <span class="word-count">阅读时间：
+    <span class="word-count-time">3 mins</span>
+  </span>
+  
+    <span class="word-count">访问次数：
+      <span id="/2021/211004-log/" class="waline-visitor-count">...</span>
+    </span>
+    <span class="word-count">评论统计：
+      <span id="/2021/211004-log/" class="waline-comment-count">...</span>
+    </span>
+  
+
+
+  </div>
+    <div class="article-info">
+    
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E7%BB%B4%E6%8A%A4%E6%97%A5%E5%BF%97/">维护日志</a></li></ul>
+
+
+    
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HKT-924/" rel="tag">HKT-924</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BB%BA%E7%AB%99%E6%8C%87%E7%8C%AB/" rel="tag">建站指猫</a></li></ul>
+
+
+  </div>
+</div>
+  
+  <div class="article-entry">
+    <p>　　今日成果：提交谷歌站点地图 &amp; 站内搜索功能。<br>　　因为感冒 + 低烧请了两天假没打神兵，结果学者突然跑路了……一股迷之愧疚感油然而生……总觉得我要是不请假还能多打两天没准就过三连桶了……</p>
+<span id="more"></span>
+
+<h3 id="向谷歌提交站点地图"><a href="#向谷歌提交站点地图" class="headerlink" title="向谷歌提交站点地图"></a>向谷歌提交站点地图</h3><h4 id="生成站点地图"><a href="#生成站点地图" class="headerlink" title="生成站点地图"></a>生成站点地图</h4><p>　　使用的插件：<a target="_blank" rel="noopener" href="https://github.com/ludoviclefevre/hexo-generator-seo-friendly-sitemap"> hexo-generator-seo-friendly-sitemap
+</a><br>　　安装：在命令行中输入 <code>npm install hexo-generator-seo-friendly-sitemap --save</code><br>　　配置：在博客根目录下的 <code>_comfig.yml</code> 文件中添加：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></table></figure>
+
+<p>　　生成：<code>hexo g</code> 之后检查一下博客根目录下的 <code>public</code> 文件夹，应该会出现 <code>sitemap.xml</code> 以及分页的诸多 sitemap 文件，随后 <code>hexo d</code> 更新博客即可。</p>
+<h4 id="故障：上传后-sitemap-xml-404"><a href="#故障：上传后-sitemap-xml-404" class="headerlink" title="故障：上传后 sitemap.xml 404"></a>故障：上传后 sitemap.xml 404</h4><p>　　部署完毕后遇到一个问题：<code>/sitemap.xml</code> 在本地和 github 仓库中都可以正确预览，但是 <a href="https://4o.cx/sitemap.xml">https://4o.cx/sitemap.xml</a> 却始终返回 404。<br>　　仔细检查之后发现站点地图中的链接并不是已经设置好的自定义域名，而是 github page 的默认域名，<strong>推测</strong>：hexo 域名没有正确配置，自定义域名下的所有内容均是从 <code>hekatech.github.io</code> 转发来的，而 <code>sitemap.xml</code> 发生了转发错误，因此无法读取。<br>　　修正：打开博客根目录下的 <code>_comfig.yml</code>，将网址设置部分变更如下：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://4o.cx</span></span><br></pre></td></tr></table></figure>
+
+<p>　　这个注释确实很有迷惑性，看起来好像你用了 github page 就一定要填它给的默认连接，实际上这个数据是用来生成所有页面的网址的，所以应该填入的是 <em>当前使用的域名</em> 才对……<br>　　变更设定后网站地图中收录的链接变成了 <code>https://4o.cx/...</code>，上传后也可以正常显示了。</p>
+<h3 id="站内搜索"><a href="#站内搜索" class="headerlink" title="站内搜索"></a>站内搜索</h3><p>　　我以为这玩意做起来很简单只要全抄就行了结果折腾到半夜……</p>
+<h4 id="生成搜索内容"><a href="#生成搜索内容" class="headerlink" title="生成搜索内容"></a>生成搜索内容</h4><p>　　使用的插件：<a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search#hexo-generator-search">hexo-generator-search</a><br>　　配置：在 <code>hexo/_config.yml</code> 中添加如下内容：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">content:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>　　本来我试图用 json 的（因为我对 xml 的可读性实在评价不高），然而插件作者给的示例搜索 JS 是处理 xml 的，把搜索文件换成 json 以后它就不跑了……然后它生成的这个 xml 文件似乎也不是很标准，反正控制台一直会报错：<em>XML パースエラー: 整形式になっていません。</em><br>　　但总之虽然报错也还是能跑，这个问题就先鸽置了【</p>
+<h4 id="创建搜索页面"><a href="#创建搜索页面" class="headerlink" title="创建搜索页面"></a>创建搜索页面</h4><p>　　插件作者很贴心地把自己主题的 <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-theme-freemind/blob/master/layout/_widget/search.ejs#L8">layout</a> 放出来共大家参考（抄作业），而且刚好也是 ejs 诶！那么我当然是快乐地直接拿来了，为了 css 样式和动画最后修改成如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (config.search) &#123; %&gt;</span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;search-block&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;site_search&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;form-group&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">id</span>=<span class="string">&quot;local-search-input&quot;</span> <span class="attr">name</span>=<span class="string">&quot;q&quot;</span> <span class="attr">results</span>=<span class="string">&quot;0&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;&lt;%= __(&#x27;search&#x27;) %&gt;&quot;</span> <span class="attr">class</span>=<span class="string">&quot;st-search-input st-default-search-input form-control&quot;</span>/&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;local-search-result&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="创建搜索代码"><a href="#创建搜索代码" class="headerlink" title="创建搜索代码"></a>创建搜索代码</h4><p>　　直接引用原作者给出的 <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-theme-freemind/blob/master/source/js/search.js">示例 JS</a> 后，在下方追加：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">  <span class="keyword">var</span> path = <span class="string">&quot;/search.xml&quot;</span>;</span><br><span class="line">  <span class="comment">// 把引号里替换成 `_config.yml` 中设置的搜索文件地址</span></span><br><span class="line">  searchFunc(path, <span class="string">&#x27;local-search-input&#x27;</span>, <span class="string">&#x27;local-search-result&#x27;</span>);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>　　完成后在搜索框内输入内容就会弹出结果了。</p>
+<h4 id="侧边栏搜索按钮-amp-弹窗动画"><a href="#侧边栏搜索按钮-amp-弹窗动画" class="headerlink" title="侧边栏搜索按钮 &amp; 弹窗动画"></a>侧边栏搜索按钮 &amp; 弹窗动画</h4><p>　　目前本站的搜索功能调出方式是：点击侧边栏的搜索按钮 → 从右侧滑出搜索页面 → 在搜索框中输入关键词 → 显示搜索结果<br>　　具体的实现方法如下：</p>
+<ul>
+<li>在主题设置文件中创建侧边栏按钮，将连接指向 <code>javascript:;</code></li>
+<li>将搜索框最外侧元素（如果照抄了我的 ejs 那么这里就是 <code>.search-block</code>）的样式设置为如下：<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.search-block</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: fixed;</span><br><span class="line">  <span class="attribute">width</span>: auto;</span><br><span class="line">  <span class="attribute">min-width</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100vh</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+此时搜索框应该是悬浮在整个页面上方的，如果不是，请调整 <code>z-index</code> 样式</li>
+<li>在 JS 文件中添加如下内容：<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;a[title=&#x27;搜索&#x27;]&quot;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line"><span class="comment">// 单击 title 为「搜索」的链接时执行以下事件</span></span><br><span class="line"><span class="comment">// 如果你的主题为侧边栏按钮生成了单独的类名 / id，也可以使用常规选择器</span></span><br><span class="line">  $(<span class="string">&#x27;.search-block&#x27;</span>).toggleClass(<span class="string">&#x27;in&#x27;</span>);</span><br><span class="line">  <span class="comment">// 为搜索框添加 / 删除 classname=&quot;in&quot;</span></span><br><span class="line">  $(<span class="built_in">this</span>).toggleClass(<span class="string">&#x27;active&#x27;</span>);</span><br><span class="line">  <span class="comment">// 在显示搜索框的同时激活搜索按钮，如无需求可以删去这一行</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+<li>最后将 <code>.search-block</code> 的 <code>left</code> 值设置成 100% 使它默认隐藏，再为 <code>.search-block.in</code> 添加 <code>left: 20%</code></li>
+<li>最终完成的 css 样式如下：<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.search-block</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: fixed;</span><br><span class="line">  <span class="attribute">width</span>: auto;</span><br><span class="line">  <span class="attribute">min-width</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100vh</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.9</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.search-block</span><span class="selector-class">.in</span> &#123;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">20%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="已知问题"><a href="#已知问题" class="headerlink" title="已知问题"></a>已知问题</h3><p>　　是说这个搜索插件还是有一些瑕疵……除了 xml 格式报错之外还有一个非常无语的问题就是，代码框的行号也会被当成正文内容统计进去，搜索 <code>1234</code> 几乎会返回所有添加了代码框的文章。我不知道这个问题是不是和 xml 生成格式有关……总之今天已经很累了，睡大觉睡大觉 :4o-3:<br>　　以及新发现的一个灵异问题：在某个特定宽度下代码框的横向滚动条会无限向右延伸……虽然调整了页面宽度之后这个问题暂时没有再复现了但是 WTF？？？</p>
+
+  </div>
+  <div class="clear" style="clear:both;"></div>
+  <footer class="article-footer">
+  </footer>
+</article>
+
+
+  <div class="comment-block">
+    <hr>
+  <div id="waline"></div>
+  </div>
+
+
+<div class="main-footer">
+  <span>© 2023 無色人間。-<a rel="me noopener" target="_blank" href="https://bgme.me/@suzushi">「e686a7e3828c」</a></span>
+  <span>转载本站图文请附上<a href="">「原始链接」</a></span>
+  <span class="description">已收录数据
+    <em class="word-count-symbol">&nbsp;186k&nbsp;</em>
+    字，登记访客&nbsp;
+    <em id="/" class="waline-visitor-count">...</em>
+    &nbsp;人。
+  </span>
+</div>
+</div>
+
+
+
+  <div class="article-toc">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%91%E8%B0%B7%E6%AD%8C%E6%8F%90%E4%BA%A4%E7%AB%99%E7%82%B9%E5%9C%B0%E5%9B%BE"><span class="toc-number">1.</span> <span class="toc-text">向谷歌提交站点地图</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E7%AB%99%E7%82%B9%E5%9C%B0%E5%9B%BE"><span class="toc-number">1.1.</span> <span class="toc-text">生成站点地图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%85%E9%9A%9C%EF%BC%9A%E4%B8%8A%E4%BC%A0%E5%90%8E-sitemap-xml-404"><span class="toc-number">1.2.</span> <span class="toc-text">故障：上传后 sitemap.xml 404</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2"><span class="toc-number">2.</span> <span class="toc-text">站内搜索</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E6%90%9C%E7%B4%A2%E5%86%85%E5%AE%B9"><span class="toc-number">2.1.</span> <span class="toc-text">生成搜索内容</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%90%9C%E7%B4%A2%E9%A1%B5%E9%9D%A2"><span class="toc-number">2.2.</span> <span class="toc-text">创建搜索页面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%90%9C%E7%B4%A2%E4%BB%A3%E7%A0%81"><span class="toc-number">2.3.</span> <span class="toc-text">创建搜索代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%A7%E8%BE%B9%E6%A0%8F%E6%90%9C%E7%B4%A2%E6%8C%89%E9%92%AE-amp-%E5%BC%B9%E7%AA%97%E5%8A%A8%E7%94%BB"><span class="toc-number">2.4.</span> <span class="toc-text">侧边栏搜索按钮 &amp; 弹窗动画</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%B2%E7%9F%A5%E9%97%AE%E9%A2%98"><span class="toc-number">3.</span> <span class="toc-text">已知问题</span></a></li></ol>
+  </div>
+
+
+
+          
+  
+  </div>
+  <div class="hekation">
+
+<svg class="HKT-block" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <circle class="HKT-item" id="HKT-1" cx="128" cy="128" r="120"/>
+  <circle class="HKT-item" id="HKT-2" cx="128" cy="128" r="127"/>
+  <circle class="HKT-item" id="HKT-3" cx="128" cy="128" r="96"/>
+  <circle class="HKT-item" id="HKT-4" cx="128" cy="128" r="72"/>
+  <circle class="HKT-item" id="HKT-5" cx="128" cy="128" r="94"/>
+  <circle class="HKT-item" id="HKT-6" cx="128" cy="128" r="80"/>
+  <circle class="HKT-item" id="HKT-7" cx="128" cy="128" r="47"/>
+  <circle class="HKT-item" id="HKT-8" cx="128" cy="128" r="32"/>
+  <circle class="HKT-item" id="HKT-9" cx="128" cy="128" r="28"/>
+  <circle class="HKT-item" id="HKT-10" cx="128" cy="128" r="24"/>
+</svg>
+
+</div>
+
+  
+
+    <div class="search-block">
+      <div id="site_search">
+        <div class="form-group">
+          <input type="text" id="local-search-input" name="q" results="0" placeholder="search" class="st-search-input st-default-search-input form-control"/>
+        </div>
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+
+
+
+</body>
+<footer>
+  
+<script src="https://co5.me/lib/jquery/index.js?v=2.1.3.js"></script>
+
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<script src="/PhotoSwipe/photoswipe.js"></script>
+
+  
+<script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+
+
+<script src="/scripts/main.js"></script>
+
+
+<script src="/scripts/score.js"></script>
+
+
+<script src="/scripts/waline.js"></script>
+
+
+<script src="/scripts/search.js"></script>
+
+
+  
+
+  
+    
+      <script type="text/javascript">
+      Waline({
+        el: '#waline',
+        serverURL: 'https://waline-4o-cx.vercel.app/',
+        emoji: [],
+        uploadImage: false,
+        visitor: true,
+        requiredMeta: ['nick', 'mail'],
+        placeholder:"欢迎留言 ~ 登录非必选项，填上昵称和邮箱即可提交评论并显示 Libravatar / Gravatar",
+      });
+      window.onload = function(){
+        $("#waline-nick" ).attr( "placeholder" , "昵称" );
+        $("#waline-mail" ).attr( "placeholder" , "邮箱" );
+        $("#waline-link" ).attr( "placeholder" , "链接" );
+      }
+      </script>
+    
+  
+
+
+  
+  <script type="text/javascript">      
+    var path = "/search.xml";
+    searchFunc(path, 'local-search-input', 'local-search-result');
+  </script>
+
+  
+<script src="/hekation/emoji.js"></script>
+
+
+<link rel="stylesheet" href="/hekation/emoji.css">
+
+
+<script src="/scripts/HKT-63.js"></script>
+
+</footer>
+</html>

@@ -1,0 +1,38 @@
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  writing-mode: vertical-rl;
+  margin-bottom: 3em;
+}
+.pagination >span,
+.pagination >a {
+  padding: 1em 0;
+  margin: 0 0 0.6em 0;
+  border-radius: 0 0.5em 0.5em 0;
+  box-shadow: init-shadow;
+}
+.pagination .current {
+  background-color: o-light;
+  color: rgba(255,255,255,0.8);
+  padding-left: 2em;
+  position: relative;
+}
+.pagination .current::before {
+  content: '▘▞';
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0.25em;
+  left: 1.6em;
+}
+.pagination >a,
+.pagination .space {
+  background-color: rgba(0,0,0,0.5);
+  color: l-gray;
+}
+.pagination >a:hover {
+  background-color: rgba(0,0,0,0.9);
+  padding-left: 1.5em;
+  color: h-light;
+}
