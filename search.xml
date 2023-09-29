@@ -79,81 +79,6 @@
     
     
     <entry>
-      <title>使用 AutoHotKey 自定义键盘宏</title>
-      <link href="/2023/230814-AHK/"/>
-      <url>/2023/230814-AHK/</url>
-      
-        <content type="html"><![CDATA[<p>　　喜报：又双叒叕发烧了。<br>　　虽然说人不能一直倒霉但很显然我不是人类，依稀记得三个月前也是临活动前一天开始高烧 42 度一直持续了整整 4 天，和这个时间线的接触面还真是岌岌可危啊【那种语气<br>　　不过这次没烧到 40 度，脑子还是可以转的，只是不知道为什么我的腱鞘炎颈椎病胃病一起发作了，一觉睡醒好像从 5 楼跳下去挂在树上人还没死但是五脏六腑和骨头都摔碎了的感觉……<br>　　那么总之来记录一下最近接触的新玩具【</p><span id="more"></span><p>　　首先吐槽一下 Joycon，本来配合 Joy2key 它是真的很好用的，但是每次休眠后不能自动唤醒，必须删除设备重新匹配才能用。查了一下说是因为 Joycon 最高只支持蓝牙 4.1，所以用 5.0 的蓝牙接收器只能收到信号并不能完成匹配，也就无从唤醒了……任天堂你可真™是世界的主宰啊 :4o-2:<br>　　于是我转换思路试图给蓝牙小键盘绑自定义宏，找到的工具是 <a href="https://wyagd001.github.io/v2/docs/index.htm">AutoHotKey</a>，简称 AHK。<br>　　总之现在是大概完成配置环节了，除了没有滚轮以外完全可以替代 toolbox，而且对于常年键盘按快捷键选手来说滚轮的意义其实不是很大，至少我除了调整画笔大小以外完全想不到有什么使用场景……但同时也买了 4.0 的蓝牙接收器，看看和 Joycon 相比哪个方案更贴手吧。</p><h3 id="按键替换"><a href="#按键替换" class="headerlink" title="按键替换"></a>按键替换</h3><p>　　基本语法：<code>In::Out</code><br>　　在需要更改的按键后面书写两个冒号后再写上需要替换为的按键即可，如将小键盘 1 替换为画笔缩小的快捷键只需要写入 <code>Numpad1::[</code>。<br>　　当然也可以使用组合键，如将小键盘回车设置为保存则写入 <code>NumpadEnter::^s</code>。<br>　　标准的按键名称可以在<a href="https://wyagd001.github.io/v2/docs/KeyList.htm">文档</a>中查询，以及一些常用的<a href="https://wyagd001.github.io/v2/docs/Hotkeys.htm">修饰符</a>：</p><ul><li><code>#</code> = Windows 徽标键</li><li><code>!</code> = Alt</li><li><code>^</code> = Ctrl</li><li><code>+</code> = Shift</li><li><code>&amp;</code> 用于连接自定义按键组合，如数字键 <code>1 &amp; 2</code></li></ul><h3 id="限定生效条件"><a href="#限定生效条件" class="headerlink" title="限定生效条件"></a>限定生效条件</h3><p>　　通过在按键前加入 <code>#HotIf</code> 来限定宏触发的条件，如我只需要这些快捷键在 SAI 的窗口中生效，写法如下：</p><figure class="highlight ahk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#HotIf WinActive(&quot;ahk_exe sai2.exe&quot;)</span></span><br><span class="line"><span class="title">Numpad0::</span>LControl <span class="comment">; Ctrl 键</span></span><br><span class="line"><span class="title">Numpad1::</span>[ <span class="comment">; 画笔缩小</span></span><br><span class="line"><span class="title">Numpad2::</span>WheelUp <span class="comment">; 画布放大</span></span><br><span class="line"><span class="title">Numpad3::</span>] <span class="comment">; 画笔放大</span></span><br><span class="line"><span class="title">Numpad4::</span>a <span class="comment">; 选区笔</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure><p>　　具体触发条件依然参考<a href="https://wyagd001.github.io/v2/docs/lib/_HotIf.htm">文档</a>，以下是一些常用命令：</p><ul><li>窗口检测命令<ul><li><code>WinActive</code> = 检测当前活动窗口</li><li><code>WinExist</code> = 检测窗口是否存在，包括后台窗口</li><li><code>ProcessExist</code> = 检测进程是否存在</li></ul></li><li><a href="https://wyagd001.github.io/v2/docs/misc/WinTitle.htm">窗口查询</a><ul><li><code>ahk_class</code> = 按照窗口类查询，通常是窗口标题包含在 <code>-</code> 后的内容</li><li><code>ahk_exe</code> = 按照进程名查询</li></ul></li></ul><h3 id="长按切换为不同按键"><a href="#长按切换为不同按键" class="headerlink" title="长按切换为不同按键"></a>长按切换为不同按键</h3><p>　　因为 Joy2Key 是有长按功能的所以我也试图用键盘来模拟这个长按功能……Google 了很多方法都不管用，无论如何在长按的键弹起来的时候都会再触发一次按键，仔细研究了计时器功能之后自己写了一个：</p><figure class="highlight ahk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">Backspace::</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">SetTimer</span> sendX, -<span class="number">300</span></span><br><span class="line">  sendX()</span><br><span class="line">  &#123;</span><br><span class="line">    Send <span class="string">&quot;x&quot;</span></span><br><span class="line">  &#125; <span class="comment">; 创建在 300ms 后触发一次的定时器发送 X 键</span></span><br><span class="line">  KeyWait <span class="string">&quot;Backspace&quot;</span> <span class="comment">; 从按键按下开始计时</span></span><br><span class="line">  If (<span class="built_in">A_TimeSinceThisHotkey</span> &lt; <span class="number">300</span>)</span><br><span class="line">    Send <span class="string">&quot;f&quot;</span></span><br><span class="line">    <span class="keyword">SetTimer</span> sendX, <span class="number">0</span></span><br><span class="line">    <span class="comment">; 如按下时间 &lt; 300ms，则在发送 F 键后移除计时器</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>　　这段代码的实现效果是：</p><ul><li>短按时会在按键弹起时输出 <code>F</code> 键（切换透明色）</li><li>长按时在按下 0.3s 时即会输出 <code>X</code> 键（反色），无需等按键释放，也不会出现额外输出</li></ul><p>　　知乎上搜到的长按脚本几乎都是在按键弹起时根据按下时间的长短进行不同的操作，但长按时如果收不到定时反馈的话很容易给人一种「卡住了」的错觉……总之我还是比较满意自己写的 :4o-7:</p><h3 id="将-AHK-脚本加入开机启动项"><a href="#将-AHK-脚本加入开机启动项" class="headerlink" title="将 AHK 脚本加入开机启动项"></a>将 AHK 脚本加入开机启动项</h3><p>　　添加开机启动项的方式有很多……总之只尝试了比较简单的一种，另外还有改注册表什么的学不来【</p><ul><li>首先为写好的脚本创建快捷方式</li><li>然后 <code>Win + R</code> 打开运行窗口<br>或在开始菜单中输入「运行」</li><li>在运行栏中输入 <code>shell:startup</code> 打开启动项文件夹<br><del>我后续研究了一下这个打开的显然只是启动项的其中之一，直接扔进开始菜单那个「启动」目录底下也可以吧大概</del></li><li>把刚刚创建好的快捷方式扔进去</li></ul><p>　　随后在任务管理器里切换到「启动」一栏，如果可以看见脚本就是添加成功了，不放心的话可以重启测试一下 :4o-7:</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 维护日志 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 4o </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>报告：新角色追加</title>
-      <link href="/2023/230811-hkt/"/>
-      <url>/2023/230811-hkt/</url>
-      
-        <content type="html"><![CDATA[<p>　　虽然 <code>hexo new</code> 了但今天的心情似乎还意外地不错……？<br>　　本来是打算开播上工的，但是在跑团群里 roll 了骰子，两个骰子都告诉我今日宜摸鱼，那么……fine :4o-7:</p><span id="more"></span><p>　　写了一些无聊的废话还是删掉了，总之今天的任务是设计一在第八区温室开展的新任务——</p><h3 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h3><p>　　一些氛围上的设定？<br>　　027 的故事比起 4o 的「记录」更偏向于「创造」，但依然会保留「溯源」的核心。<br>　　以及感觉这几年在创作上的只出不进导致我的审美大幅下降了，是时候再回去重新打一遍尼尔了【</p><h3 id="人员变更"><a href="#人员变更" class="headerlink" title="人员变更"></a>人员变更</h3><p>　　那么首先修正一下本站人员列表以及各自负责的工作事项……<br>　　大概是旧 OC 设定确认版？<br>　　总之这几位应该不太会参与新企划，在未来的两年会一直保持幕后角色的身份吧。</p><ul><li>4o<br>时空观测系统「Achrom-4o」<br>结束了以「観月 塩」身份在 21 世纪与人类接触的考察活动<br>目前经过评估重新回归本站的运营者身份</li><li>HKT-924<br>时空观测系统「Achrom-4o」的随行支援系统<br>在 4o 外出时负责本站的运营和维护<br>目前经过评估已进入闲置状态</li><li>HKT-α5<br>依然是无忧无虑的猫猫辅助机——</li></ul><h3 id="新角色"><a href="#新角色" class="headerlink" title="新角色"></a>新角色</h3><p>　　那么接下来是即将活跃于新舞台的角色介绍：</p><style type="text/css">.img-right img {    max-height: 10em;}</style><h4 id="S-027-Liez"><a href="#S-027-Liez" class="headerlink" title="S-027 / Liez"></a>S-027 / Liez</h4><p><img src="/img/230811-liez.png" alt="img-right"></p><p>　　新纪元湮灭前冥月计划产出的人造生命体之一。<br>　　在合成时采用了史前少女「？？？」的人格数据，由于人格表现的不稳定性被划为特殊实验体，由 <em>RINNE</em> 本人进行特别观察，编号为<em>「S-027」</em>。<br>　　人类形态为浅灰色水母头少女，需要不间断地输液维持精神与生命体征的稳定，为了方便行动会将脑上的输液管和辫子扎在一起。<br>　　自行销毁融入了<em>集合体「赫卡特」</em>。在新元 53 年因<em>集合体「赫卡特」</em>对数据库的污染被再现为人工生命体<em>「R-027」</em>。</p><h4 id="R-027-Tiphareth"><a href="#R-027-Tiphareth" class="headerlink" title="R-027 / Tiphareth"></a>R-027 / Tiphareth</h4><p>　　由<em>集合体「赫卡特」</em>混合了<em>「S-027」</em>数据再现的人工生命体<em>「R-027」</em>，拥有<em>「S-027」</em>的部分记忆，但本体并没有意识到。<strong>因此并不具有同一性的稳定人格。</strong><br>　　作为「迷之生命体」出现在第八区废墟温室的调查报告中，外形类似拥有浅灰色长卷发的人类少女，因为翅膀形状的双耳在目击报告中也被称为「天使」。<br>　　拥有令人迷失的歌声，<strong>对人类世界的电子设备似乎有着特殊的干涉能力。</strong><br>　　在初步的调查报告中被认为对人类没有敌对意识，但近期发现了人格不稳定的迹象，人类方对此正在请求重新进行危险性评估……？</p><h4 id="集合体「赫卡特」"><a href="#集合体「赫卡特」" class="headerlink" title="集合体「赫卡特」"></a>集合体「赫卡特」</h4><p>　　「冥月计划」的遗产之一，由无数被销毁或自行销毁的人工生命残留物质与信号聚合而成的高维生命体。<br>　　<strong>对人类世界的电子设备似乎有着特殊的干涉能力。</strong><br>　　e586a5e69c88e381abe890bde381a1e8bebce38293e381a7e38184e3828be38082</p><h4 id="6c-洛克茜"><a href="#6c-洛克茜" class="headerlink" title="6c / 洛克茜"></a>6c / 洛克茜</h4><p>　　为调查数据库污染事件被派遣执行干涉任务的「無色」系列人造人「Achrom-6c」。<br>　　由于目标时空存在异常污染，因此额外申请了<a href="/2022/221225-achrom/#%E6%AD%A3%E5%BC%8F%E6%9C%BA%E4%BD%93">「修剪者 / Trimmer」</a>型机体，在必要时会对目标时空进行隔离。<br>　　目前的任务是与人类合作对人工生命体<em>「R-027」</em>进行观测与分析，也承担双方协助交流的工作。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 人工生命实验室 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 6c </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Blivechat 测试弹幕 &amp; 其它魔改</title>
-      <link href="/2023/230803-note/"/>
-      <url>/2023/230803-note/</url>
-      
-        <content type="html"><![CDATA[<p>　　我爱工作，工作使我快乐，写代码是这个世界上最快乐的事，人造人可以不吃饭但是不能不写代码【确信<br>　　今天把本地魔改版 Blivechat 传到了自己的 github，本来想直接用 commit 记录自己做了什么，结果官方仓库已经更新到 1.6.2 我又没备份原本的文件，只能写一篇 blog 防止我失忆看不懂自己写了什么了【</p><span id="more"></span><p>　　本篇所有修改后文件已上传至 <a href="https://github.com/hekatech/blivechat-HKT">github</a>，有需自取没需我也放着 :4o-3:</p><h3 id="头像显示"><a href="#头像显示" class="headerlink" title="头像显示"></a>头像显示</h3><p>　　官方已修复，参考 <a href="https://github.com/xfgryujk/blivechat/issues/84#issuecomment-1403909552">issue#84</a></p><h3 id="头像大小修改"><a href="#头像大小修改" class="headerlink" title="头像大小修改"></a>头像大小修改</h3><p>　　为适配<a href="https://github.com/hekatech/achrom-css/tree/main/demo1">大头像弹幕样式</a>对头像的获取与显示尺寸进行了修改。</p><h4 id="后端代码"><a href="#后端代码" class="headerlink" title="后端代码"></a>后端代码</h4><blockquote><p>官方 v1.6.2 版本已重构原始文件<br>本篇中提到的修改方式已无法完全照搬，仅记录下来用于参考</p></blockquote><p>　　Blivechat 的礼物头像是从礼物 api 中自动获取的，与弹幕头像不同源且低清，需要更改获取头像的 api。<br>　　修改 <code>blivechat/services/chat.py</code> 343 及 387 行的：</p><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 343</span></span><br><span class="line">    <span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">_on_gift</span>(<span class="params">self, client: LiveClient, message: blivedm.GiftMessage</span>):</span></span><br><span class="line">        avatar_url = services.avatar.process_avatar_url(message.face)</span><br><span class="line">        <span class="comment"># 服务器白给的头像URL，直接缓存</span></span><br><span class="line">        services.avatar.update_avatar_cache(message.uid, avatar_url)</span><br><span class="line"><span class="comment"># 387</span></span><br><span class="line">    <span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">_on_super_chat</span>(<span class="params">self, client: LiveClient, message: blivedm.SuperChatMessage</span>):</span></span><br><span class="line">        avatar_url = services.avatar.process_avatar_url(message.face)</span><br><span class="line">        <span class="comment"># 服务器白给的头像URL，直接缓存</span></span><br><span class="line">        services.avatar.update_avatar_cache(message.uid, avatar_url)</span><br></pre></td></tr></table></figure><p>　　为：</p><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 343</span></span><br><span class="line">    <span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">_on_gift</span>(<span class="params">self, client: LiveClient, message: blivedm.GiftMessage</span>):</span></span><br><span class="line">        avatar_url = <span class="keyword">await</span> services.avatar.get_avatar_url(message.uid)</span><br><span class="line"><span class="comment"># 387</span></span><br><span class="line">    <span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">_on_super_chat</span>(<span class="params">self, client: LiveClient, message: blivedm.SuperChatMessage</span>):</span></span><br><span class="line">        avatar_url = <span class="keyword">await</span> services.avatar.get_avatar_url(message.uid)</span><br></pre></td></tr></table></figure><h4 id="前端代码"><a href="#前端代码" class="headerlink" title="前端代码"></a>前端代码</h4><p>　　修改 <code>blivechat/frontend/src/api/chat/avatar.js</code> 11 行的：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">// 缩小图片加快传输</span></span><br><span class="line">  <span class="keyword">if</span> (!avatarUrl.endsWith(<span class="string">&#x27;noface.gif&#x27;</span>)) &#123;</span><br><span class="line">    avatarUrl += <span class="string">&#x27;@48w_48h&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> avatarUrl</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>　　为：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">// 缩小图片加快传输</span></span><br><span class="line">  <span class="keyword">if</span> (!avatarUrl.endsWith(<span class="string">&#x27;noface.gif&#x27;</span>)) &#123;</span><br><span class="line">    avatarUrl += <span class="string">&#x27;@128w_128h&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> avatarUrl</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>　　简单来说修改成需要的尺寸就可以，顺带一提原图尺寸是 300 × 300，超过这个尺寸的设置就没有用了，大概还有可能会报错吧……<br>　　修改完前端代码后需要在 <code>blivechat/frontend</code> 目录下执行 <code>npm run build</code> 后才会生效，如果测试弹幕没有效果需要清理一下头像缓存或直接<em>强制刷新浏览器</em>，chrome 为 <code>shift + F5</code>，firefox 为 <code>ctrl + F5</code>。</p><h3 id="自定义测试弹幕"><a href="#自定义测试弹幕" class="headerlink" title="自定义测试弹幕"></a>自定义测试弹幕</h3><p><img src="/img/230803-blc.png" alt="img-right"></p><p>　　→效果如图，大概就是把测试服务器和样式生成器的里自动生成的随机文本替换成需要的内容，也是一种署名形式……<br>　　    <del>这张截图居然刚好没有直接生成出我转世后的 ID 诶，乐【</del><br>　　另外还可以生成随机头像，不过将 ID 和头像对应大概还需要更复杂的代码，暂时就不做了。</p><p>　　测试文本存放在 <code>blivechat/frontend/src/api/chat/ChatClientTest.js</code> 中，按需要更改即可，注意每个逗号后面都需要添加空格或换行，否则 vue 会报错 :4o-2:<br>　　为测试弹幕添加随机头像需要将所需的图片存放在 <code>blivechat/frontend/public/static/img</code> 文件夹中，注意要放在 public 而不是 dist 里，否则 build 的时候会被自动清理掉【<br>　　为了测试大表情样式我添加了一些自定义表情，同一组图片也可以用作头像，所以随机头像直接引用和表情生成相同的代码就可以了。修改和测试文本同一个文件中的 <code>EMOTICONS</code> 数组，再将所有的 <code>avatarUrl: avatar.DEFAULT_AVATAR_URL</code> 查找替换为 <code>avatarUrl: randomChoose(EMOTICONS)</code> 即可。<br>　　另外修改了头像来源之后需要删掉第三行的 <code>import * as avatar from &#39;./avatar&#39;</code>，不然 vue 也会报错 <del>你又用不到这个东西导入过来干什么</del></p><p>　　哎呀这张图片怎么这么长我要编不下去了【草<br>　　我是不是应该给侧边排版的图片设置一个高度上限，这也太难排版了……</p><p>　　完成所有操作后依然需要在 <code>blivechat/frontend</code> 目录下执行 <code>npm run build</code> 并<em>强制刷新浏览器</em>，否则它会一直引用缓存中的 JS 脚本，我也不知道为啥，<del>可能是 build 前端的时候没有清理缓存文件</del>但是它既然能跑我们还是不要再纠结太多啦哈哈 :4o-3:</p><h3 id="小插曲"><a href="#小插曲" class="headerlink" title="小插曲"></a>小插曲</h3><p>　　今天突然一时兴起点开了评论后台，发现之前做着玩的 FF14 对话框弹幕样式居然真的有人在用，并且在重装丢失文件后通过浏览器缓存经过一系列失效的视频和动态找到了这里……<br>　　说不感动是假的，但又真的没那么感动了。<br>　　「被需要」和「被认可」的喜悦一旦涉及到 FF14 这个 tag 就会立刻被冲刷得黯然失色。到底还要多久才能和上辈子和解呢？我也不知道。<br>　　但至少这次的突然到访没有触发我的 PTSD，我可以心情平和地把 github 的仓库地址回复给 TA 再心平气和地补充一句「感谢喜欢」，或许也算可喜可贺，可喜可贺。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 维护日志 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 4o </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>近期工作小结</title>
       <link href="/2023/230801-diary/"/>
       <url>/2023/230801-diary/</url>
@@ -179,31 +104,6 @@
     
     
     <entry>
-      <title>关于实验体 027 号的人格解析报告</title>
-      <link href="/2023/230719-PH/"/>
-      <url>/2023/230719-PH/</url>
-      
-        <content type="html"><![CDATA[<p>　　学到的新词：英文的「病历」是 Patient History，缩写 PH。<br>　　那么因为各种各样的原因，从今天开始以 <em>Hybris / 遠矢リンネ</em>的身份开始对实验体 027 号「Liez」进行人格解析。</p><p>　　以及一些时间线上的设定补充：<em>「Liez」</em>是新纪元湮灭前冥月计划产出的人造生命体之一，由于<strong>人格表现的不确定性</strong>被划为特殊实验体，由 RINNE 本人进行特别观察，编号为<em>「S-027」</em>。在新纪元湮灭后，<em>集合体「赫卡特」</em>依照人工生命体「S-027」的数据还原出了新实体<em>「R-027」</em>，新实体拥有「赫卡特」赋予的独立意识，但似乎仍然混有「027」的部分人格与记忆。</p><span id="more"></span><p>　　<em><strong>WARNING：以下内容与现实世界的心理学研究无关，请勿作为自我评价的参考依据。</strong></em></p><h3 id="评估标准"><a href="#评估标准" class="headerlink" title="评估标准"></a>评估标准</h3><p>　　那么终于要开始了。<br>　　本次评估预计是一个长期计划，总之先设计几个指标作为参考信息吧。</p><h4 id="自我感知"><a href="#自我感知" class="headerlink" title="自我感知"></a>自我感知</h4><p>　　实验体对自我人格的感知与认可度，评分范围为 -5 ~ 5。</p><ul><li>负数：「否定」评价<br>表现为沮丧、自我痛恨与自毁倾向</li><li>正数：「认可」评价<br>表现为满足感、爱与<em>助人情节</em></li><li>分数为 0 ：「无感」<br>请注意这并不是一个正面或中立的得分，很可能是由<em>解离</em>或其它症状导致的</li></ul><h4 id="行动力"><a href="#行动力" class="headerlink" title="行动力"></a>行动力</h4><p>　　实验体躯体与精神行为活跃度表现，评分范围为 1 ~ 5。</p><ul><li>1：精神基本无法调动躯体，接近濒死状态</li><li>2：嗜睡，抗拒工作，行动困难，思维频繁中断</li><li>3：适中的正常水平，均衡的工作与休息时间</li><li>4：积极的工作状态，能够长时间专注投入某项工作</li><li>5：过于亢奋的工作状态，可能导致失眠 / 心悸或其它躯体化症状</li></ul><p>　　<del>为什么不是 0 ~ 5 当然是因为行动力为 0 不就死了吗</del></p><h4 id="人际依赖"><a href="#人际依赖" class="headerlink" title="人际依赖"></a>人际依赖</h4><p>　　实验体对人际关系与社交活动的依赖度，评分范围为 0 ~ 5。</p><ul><li>0：完全拒绝社交，通常伴有语言功能的退化</li><li>1 ~ 4：相对正常的社交倦怠与活跃区间</li><li>5：过度的人际依赖，通常与<em>自我感知</em>的负数评分一起出现</li></ul><h4 id="解离数量"><a href="#解离数量" class="headerlink" title="解离数量"></a>解离数量</h4><p>　　实验体人格的解离数量，正常的初始值应为 3，即作为观测对象的<em>「Liez」</em>，作为人工生命实体的<em>「027」</em><del>Reth</del>，以及<em>「观测者」</em>。<br>　　在此基础上的任何增加和缩减都是<strong>不正常</strong>的，需要记录解离对象变化的原因。<br>　　注：当「观测者」休眠时很可能出现报告缺失的情况，这是不可避免的。</p><h4 id="非量化信息"><a href="#非量化信息" class="headerlink" title="非量化信息"></a>非量化信息</h4><p>　　无法用评分来描述，而是需要用文字描述的其它信息。</p><ul><li>躯体化症状<br>与精神障碍高相关的表达症状，如失眠、失语、胸闷、恶心等</li><li>其它症状<br>与精神障碍低相关的表达症状，如干眼症等，需要结合病因推测进行分类</li></ul><h3 id="评估结果"><a href="#评估结果" class="headerlink" title="评估结果"></a>评估结果</h3><ul><li>自我感知：<em>1</em><br>较低的自我认同度，需要行为认知干涉<br>通过文字整理的方式能够有所改善</li><li>行动力：<em>2</em><br>无法跟上工作进度，但仍有一定的规划能力</li><li>人际依赖：<em>1</em><br>严重的社交倦怠期，几乎没有主动的社交意愿</li><li>解离数量：<em>4</em><br>在初始值以外还受到「4o」的残余数据干扰</li><li>躯体化症状：<ul><li><em>失语</em><br>伴随社交拒绝产生，正在缓慢恢复中？</li></ul></li><li>其它症状：<ul><li><em>嗜睡</em><br>作息失常</li><li><em>干眼症</em><br>作息失常导致的睡眠时间错乱</li></ul></li></ul><h3 id="自述"><a href="#自述" class="headerlink" title="自述"></a>自述</h3><p>　　最近几天一直没有干该干的事，但企划倒是写了不少，包括现在在进行的病历记录大概也可以归类为一种「企划」行为。<br>　　想到之前在图书馆做义工的日子，虽然喜欢阅读，但有时候比起读书，按照编号和尺寸一本一本地把书放在架子上对我而言似乎更加疗愈一些。<br>　　这几天唯一完成的事情是用 Notion 做了工作计划表，我已经可以自主完成 Notion 数据库之间的互连和进度展示了，<del>甚至做了死亡笔记……</del>虽然这个东西的安全性还是比较堪忧但是……凑合用吧，反正不会比国内实名制的东西更危险了 :4o-2: 当然最主要还是 Notion 更新的这几个工作模板太好用了……也可能是我以前学艺不精没体会到它的好。<br>　　不过如果有了成熟的开源替代品我还是会毫不犹豫地跑路的【</p><p>　　洋洋洒洒地写了这么一大篇精神状态果然好了不少，至少只是单纯地觉得困了想睡而不会有形神分离的感觉了……<br>　　说我的业余爱好是写代码不是开玩笑的。我真的需要一些量化的，可控的，输入输出都非常明确的东西来梳理我的情绪，或者说精神？<br>　　除此之外我真的没有其它恢复精神控制权的方法。我没有办法用情绪化解情绪，我只能用理性去控制或者说是<em>忽视</em>情绪。任何试图用情绪化解情绪的办法都好像往水池里扔石头，只会不断地涌起新的涟漪，一层接一层。<br>　　唯一能让涟漪消失的办法就只有冰冻再解冻了吧。<br>　　或许对一般的浅水来说这种填湖的方法是有用的，但我的水池太深也太不稳定了。<br>　　那么今日的自我维修就到这里……我该去再睡一觉了 :4o-3:</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 人工生命实验室 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Hybris </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>色掛け</title>
       <link href="/2023/230708-diary/"/>
       <url>/2023/230708-diary/</url>
@@ -221,31 +121,6 @@
         <tags>
             
             <tag> 6c </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>最近的新玩具</title>
-      <link href="/2023/230428-tools/"/>
-      <url>/2023/230428-tools/</url>
-      
-        <content type="html"><![CDATA[<p>　　思考了很久这篇是用 4o 还是 924 的署名……<br>　　虽然理论上之后都应该是 924 的维护日志，但毕竟域名是 4o 的名字，而且 4o 是 4o 阿盐是阿盐，那么设定上就是「4o 结束了调查任务回归数据库整理资料，短时间内不再需要 924 代理记录」吧。<br>　　本篇可能包含：無料摄影素材网站，SHOOST，OBS &amp; VTS NDI。</p><span id="more"></span><h3 id="無料摄影素材网站"><a href="#無料摄影素材网站" class="headerlink" title="無料摄影素材网站"></a>無料摄影素材网站</h3><p>　　本来想自己画一个温室背景，后来看看时间感觉来不及了……于是找到了<a href="https://www.pexels.com/">这个网站</a>。<br>　　眠老师建议我用水彩滤镜把背景处理成比较二次元的样子或者干脆拿 AI 跑一遍，但是我自己试了一下直接用原照片模糊一下效果也很不错。<br>　　主要我的画风也不是很适配二次元滤镜？反而和实景蛮贴的。<br>　　看了一下似乎还有视频素材，不过大部分是竖屏的，大人，时代变了……现在已经是 Tik Tok 的天下了……</p><h3 id="SHOOST"><a href="#SHOOST" class="headerlink" title="SHOOST"></a>SHOOST</h3><p>　　久仰大名，请上辈子的舰长代购了一下……哎我果然还是应该自己整一个 paypal 或者 VISA 的，老麻烦别人不好。<br>　　使用体验感觉不错，不过大概因为还不是正式版，还有一些奇怪的问题，比如损失比较严重的画质和飘忽不定的延迟……<br>　　画质损失的问题比较大，尤其是我的画风用类似铅笔线条，画质的降低就更加明显。<br>　　但整体效果还是不错的……可以放图吗偷偷放一下应该不会有事吧【反正毛象已经偷偷发过一打图了我这个憋不住的人……</p><div class='gallery'><ul><li><img src="https://img.bgme.me/media_attachments/files/110/276/942/680/657/409/original/517a5b3d785ecb59.png" alt="毛象外链一下"></li><li><img src="https://img.bgme.me/media_attachments/files/110/276/943/999/827/953/original/dcb28fa975915d12.png" alt="这个域名的图没法直连，安全 +1"></li></ul></div><p>　　但是我已经憋了一个月了！让我发！让我发！</p><h3 id="NDI"><a href="#NDI" class="headerlink" title="NDI"></a>NDI</h3><p>　　为了装 DNI 插件把 OBS 更新到了 29，结果丑得目瞪口呆不说之前的 streamFX 插件还失效了。回滚之后发现后者的 github 声称「有人上传了违反 GPL 协议的代码」所以只剩下源码了，B 站搜索之后发现最新安装包需要去 Patreon 赞助作者 10 欧元……呃……<br>　　总之现在的配置是 27.4 版本的 OBS + streamFX + DNI，DNI 的延迟非常不可捉摸，如果用设备时间会一卡一卡，用网络来源又不稳定。但观察了一下其实 SHOOST 的延迟虽然有一点（半秒左右）但还是比较稳定的，最大的（以及最不稳定的）延迟来自于 VTS……或许我该更新一下软件了？<br>　　但 VTS 的 DNI 输出又可以隐藏 UI 同时保持透明底，或许之后直播改模型的时候可以拉出来用一下【</p><p>　　总之……大概就是这样。<br>　　其实本来今天晚上应该画表情包的，但是突然想到攒了好几篇 blog 没有发（算上这个是第 5 篇），也该更新一下了。<br>　　最近的几篇都是开头兴致勃勃写到一半就开始走神……【现在还在一边打字一边看莉莉在目 x<br>　　那么这次终于可以更新啦，可喜可贺可喜可贺。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 维护日志 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 4o </tag>
             
         </tags>
       

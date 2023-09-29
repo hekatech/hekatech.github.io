@@ -33,30 +33,6 @@
     </url>
 
     <url>
-        <loc>https://4o.cx/2023/230814-AHK/</loc>
-        <lastmod>2023-08-14T17:03:17.579Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://4o.cx/2023/230811-hkt/</loc>
-        <lastmod>2023-08-11T17:29:31.236Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://4o.cx/2023/230719-PH/</loc>
-        <lastmod>2023-08-11T13:25:29.351Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://4o.cx/2023/230801-diary/</loc>
         <lastmod>2023-08-11T12:50:47.133Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -65,24 +41,8 @@
     </url>
 
     <url>
-        <loc>https://4o.cx/2023/230803-note/</loc>
-        <lastmod>2023-08-11T12:50:42.207Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://4o.cx/2023/230708-diary/</loc>
         <lastmod>2023-07-19T11:12:07.405Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://4o.cx/2023/230428-tools/</loc>
-        <lastmod>2023-04-28T15:21:10.823Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
