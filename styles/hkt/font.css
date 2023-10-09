@@ -12,10 +12,13 @@ strong {
 .article-date,
 .code pre,
 .word-count,
-.archive-list-item,
-code {
+.archive-list-item {
   font-family: font-mono;
   word-break: normal;
+}
+code {
+  font-family: font-mono;
+  word-break: break-all;
 }
 .highlight {
   line-height: 1.8em;

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    「Win 10 美化小笔记」 - 無色人間。
+  
+</title>
+
+
+  <link rel="alternative" href="/atom.xml" title="無色人間。" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+
+
+<link rel="stylesheet" href="/styles/main.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <img src="/favicon.png">
+  </button>
+  <a class="title" href="/">無色人間。</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">無色人間。</a></h1>
+    
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/" title="主页" external="false">主页</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/about" title="关于" external="false">关于</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/categories" title="分类" external="false">分类</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/ark" title="｢匣｣" external="false">｢匣｣</a>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">归档</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">23</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">43</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav" id="linklist">
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS" external="false">RSS</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="javascript:;" title="搜索" external="false">搜索</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+  <div class="footer">
+    <div class="info">
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="/icon.png"></a>
+          
+        </div>
+      <div class="content">
+        
+          <div class="description">For the glory of mankind.</div>
+        
+        
+          <div class="author">4o</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    <div class="main-content">
+          <div class="post-body">
+
+<article id="post-231009-windows" class="article article-type-post">
+  
+    <div class="article-header">
+      <div class="article-title">
+      <h2>
+      Win 10 美化小笔记
+    </h2>
+    <span class="article-date">
+  2023/10/09
+</span>
+
+    
+
+  <span class="word-count">字数统计：
+    <span class="word-count-symbol">1.4k</span>
+  </span>
+  <span class="word-count">阅读时间：
+    <span class="word-count-time">2 mins</span>
+  </span>
+  
+    <span class="word-count">访问次数：
+      <span id="/2023/231009-windows/" class="waline-visitor-count">...</span>
+    </span>
+    <span class="word-count">评论统计：
+      <span id="/2023/231009-windows/" class="waline-comment-count">...</span>
+    </span>
+  
+
+
+  </div>
+    <div class="article-info">
+    
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E7%BB%B4%E6%8A%A4%E6%97%A5%E5%BF%97/">维护日志</a></li></ul>
+
+
+    
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/6c/" rel="tag">6c</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AviUtl/" rel="tag">AviUtl</a></li></ul>
+
+
+  </div>
+</div>
+  
+  <div class="article-entry">
+    <p>　　折腾 AviUtl 界面美化的副产品，折腾着折腾着就开始捣鼓整个 Windows 了……</p>
+<span id="more"></span>
+
+<h3 id="更改-Windows-窗口标题栏颜色"><a href="#更改-Windows-窗口标题栏颜色" class="headerlink" title="更改 Windows 窗口标题栏颜色"></a>更改 Windows 窗口标题栏颜色</h3><p>　　众所周知 Win10 的暗色模式有点用处但不多，记事本等诸多应用的标题栏依然是白的，AviUtl 也在白标题栏之列，设置了夜间模式之后看着不可谓不痛苦……<br>　　活动窗口的改变方法：选一个暗一点的主题色。<br>　　是的这是唯一的解决方法……<br>　　设置完毕后发现非活动窗口的标题栏依然是白的，这个时候就需要改注册表，进入 <code>HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\DWM</code> 新建 <em>DWORD（32位）值</em> 并命名为 <em>「AccentColorInactive」</em>，将值改为 <em>FF</em> 开头的 8 位 Hex ARGB 颜色代码。<br>　　是的这个地方用的是 ARGB 但我尝试使用半透明颜色后他会自动变成 6 位值，也不知道这里用 8 位的意义何在，以后打算搞半透明在这放个新建文件夹是吧 :4o-3:</p>
+<h3 id="更改标题栏高度"><a href="#更改标题栏高度" class="headerlink" title="更改标题栏高度"></a>更改标题栏高度</h3><p>　　解决了白色标题栏还要解决标题栏过宽把界面拆分得太多的问题……<br>　　依然是改注册表，进入 <code>HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics</code>，修改 <em>BorderWidth</em> 和 <em>PaddedBorderWidth</em> 为 <em>0</em>。</p>
+<h3 id="自定义图标"><a href="#自定义图标" class="headerlink" title="自定义图标"></a>自定义图标</h3><p>　　尝试用 PS 插件导出了 ico 图标，但不知道为什么缩小的时候会变成龇牙咧嘴的马赛克（就是锯齿很多的意思），多方查询资料后发现 windows 用的 ico 文件需要包括多个尺寸的文件，不然让 windows 自己压缩图片就是会压成这个鬼样子……<br>　　OK fine。</p>
+<blockquote>
+<p>使用软件：<a target="_blank" rel="noopener" href="https://icofx.ro/">icoFX</a><br>虽然是付费软件但似乎免费版也不影响使用，网上随便搜一下也能找到汉化</p>
+</blockquote>
+<p>　　将图片拖入窗口选择 <em>从图像创建 Windows 图标</em> 就会自动生成多个尺寸的图像，然后直接保存为 ico 即可。<br>　　如果图像尺寸小于 256×256，则需要先导入图像再通过菜单的 <em>图像→从图像创建 Windows 图标</em> 生成图标，勾选 256 尺寸后会自动把图片放大，虽然效果比较模糊但是这个尺寸的图标其实不太用得到，反正我是无所谓【。在意的话可以用别的软件预处理一下图像。</p>
+<h4 id="创建图标库"><a href="#创建图标库" class="headerlink" title="创建图标库"></a>创建图标库</h4><p>　　在菜单中选择 <em>工具→图标资源编辑器</em> 可以添加多个 ico 文件创建 icl 格式的图标库，即一个文件内包含多个 ico 图标。但是这个格式在 windows 文件浏览器中是不会直接显示图的，我觉得发布少量图标的时候用多个单图像 ico 文件打包的形式也不错。</p>
+<h3 id="去除快捷方式箭头"><a href="#去除快捷方式箭头" class="headerlink" title="去除快捷方式箭头"></a>去除快捷方式箭头</h3><p>　　还是改注册表！<br>　　进入 <code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons</code>，如果没有 <code>Shell Icons</code> 这一项就新建项，然后新建 <em>字符串值</em> 命名为 <em>29</em>，将值改为 <code>C:\WINDOWS\system32\imageres.dll,197</code> 即可。<br>　　这个操作是修改了快捷方式的角标 ico 文件, <code>imageres.dll,197</code> 是一个接近全透明的图标，详情请<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/62187698/answer/246865678">【参考此处】</a><br>　　当然我自己画了一个更接近全透明的图标，经测试不会自动生成为全黑缩略图，有需要可以<a href="/img/ui/sc.ico">【点我下载】</a><br>　　下载后将注册表值改为透明图标的路径即可。</p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://www.microwin10.com/wenzhang/jiaocheng/2015-12-01/1094.html">让Win10非活动窗口标题栏也换上五颜六色</a></li>
+<li><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1676363">通过注册表调整 Windows 8 窗口边框宽度</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/62187698/answer/246865678">如何简洁有效地去除Windows 10快捷方式小箭头？</a></li>
+</ul>
+
+  </div>
+  <div class="clear" style="clear:both;"></div>
+  <footer class="article-footer">
+  </footer>
+</article>
+
+
+  <div class="comment-block">
+    <hr>
+  <div id="waline"></div>
+  </div>
+
+
+<div class="main-footer">
+  <span>© 2023 無色人間。-<a rel="me noopener" target="_blank" href="https://bgme.me/@suzushi">「e686a7e3828c」</a></span>
+  <span>转载本站图文请附上<a href="">「原始链接」</a></span>
+  <span class="description">已收录数据
+    <em class="word-count-symbol">&nbsp;183k&nbsp;</em>
+    字，登记访客&nbsp;
+    <em id="/" class="waline-visitor-count">...</em>
+    &nbsp;人。
+  </span>
+</div>
+</div>
+
+
+
+  <div class="article-toc">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E6%94%B9-Windows-%E7%AA%97%E5%8F%A3%E6%A0%87%E9%A2%98%E6%A0%8F%E9%A2%9C%E8%89%B2"><span class="toc-number">1.</span> <span class="toc-text">更改 Windows 窗口标题栏颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E6%94%B9%E6%A0%87%E9%A2%98%E6%A0%8F%E9%AB%98%E5%BA%A6"><span class="toc-number">2.</span> <span class="toc-text">更改标题栏高度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9B%BE%E6%A0%87"><span class="toc-number">3.</span> <span class="toc-text">自定义图标</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%9B%BE%E6%A0%87%E5%BA%93"><span class="toc-number">3.1.</span> <span class="toc-text">创建图标库</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%BB%E9%99%A4%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F%E7%AE%AD%E5%A4%B4"><span class="toc-number">4.</span> <span class="toc-text">去除快捷方式箭头</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-number">5.</span> <span class="toc-text">参考</span></a></li></ol>
+  </div>
+
+
+
+          
+  
+  </div>
+  <div class="hekation">
+
+<svg class="HKT-block" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <circle class="HKT-item" id="HKT-1" cx="128" cy="128" r="120"/>
+  <circle class="HKT-item" id="HKT-2" cx="128" cy="128" r="127"/>
+  <circle class="HKT-item" id="HKT-3" cx="128" cy="128" r="96"/>
+  <circle class="HKT-item" id="HKT-4" cx="128" cy="128" r="72"/>
+  <circle class="HKT-item" id="HKT-5" cx="128" cy="128" r="94"/>
+  <circle class="HKT-item" id="HKT-6" cx="128" cy="128" r="80"/>
+  <circle class="HKT-item" id="HKT-7" cx="128" cy="128" r="47"/>
+  <circle class="HKT-item" id="HKT-8" cx="128" cy="128" r="32"/>
+  <circle class="HKT-item" id="HKT-9" cx="128" cy="128" r="28"/>
+  <circle class="HKT-item" id="HKT-10" cx="128" cy="128" r="24"/>
+</svg>
+
+</div>
+
+  
+
+    <div class="search-block">
+      <div id="site_search">
+        <div class="form-group">
+          <input type="text" id="local-search-input" name="q" results="0" placeholder="search" class="st-search-input st-default-search-input form-control"/>
+        </div>
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+
+
+
+</body>
+<footer>
+  
+<script src="https://co5.me/lib/jquery/index.js?v=2.1.3.js"></script>
+
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<script src="/PhotoSwipe/photoswipe.js"></script>
+
+  
+<script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+
+
+<script src="/scripts/main.js"></script>
+
+
+<script src="/scripts/score.js"></script>
+
+
+<script src="/scripts/waline.js"></script>
+
+
+<script src="/scripts/search.js"></script>
+
+
+  
+
+  
+    
+      <script type="text/javascript">
+      Waline({
+        el: '#waline',
+        serverURL: 'https://waline-4o-cx.vercel.app/',
+        emoji: [],
+        uploadImage: false,
+        visitor: true,
+        requiredMeta: ['nick', 'mail'],
+        placeholder:"欢迎留言 ~ 登录非必选项，填上昵称和邮箱即可提交评论并显示 Libravatar / Gravatar",
+      });
+      window.onload = function(){
+        $("#waline-nick" ).attr( "placeholder" , "昵称" );
+        $("#waline-mail" ).attr( "placeholder" , "邮箱" );
+        $("#waline-link" ).attr( "placeholder" , "链接" );
+      }
+      </script>
+    
+  
+
+
+  
+  <script type="text/javascript">      
+    var path = "/search.xml";
+    searchFunc(path, 'local-search-input', 'local-search-result');
+  </script>
+
+  
+<script src="/hekation/emoji.js"></script>
+
+
+<link rel="stylesheet" href="/hekation/emoji.css">
+
+
+<script src="/scripts/HKT-63.js"></script>
+
+</footer>
+</html>

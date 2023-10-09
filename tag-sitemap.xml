@@ -3,22 +3,29 @@
 
 
     <url>
-        <loc>https://4o.cx/tags/4o/</loc>
-        <lastmod>2023-09-29T17:08:12.394Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://4o.cx/tags/HKT-924/</loc>
-        <lastmod>2023-08-20T22:41:42.473Z</lastmod>
+        <loc>https://4o.cx/tags/AviUtl/</loc>
+        <lastmod>2023-10-09T15:22:54.900Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://4o.cx/tags/6c/</loc>
-        <lastmod>2023-07-19T11:12:07.405Z</lastmod>
+        <lastmod>2023-10-09T15:22:54.900Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://4o.cx/tags/HKT-924/</loc>
+        <lastmod>2023-09-30T23:07:39.317Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://4o.cx/tags/4o/</loc>
+        <lastmod>2023-09-29T17:08:12.394Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

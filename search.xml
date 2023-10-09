@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Win 10 美化小笔记</title>
+      <link href="/2023/231009-windows/"/>
+      <url>/2023/231009-windows/</url>
+      
+        <content type="html"><![CDATA[<p>　　折腾 AviUtl 界面美化的副产品，折腾着折腾着就开始捣鼓整个 Windows 了……</p><span id="more"></span><h3 id="更改-Windows-窗口标题栏颜色"><a href="#更改-Windows-窗口标题栏颜色" class="headerlink" title="更改 Windows 窗口标题栏颜色"></a>更改 Windows 窗口标题栏颜色</h3><p>　　众所周知 Win10 的暗色模式有点用处但不多，记事本等诸多应用的标题栏依然是白的，AviUtl 也在白标题栏之列，设置了夜间模式之后看着不可谓不痛苦……<br>　　活动窗口的改变方法：选一个暗一点的主题色。<br>　　是的这是唯一的解决方法……<br>　　设置完毕后发现非活动窗口的标题栏依然是白的，这个时候就需要改注册表，进入 <code>HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\DWM</code> 新建 <em>DWORD（32位）值</em> 并命名为 <em>「AccentColorInactive」</em>，将值改为 <em>FF</em> 开头的 8 位 Hex ARGB 颜色代码。<br>　　是的这个地方用的是 ARGB 但我尝试使用半透明颜色后他会自动变成 6 位值，也不知道这里用 8 位的意义何在，以后打算搞半透明在这放个新建文件夹是吧 :4o-3:</p><h3 id="更改标题栏高度"><a href="#更改标题栏高度" class="headerlink" title="更改标题栏高度"></a>更改标题栏高度</h3><p>　　解决了白色标题栏还要解决标题栏过宽把界面拆分得太多的问题……<br>　　依然是改注册表，进入 <code>HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics</code>，修改 <em>BorderWidth</em> 和 <em>PaddedBorderWidth</em> 为 <em>0</em>。</p><h3 id="自定义图标"><a href="#自定义图标" class="headerlink" title="自定义图标"></a>自定义图标</h3><p>　　尝试用 PS 插件导出了 ico 图标，但不知道为什么缩小的时候会变成龇牙咧嘴的马赛克（就是锯齿很多的意思），多方查询资料后发现 windows 用的 ico 文件需要包括多个尺寸的文件，不然让 windows 自己压缩图片就是会压成这个鬼样子……<br>　　OK fine。</p><blockquote><p>使用软件：<a href="https://icofx.ro/">icoFX</a><br>虽然是付费软件但似乎免费版也不影响使用，网上随便搜一下也能找到汉化</p></blockquote><p>　　将图片拖入窗口选择 <em>从图像创建 Windows 图标</em> 就会自动生成多个尺寸的图像，然后直接保存为 ico 即可。<br>　　如果图像尺寸小于 256×256，则需要先导入图像再通过菜单的 <em>图像→从图像创建 Windows 图标</em> 生成图标，勾选 256 尺寸后会自动把图片放大，虽然效果比较模糊但是这个尺寸的图标其实不太用得到，反正我是无所谓【。在意的话可以用别的软件预处理一下图像。</p><h4 id="创建图标库"><a href="#创建图标库" class="headerlink" title="创建图标库"></a>创建图标库</h4><p>　　在菜单中选择 <em>工具→图标资源编辑器</em> 可以添加多个 ico 文件创建 icl 格式的图标库，即一个文件内包含多个 ico 图标。但是这个格式在 windows 文件浏览器中是不会直接显示图的，我觉得发布少量图标的时候用多个单图像 ico 文件打包的形式也不错。</p><h3 id="去除快捷方式箭头"><a href="#去除快捷方式箭头" class="headerlink" title="去除快捷方式箭头"></a>去除快捷方式箭头</h3><p>　　还是改注册表！<br>　　进入 <code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons</code>，如果没有 <code>Shell Icons</code> 这一项就新建项，然后新建 <em>字符串值</em> 命名为 <em>29</em>，将值改为 <code>C:\WINDOWS\system32\imageres.dll,197</code> 即可。<br>　　这个操作是修改了快捷方式的角标 ico 文件, <code>imageres.dll,197</code> 是一个接近全透明的图标，详情请<a href="https://www.zhihu.com/question/62187698/answer/246865678">【参考此处】</a><br>　　当然我自己画了一个更接近全透明的图标，经测试不会自动生成为全黑缩略图，有需要可以<a href="/img/ui/sc.ico">【点我下载】</a><br>　　下载后将注册表值改为透明图标的路径即可。</p><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul><li><a href="http://www.microwin10.com/wenzhang/jiaocheng/2015-12-01/1094.html">让Win10非活动窗口标题栏也换上五颜六色</a></li><li><a href="https://cloud.tencent.com/developer/article/1676363">通过注册表调整 Windows 8 窗口边框宽度</a></li><li><a href="https://www.zhihu.com/question/62187698/answer/246865678">如何简洁有效地去除Windows 10快捷方式小箭头？</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 维护日志 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 6c </tag>
+            
+            <tag> AviUtl </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>能者多牢</title>
       <link href="/2023/230929-ff/"/>
       <url>/2023/230929-ff/</url>

@@ -186,10 +186,13 @@ strong {
 .article-date,
 .code pre,
 .word-count,
-.archive-list-item,
-code {
+.archive-list-item {
   font-family: Consolas, "微软雅黑", monospace;
   word-break: normal;
+}
+code {
+  font-family: Consolas, "微软雅黑", monospace;
+  word-break: break-all;
 }
 .highlight {
   line-height: 1.8em;
