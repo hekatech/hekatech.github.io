@@ -3,6 +3,20 @@
 
 
     <url>
+        <loc>https://4o.cx/tags/%E7%94%BB%E5%BB%8A/</loc>
+        <lastmod>2023-10-31T19:25:35.450Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://4o.cx/tags/4o/</loc>
+        <lastmod>2023-10-31T19:25:35.450Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://4o.cx/tags/AviUtl/</loc>
         <lastmod>2023-10-09T15:22:54.900Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -19,13 +33,6 @@
     <url>
         <loc>https://4o.cx/tags/HKT-924/</loc>
         <lastmod>2023-09-30T23:07:39.317Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://4o.cx/tags/4o/</loc>
-        <lastmod>2023-09-29T17:08:12.394Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -75,13 +82,6 @@
     <url>
         <loc>https://4o.cx/tags/%E8%BF%BD%E7%95%AA/</loc>
         <lastmod>2023-03-27T22:53:02.235Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://4o.cx/tags/%E7%94%BB%E5%BB%8A/</loc>
-        <lastmod>2023-03-07T02:53:58.487Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

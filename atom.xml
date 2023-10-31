@@ -6,7 +6,7 @@
   <link href="https://4o.cx/atom.xml" rel="self"/>
   
   <link href="https://4o.cx/"/>
-  <updated>2023-10-09T15:22:54.900Z</updated>
+  <updated>2023-10-31T19:25:35.450Z</updated>
   <id>https://4o.cx/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>久违的大头画</title>
+    <link href="https://4o.cx/2023/231031-test/"/>
+    <id>https://4o.cx/2023/231031-test/</id>
+    <published>2023-10-31T18:39:26.000Z</published>
+    <updated>2023-10-31T19:25:35.450Z</updated>
+    
+    <content type="html"><![CDATA[<p>　　想了一下最后发 blog 还是没带水印，看了一下水印上留的日期已经是一年前的 10.29，去年的十月我在干什么呢？已经完全没有印象了。<br>　　尝试了一下厚涂，得出结论：不适合我。我画画的工作流程已经非常固化了，至少在最终细化之前不太有厚涂的可能性。<br>　　但这次也做了一些尝试，比如<em>正片叠底打光</em>和<em>渐变映射</em>。</p><span id="more"></span><p>　　那么以下是对比图：</p><div class="gallery">    <ul><li><img src="/img/231031/231031-s.png" alt="原色"></li><li><img src="/img/231031/231031-af.png" alt="调色后"></li></ul></div><p>　　两个版本难舍难分……也都不是百分百满意。原色由于发光图层的特点在高光周围有丰富的色彩变化，但暗面很暗沉；渐变映射调色后整体的颜色变「轻」了，但是也失去了一些层次感。<br>　　另外头发的高光两个版本都不是很理想，很怪，感觉画不出以前的感觉了，大概是笔刷的问题吧……<br>　　<strong>还是要多画</strong>，不然连自己之前是怎么画的都记不住了。</p><p>　　其实已经有点画腻了这种高饱和光污染的东西了……下次试试黑白吧。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;　　想了一下最后发 blog 还是没带水印，看了一下水印上留的日期已经是一年前的 10.29，去年的十月我在干什么呢？已经完全没有印象了。&lt;br&gt;　　尝试了一下厚涂，得出结论：不适合我。我画画的工作流程已经非常固化了，至少在最终细化之前不太有厚涂的可能性。&lt;br&gt;　　但这次也做了一些尝试，比如&lt;em&gt;正片叠底打光&lt;/em&gt;和&lt;em&gt;渐变映射&lt;/em&gt;。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="碎镜" scheme="https://4o.cx/categories/%E7%A2%8E%E9%95%9C/"/>
+    
+    
+    <category term="4o" scheme="https://4o.cx/tags/4o/"/>
+    
+    <category term="画廊" scheme="https://4o.cx/tags/%E7%94%BB%E5%BB%8A/"/>
+    
+  </entry>
   
   <entry>
     <title>Win 10 美化小笔记</title>
@@ -424,29 +447,6 @@
     <category term="4o" scheme="https://4o.cx/tags/4o/"/>
     
     <category term="CSS" scheme="https://4o.cx/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>1 月追番笔记 · 后篇</title>
-    <link href="https://4o.cx/2023/230204-anime/"/>
-    <id>https://4o.cx/2023/230204-anime/</id>
-    <published>2023-02-05T01:41:08.000Z</published>
-    <updated>2023-03-27T22:52:56.251Z</updated>
-    
-    <content type="html"><![CDATA[<p>　　其实最近两个星期都在马不停蹄地转播绝欧米茄开荒，吃饭睡觉一律顾不上，更没什么时间追番……<br>　　但还是七七八八看了一些，总之先写点什么重连一下语言系统吧【</p><span id="more"></span><h3 id="尼尔"><a href="#尼尔" class="headerlink" title="尼尔"></a>尼尔</h3><p>　　好吧其实我就是为了记尼尔最新话的 hex 加密码写的这篇东西【理直气壮</p><blockquote><p>492070726f6d697365206c6f766520<br>6f662074686520657465726e6974792e</p></blockquote><ul><li>I promise love of the eternity.</li></ul><p>　　A1 它终于学会换行了，可喜可贺可喜可贺。<br>　　二话三话终于做得有了点「动画」的样子而不是什么游戏音乐宣传 PV 了，但打斗的音效和节奏依然还是烂烂烂，别告诉我你们只要了 BGM 和动作数据没要音效哈 :4o-2:<br>　　但是 3 话加入了 Replicant 里的剧情还是让人眼前一亮的，小剧场也一直稳定发挥（真的这小剧场比正篇好看多了），我感觉 A1 就是没搞懂不同载体之间的区别，你想用 2D 还原 3D 的那种氛围甚至镜头以你的水平就是东施效颦，为什么不发挥 2D 动画的特长多做一些日常和心理活动呢……<br>　　最后每次 9S 开 hacking 我都觉得在看全员恶玉这是可以说的吗……<br>　　依然是 <em>7/10</em>，希望停工回来能再接再厉做得更像「动画」一点吧。</p><h3 id="间谍教室"><a href="#间谍教室" class="headerlink" title="间谍教室"></a>间谍教室</h3><p>　　因为动画做得实在太烂了（太烂了）忍不住去看了下小说，发现原作除了一点不可免俗的媚宅内容外还是比较可圈可点的正常小说，是的它至少是能让人有读下去的欲望的厕纸……哈哈动画直接把除了媚宅以外的内容全™删了还觉得不够，还要原创更多的媚宅内容进去，直接导致一个正常向的间谍轻小说变成了媚宅后宫番，我的评价是令人作呕。<br>　　因为动画做得实在太烂了（再次）我特意去查了一下编剧<span class='sb'>猪爪慎一</span>的成分，发现这位的知名作品是《笑容的代价》，呃……以及我说怎么第 4 话观感有回升原来只有这个第 4 话不是他写的，这™不换人？？？这不换人？？？<br>　　看在作画的面子上修正评分为 <em>4/10</em>，就那个什么，<span class='sb'>猪爪慎一</span>还有 FEEL <strong>你们的遗像我已经做好了，留个地址签收一下吧</strong> :4o-2:<br>　　嗯感觉遗像不能解我心头之恨所以特意写了个 CSS 把<span class='sb'>猪爪慎一</span>的名字用方框框起来了，不愧是我。</p><h3 id="转生王女"><a href="#转生王女" class="headerlink" title="转生王女"></a>转生王女</h3><p>　　唯一看起来血压不那么高的番……<br>　　女孩子贴贴就是最好的，但是作画没有间谍教室稳定也是真的。<br>　　每一集都是最适合花之塔的一集.jpg 说起来大概是因为追了这个番所以前两天网易云日推点开来第一首就是花之塔，草【</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;　　其实最近两个星期都在马不停蹄地转播绝欧米茄开荒，吃饭睡觉一律顾不上，更没什么时间追番……&lt;br&gt;　　但还是七七八八看了一些，总之先写点什么重连一下语言系统吧【&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="ERROR" scheme="https://4o.cx/categories/ERROR/"/>
-    
-    
-    <category term="HKT-924" scheme="https://4o.cx/tags/HKT-924/"/>
-    
-    <category term="追番" scheme="https://4o.cx/tags/%E8%BF%BD%E7%95%AA/"/>
     
   </entry>
   
