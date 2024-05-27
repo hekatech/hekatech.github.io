@@ -4,7 +4,14 @@
 
     <url>
         <loc>https://4o.cx/tags/4o/</loc>
-        <lastmod>2024-05-25T19:53:30.311Z</lastmod>
+        <lastmod>2024-05-27T14:24:45.433Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://4o.cx/tags/%E7%94%BB%E5%BB%8A/</loc>
+        <lastmod>2024-05-27T14:17:46.730Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -12,13 +19,6 @@
     <url>
         <loc>https://4o.cx/tags/6c/</loc>
         <lastmod>2024-04-07T14:34:34.086Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://4o.cx/tags/%E7%94%BB%E5%BB%8A/</loc>
-        <lastmod>2023-10-31T19:25:35.450Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
