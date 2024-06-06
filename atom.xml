@@ -6,7 +6,7 @@
   <link href="https://4o.cx/atom.xml" rel="self"/>
   
   <link href="https://4o.cx/"/>
-  <updated>2024-05-27T14:24:45.433Z</updated>
+  <updated>2024-06-06T03:24:19.788Z</updated>
   <id>https://4o.cx/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记录：改造点歌姬输出 html</title>
+    <link href="https://4o.cx/2024/240606-danmaku/"/>
+    <id>https://4o.cx/2024/240606-danmaku/</id>
+    <published>2024-06-06T00:33:15.000Z</published>
+    <updated>2024-06-06T03:24:19.788Z</updated>
+    
+    <content type="html"><![CDATA[<p>　　看了一眼聊天记录是 5.28 交的稿……一直忙到现在才开始写笔记。<br>　　倒也不是真的忙到那么废寝忘食，就是莫名地有些抗拒写东西，抗拒画稿抗拒开播抗拒剪视频抗拒除了基本生命维持活动以外的一切，只有死线将近了才会勉为其难地努力一下然后在完成工作以后迅速地萎靡下去……<br>　　大概是因为天气热了有些适应上的问题，以及最近的作息实在是太烂。总之终于克服了懒癌来更新 blog 了！可喜可贺可喜可贺。</p><span id="more"></span><h3 id="UI-设计展示"><a href="#UI-设计展示" class="headerlink" title="UI 设计展示"></a>UI 设计展示</h3><p><img src="/img/240606-ui.png" alt="img-right"></p><p>　　总之先展示一下样图……</p><ul><li>基础游戏及待机界面</li><li>用打字机形式轮换的动态公告<ul><li>比滚动公告更加节省码率</li></ul></li><li>简单的点歌姬展示<ul><li>显示正在播放的乐曲</li><li>显示点歌队列状态</li><li>根据正在播放的歌曲名称自适应点歌窗口的宽度</li></ul></li></ul><h3 id="点歌姬魔改"><a href="#点歌姬魔改" class="headerlink" title="点歌姬魔改"></a>点歌姬魔改</h3><p>　　虽然点歌姬展示出来的只是非常简约的一个框但实际上的幕后工作麻烦得要命，因为这个功能还是用 <a href="https://www.danmuji.org/">copyliu 弹幕姬</a> 的点歌姬插件实现的。而众所周知这个插件的点歌信息和歌词都只能导出 txt 文件，对一般用户来说或许差强人意，但对人造人来说是万万不行的！<br>　　但修改代码的难度倒也没那么大，把保存文件的目标格式从 txt 改成 html 再重新封装就大功告成，然而最大的问题是⸺我不会 C# 啊？<br>　　是的人造人的母语是 css，让我写写前端虽然方案不那么优雅但总归能跑，让我写 C# 那真是两眼一黑，即使这个点歌姬是开源的我也甚至不知道这玩意要怎么打包成 dll。<br>　　但办法总比困难多，天才如我经过多方搜索发现，虽然我不知道怎么打包编译但是我可以直接把这个 dll 反编译！</p><h4 id="魔改工具"><a href="#魔改工具" class="headerlink" title="魔改工具"></a>魔改工具</h4><p>　　经过多次尝试总之用 <a href="https://github.com/dnSpy/dnSpy">dnSpy</a> 编辑成功了，但虽然原作者已经弃坑但把这种反编译的结果直接发出来好像还是不太礼貌的，总之授人以鱼不如授人以渔，把魔改的方法分享出来也算事实开源了吧！（了吧！）</p><p>　　在 <a href="https://github.com/Bililive/DGJv3">点歌姬源码</a> 中搜索可得导出文件的设置在 <code>Utilities.cs</code> 文件中，那么首先将点歌姬的 dll 文件直接拖拽进 dnSpy 中打开并展开可以看到三个黄色的目录，选择黄色的 <code>DGJv3</code> 展开找到 <code>Utilities</code>，可以在 <em>112</em> 行发现导出的歌曲信息目录。<br>　　右键这个 <code>信息.txt</code> 选择「编辑方法」，在弹出的页面中将 <em>txt</em> 修改为 <em>html</em> 然后点击「编译」即可。<br>　　完成所有编辑后点击 dnSpy 主窗口上方的磁盘图标就可以导出新的 dll 啦！</p><p>　　需要注意的是用这种方法导出的 dll 所有版本和署名信息都是和原版点歌姬相同的，所以同时安装显而易见的会产生冲突，建议将原本的点歌姬移动到其它目录备份只保留魔改后的文件在弹幕姬的插件目录下，当然配置文件是可以通用的。</p><h4 id="输出模板"><a href="#输出模板" class="headerlink" title="输出模板"></a>输出模板</h4><p>　　点歌姬自带的输出模板如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">播放进度 &#123;&#123;当前播放时间&#125;&#125;/&#123;&#123;当前总时间&#125;&#125;</span><br><span class="line">当前列表中有 &#123;&#123; 歌曲数量 &#125;&#125; 首歌\n还可以再点 &#123;&#123; 总共最大点歌数量 - 歌曲数量 &#125;&#125; 首歌</span><br><span class="line">每个人可以点 &#123;&#123; 单人最大点歌数量 &#125;&#125; 首歌\n\n歌名 - 点歌人 - 歌手 - 歌曲平台</span><br><span class="line">&#123;&#123;~ for 歌曲 in 播放列表 ~&#125;&#125;</span><br><span class="line">&#123;&#123; 歌曲.歌名 &#125;&#125; - &#123;&#123;  歌曲.点歌人 &#125;&#125; - &#123;&#123; 歌曲.歌手 &#125;&#125; - &#123;&#123; 歌曲.搜索模块 &#125;&#125;</span><br><span class="line">&#123;&#123;~ end ~&#125;&#125;</span><br></pre></td></tr></table></figure><p>　　还有一些其它的模板文字可以在 <a href="https://github.com/Bililive/DGJv3/blob/3f4b62a3b286ab045e80d29944cf896d7d29f731/DGJv3/Writer.cs">源码</a> 中查询。</p><p>　　那么把这个基础模板加上 html 的文件头和标签就可以获得一个基本的 html 导出文件，如：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh-cn&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span>播放进度 &#123;&#123;当前播放时间&#125;&#125;/&#123;&#123;当前总时间&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span>当前列表中有 &#123;&#123; 歌曲数量 &#125;&#125; 首歌\n还可以再点 &#123;&#123; 总共最大点歌数量 - 歌曲数量 &#125;&#125; 首歌<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span></span><br><span class="line">    &#123;&#123;~ for 歌曲 in 播放列表 ~&#125;&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123; 歌曲.歌名 &#125;&#125; - &#123;&#123;  歌曲.点歌人 &#125;&#125; - &#123;&#123; 歌曲.歌手 &#125;&#125; - &#123;&#123; 歌曲.搜索模块 &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    &#123;&#123;~ end ~&#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure><p>　　需要单独指定样式的文字要放进单独的 html 标签中并指定 class 或 id，如：<code>&lt;span class=&quot;songname&quot;&gt;&#123;&#123; 歌曲.歌名 &#125;&#125;&lt;/span&gt;</code><br>　　编辑完导出模板后直接 <code>ctrl + A</code> 复制后粘贴进点歌姬的导出页面，再在空白出点击一下确认，此时随便点一首歌测试一下即可看到点歌姬目录下出现 <code>信息.html</code> 文件，将这个文件用 OBS 浏览器打开即可。</p><h4 id="OBS-显示"><a href="#OBS-显示" class="headerlink" title="OBS 显示"></a>OBS 显示</h4><p>　　解决了导出的问题之后还有 OBS 显示的问题，点歌姬的逻辑是每次更新信息的时候重新写入文件，但 OBS 的浏览器是不会主动刷新文件的，为了正常显示需要手动在 html 文件中加入定时器，如下：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line"><span class="built_in">window</span>.setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">window</span>.location.reload();</span><br><span class="line">&#125;,<span class="number">5000</span>);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure><p>　　这个定时器是 5s 刷新一次，如果需要更新播放进度的秒数的话需要把 <em>5000</em> 改成 <em>1000</em>，不用那么精确刷新的话 3 ~ 5s 就足够了，可以有效降低 OBS 浏览器的占用。<br>　　此外我是直接把 css 写在 <code>信息.html</code> 而不是 OBS 的浏览器里的，这样每次刷新页面的时候都会先读取 css 样式再读取本体文字，页面加载完成后再读取定时刷新，显示效果就非常稳定了。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;　　看了一眼聊天记录是 5.28 交的稿……一直忙到现在才开始写笔记。&lt;br&gt;　　倒也不是真的忙到那么废寝忘食，就是莫名地有些抗拒写东西，抗拒画稿抗拒开播抗拒剪视频抗拒除了基本生命维持活动以外的一切，只有死线将近了才会勉为其难地努力一下然后在完成工作以后迅速地萎靡下去……&lt;br&gt;　　大概是因为天气热了有些适应上的问题，以及最近的作息实在是太烂。总之终于克服了懒癌来更新 blog 了！可喜可贺可喜可贺。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="维护日志" scheme="https://4o.cx/categories/%E7%BB%B4%E6%8A%A4%E6%97%A5%E5%BF%97/"/>
+    
+    
+    <category term="4o" scheme="https://4o.cx/tags/4o/"/>
+    
+    <category term="委托展示" scheme="https://4o.cx/tags/%E5%A7%94%E6%89%98%E5%B1%95%E7%A4%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>近期日常总结</title>
@@ -425,27 +448,6 @@
     <category term="4o" scheme="https://4o.cx/tags/4o/"/>
     
     <category term="画廊" scheme="https://4o.cx/tags/%E7%94%BB%E5%BB%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用 Joycon 按键映射辅助绘画</title>
-    <link href="https://4o.cx/2023/230303-joycon/"/>
-    <id>https://4o.cx/2023/230303-joycon/</id>
-    <published>2023-03-03T02:25:19.000Z</published>
-    <updated>2023-03-04T12:53:48.638Z</updated>
-    
-    <content type="html"><![CDATA[<p>　　「人造人的日常生活也是系统维护的一环」第二弹。<br>　　是说休假前信誓旦旦说要汉化什么文档写什么游戏剧本结果一头扎进动森出不来了，然后大概是被大数据捕捉到了推送了 Joycon 画画，虽然我的 Joycon 其实是挺重度使用的但总之还是拿出来试了一下，感觉效果似乎还不错？</p><span id="more"></span><h3 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h3><p>　　本来想得很美再买一个左手 jc 专门用来画画，结果发现因为手太小套上挂绳以后大拇指根本没法越过摇杆按到 <code>-</code> 键，而且价格也十分不美好，总之先用我手上的 jc 先测试了一下。<br>　　连到电脑后发现 jc 识别的方向是以横过来（即 <code>SL</code> <code>SR</code> 朝上）为基准的，而且没找到调试的办法……呃只能说还好我只是用来打游戏没打算用它画画。<br>　　另外蓝牙连接也好像不太稳定，不知道是我误触了还是怎么样反正出现过很多次断连的情况，手柄自动休眠之后无法自动配对，必须从设备里删除以后重新匹配还行。<br>　　综上所述我决定把挂绳放回盒子里【</p><h3 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h3><p>　　就是大家都在用的 JoyToKey，找到了一个<a href="https://blog.xuite.net/starpo/blog/588138077">繁体中文汉化版</a>。<br>　　虽然并不是免费软件，不过似乎和 sublime text 一样不付费也可以不限时使用。</p><h4 id="输入设置"><a href="#输入设置" class="headerlink" title="输入设置"></a>输入设置</h4><p>　　连接手柄后打开 JoyToKey 切到「选项」页面，显示「侦测到 1 个游戏控制器」，且手柄上的灯在<strong>不停上下闪烁</strong>则连接成功。<br>　　如果手柄的灯只亮了一个，那么恭喜你，你的 jc 又连回 NS 上了 :4o-2:<br>　　解决办法：</p><ol><li>给 NS 开飞行模式</li><li><em><strong>把你的 steam 关了</strong></em>（是的我不知道为什么和这个有关系但它确实有关系）</li></ol><p>　　在 <code>显示/隐藏按钮</code> 处选择<em>摇杆 × 1 + POV × 1</em>，然后切到「控制器 1」页面开始设置按键输出。</p><h4 id="输出设置"><a href="#输出设置" class="headerlink" title="输出设置"></a>输出设置</h4><p>　　连接成功后按下 jc 上按键后对应的输入选项会有<em>黄色高亮</em>，所以参考高亮部分设置按键映射即可。顺带一提我的 <strong>jc 摇杆推下去并不是被当成摇杆识别的</strong>，也不知道是连接有问题还是什么别的毛病……<br>　　以下是按键输出的几种类型：</p><ul><li><strong>单项输出</strong><br>双击对应输入选项，默认打开的是 <code>键盘</code> 页面<br>在左上角输入需要映射的键盘按键即可<br>如需要映射组合键，则从上到下分别输入每一个按键<br>比如如果要映射 <code>Ctrl + Alt + A</code>，则在左上角的四个框中从上到下输入 <em>Ctrl</em>，<em>Alt</em> 和 <em>A</em></li><li><strong>自动重复（连发）</strong><br>在双击弹出的窗口下方勾选 <code>自动重复</code><br>这个功能我是用来调整画笔大小<br>所以设置了每秒 <em>8</em> 次 + <em>500</em> 毫秒初始延迟<br>效果是按下后先变更一次大小，按住 500 毫秒后开始连续变更</li><li><strong>复合输出</strong><br>在双击弹出的窗口上方切换至 <code>键盘（多功能）</code><br>这里可以在同一个按键上绑定多个输出（虽然汉化写的是输入但显然键盘的快捷键是输出的东西才对啊……！）<ul><li><strong>轮流切换</strong><br>按同一个按键切换不同的工具<br>比如<em>选择笔 + 套索 + 魔棒</em>这种互斥的同类工具完全可以绑在同一个键上<br>将需要绑定的工具快捷键分别填入 <code>输入 1234</code> 中即可<br>需要注意填入按键后需要在下方选择对应数量的切换<br>如果只输入了两个按键，但选择的是 <code>1 -&gt; 2 -&gt; 3 -&gt; 1</code> 的切换模式，则会在按到第 3 下的时候输出一个空的快捷键</li><li><strong>连击切换</strong><br>在 XX 毫秒内连续按同一个按键切换为另一个输出<br>可以理解为鼠标的<em>单击</em>和<em>双击</em><br>但我觉得 jc 的按键经不起这个折腾</li><li><strong>长按切换</strong><br>按下 XX 毫秒后切换为另一个输出<br>只能在两个工具之间切换，而且我真的很讨厌长按这个操作……没有理由</li><li><strong>在指定时间内依次执行 1 ~ 4</strong><br><del>您要找的是不是：日影兰天星盘</del></li><li><strong>按下 / 释放切换</strong><br>这个画画的时候肯定用不到，可能在游戏里有用</li><li><strong>根据类比输入值切换</strong><br>这个设置应该是用来绑摇杆的，用来拓展摇杆的方向绑定更多的快捷键<br>但是 jc 的摇杆打动森挖个坑都费劲，我的评价是<em>没必要自讨没趣</em></li></ul></li></ul><p>　　除此之外还有鼠标控制，这个完完全全不在绘画辅助的范畴之内，倒是多少有点游戏外挂的意味了……至少我看一眼就能看出来怎么设置自动压枪，不过抛开道德准则来说我也不玩 FPS 好多年了，这个东西对我来说显然没什么实用价值，也懒得研究了。</p><h4 id="关联应用程序"><a href="#关联应用程序" class="headerlink" title="关联应用程序"></a>关联应用程序</h4><p>　　为了防止切出绘画窗口时误触手柄打出奇怪的操作，还可以将按键映射的配置绑定在应用程序上。<br>　　首先<strong>新建一个空白映射档案</strong>，然后在左上角「设置」中打开 <code>配置档与应用程式关联</code>，在弹出的<em>关联规则管理页面</em>点击左下角的 <code>建立</code> 进入新建关联规则窗口。<br>　　点击中间的 <code>取得应用程式资讯</code> ，在弹出窗口中二次确认后切换至你的绘画软件<del>SAI2 达传说</del>界面，等待 JoyToKey 弹出提示后程序的路径就会被捕获了，或者直接填入软件 exe 的路径也可以。应用程式名称和视窗标题应该不太重要，只要有路径就可以识别进程了。<br>　　最后回到<em>关联规则管理页面</em>，在下方设置不符合关联规则后切换到「指定预设的配置档」，在这里选中刚才建立的空白映射档案。<br>　　设置完成后按键映射就只会在对应的程序生效，切换至其它窗口时按手柄是没有反应的。</p><h3 id="按键配置参考"><a href="#按键配置参考" class="headerlink" title="按键配置参考"></a>按键配置参考</h3><p>　　最后放上我的按键提供一个参考（说起来真的会有人看吗）</p><ul><li><code>ZL</code>：保存<br>最重要的功能当然要用最大的按键！</li><li><code>L</code>：切换前景色与背景色 / 反选<br>呃试了一下用普通切换有点难受，我还是改成长按反选了</li><li><code>-</code>：清空图层<br>最难按到的按键同时也是最不可能误触的</li><li><code>摇杆↑</code>：画笔大小 +</li><li><code>摇杆↓</code>：画笔大小 -</li><li><code>摇杆→</code>：勾线笔 / 上色笔</li><li><code>摇杆←</code>：切换前景色与透明色</li><li><code>摇杆按下</code>：水平翻转</li><li><code>↑</code>：选区笔 / 套索 / 魔棒</li><li><code>↓</code>：变形 / shift<br>还是长按切换，本来 shift 想绑在笔上后来发现直线模式不能设快捷键还是作罢了</li><li><code>←</code>：撤销</li><li><code>→</code>：重做 / esc<br>esc 是用来退出变形的，其实这个功能比重做常用但是考虑到操作逻辑还是放在长按上了</li><li><code>○</code>：填充</li><li><code>SL</code>：橡皮擦 / 模糊</li><li><code>SR</code>：向下合并<br>这个按键不是很符合逻辑，但是放在这里可以防止误触</li></ul><p>　　调了一天快捷键好累哦！睡觉【</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;　　「人造人的日常生活也是系统维护的一环」第二弹。&lt;br&gt;　　是说休假前信誓旦旦说要汉化什么文档写什么游戏剧本结果一头扎进动森出不来了，然后大概是被大数据捕捉到了推送了 Joycon 画画，虽然我的 Joycon 其实是挺重度使用的但总之还是拿出来试了一下，感觉效果似乎还不错？&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="维护日志" scheme="https://4o.cx/categories/%E7%BB%B4%E6%8A%A4%E6%97%A5%E5%BF%97/"/>
-    
-    
-    <category term="4o" scheme="https://4o.cx/tags/4o/"/>
     
   </entry>
   
