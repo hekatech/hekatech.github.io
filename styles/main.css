@@ -852,7 +852,8 @@ blockquote::before,
   display: flex;
   gap: 1em;
   margin-bottom: 1em;
-  max-height: 450px;
+  height: 400px;
+  max-height: 35%;
   padding: 0;
 }
 .gallery .article-gallery-img,
