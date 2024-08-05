@@ -9,6 +9,13 @@
 
 
     <url>
+        <loc>https://4o.cx/categories/ERROR/</loc>
+        <lastmod>2024-08-05T12:45:38.332Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://4o.cx/categories/%25E7%25BB%25B4%25E6%258A%25A4%25E6%2597%25A5%25E5%25BF%2597/</loc>
         <lastmod>2024-07-09T07:43:25.158Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -32,13 +39,6 @@
     <url>
         <loc>https://4o.cx/categories/%25E7%25A2%258E%25E9%2595%259C/</loc>
         <lastmod>2023-10-31T19:25:35.450Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://4o.cx/categories/ERROR/</loc>
-        <lastmod>2023-09-30T23:07:39.317Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
