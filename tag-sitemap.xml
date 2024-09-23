@@ -3,6 +3,20 @@
 
 
     <url>
+        <loc>https://4o.cx/tags/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/</loc>
+        <lastmod>2024-09-23T18:30:08.213Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://4o.cx/tags/4o/</loc>
+        <lastmod>2024-09-23T18:30:08.213Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://4o.cx/tags/HKT-924/</loc>
         <lastmod>2024-08-28T05:12:18.590Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -11,13 +25,6 @@
 
     <url>
         <loc>https://4o.cx/tags/%E7%94%BB%E5%BB%8A/</loc>
-        <lastmod>2024-08-23T11:23:05.199Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://4o.cx/tags/4o/</loc>
         <lastmod>2024-08-23T11:23:05.199Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -47,13 +54,6 @@
     <url>
         <loc>https://4o.cx/tags/RINNE/</loc>
         <lastmod>2023-04-28T13:26:46.084Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://4o.cx/tags/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/</loc>
-        <lastmod>2023-03-27T22:56:30.742Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
